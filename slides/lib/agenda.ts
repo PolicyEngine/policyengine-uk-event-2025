@@ -8,7 +8,7 @@ export interface AgendaItem {
 }
 
 export const agenda: AgendaItem[] = [
-  { time: '12:00 PM - 12:30 PM', title: 'Registration, lunch and networking', type: 'networking' },
+  { time: '12:00 PM - 12:30 PM', title: 'Registration, lunch and networking', slideshowId: 'breaks', type: 'networking' },
   { time: '12:30 PM - 12:35 PM', title: 'Welcome and vision', speaker: 'Max Ghenis, Founder & CEO, PolicyEngine', speakerIds: ['max-ghenis'], slideshowId: 'welcome-vision', type: 'talk' },
   { time: '12:35 PM - 12:40 PM', title: 'The Nuffield Foundation\'s vision for evidence-based policy', speaker: 'Anvar Sarygulov, Nuffield Foundation', speakerIds: ['anvar-sarygulov'], slideshowId: 'nuffield-vision', type: 'talk' },
   { time: '12:40 PM - 12:50 PM', title: 'Technology and AI for UK policymaking: the PolicyEngine approach', speaker: 'Max Ghenis and Nikhil Woodruff, PolicyEngine', speakerIds: ['max-ghenis', 'nikhil-woodruff'], slideshowId: 'tech-ai-2025', type: 'talk' },
@@ -16,7 +16,7 @@ export const agenda: AgendaItem[] = [
   { time: '1:00 PM - 1:20 PM', title: 'UX research and design of PolicyEngine v2 platform', speaker: 'Biniam Gebre and MaSara Myers, Citizen Codex', speakerIds: ['biniam-gebre', 'masara-myers'], slideshowId: 'ux-design', type: 'talk' },
   { time: '1:20 PM - 1:40 PM', title: 'Live demo: PolicyEngine v2 platform', speaker: 'Anthony Volk, Software Engineer, PolicyEngine', speakerIds: ['anthony-volk'], slideshowId: 'platform-demo', type: 'demo' },
   { time: '1:40 PM - 2:00 PM', title: 'Localising policy impact: parliamentary constituencies and local authorities', speaker: 'Nikhil Woodruff and Ben Ogorek, PolicyEngine', speakerIds: ['nikhil-woodruff', 'ben-ogorek'], slideshowId: 'local-impact', type: 'talk' },
-  { time: '2:00 PM - 2:20 PM', title: 'Tea break and networking', type: 'break' },
+  { time: '2:00 PM - 2:20 PM', title: 'Tea break and networking', slideshowId: 'breaks', type: 'break' },
   { time: '2:20 PM - 2:40 PM', title: "NIESR's use of PolicyEngine in its living standards review", speaker: 'Max Mosley, Senior Economist, New Economics Foundation', speakerIds: ['max-mosley'], slideshowId: 'niesr-review', type: 'talk' },
   { time: '2:40 PM - 3:00 PM', title: 'Microsimulation of a carbon dividend', speaker: 'Malcolm Torry, Institute for Social and Economic Research', speakerIds: ['malcolm-torry'], slideshowId: 'carbon-dividend', type: 'talk' },
   { time: '3:00 PM - 3:20 PM', title: 'VAT analysis with synthetic firm microdata', speaker: 'Vahid Ahmadi', speakerIds: ['vahid-ahmadi'], slideshowId: 'vat-analysis', type: 'talk' },
