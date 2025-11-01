@@ -66,12 +66,12 @@ export default function CountdownTimer({ targetTime, eventDate }: CountdownTimer
   }
 
   return (
-    <div className="flex items-center justify-center gap-8">
-      <div className="text-9xl font-bold text-white/70 tabular-nums">
+    <div className="flex items-center justify-center gap-8 leading-none">
+      <div className="text-9xl font-bold text-white/70 tabular-nums leading-none">
         {formatNumber(timeLeft.minutes)}
       </div>
-      <div className="text-9xl font-bold text-white/50">:</div>
-      <div className="text-9xl font-bold text-white/70 tabular-nums">
+      <div className="text-9xl font-bold text-white/50 leading-none">:</div>
+      <div className="text-9xl font-bold text-white/70 tabular-nums leading-none">
         {formatNumber(timeLeft.seconds)}
       </div>
     </div>

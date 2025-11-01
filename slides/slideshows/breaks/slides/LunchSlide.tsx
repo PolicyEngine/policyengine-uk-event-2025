@@ -23,10 +23,11 @@ export default function LunchSlide() {
           <CountdownTimer targetTime="12:30" eventDate="2025-11-03" />
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-3">
+          <p className="text-xl text-white/60">Supported by</p>
           <Image
             src={assetPath("/logos/nuffield-white.png")}
-            alt="Supported by the Nuffield Foundation"
+            alt="Nuffield Foundation"
             width={250}
             height={80}
             className="opacity-70"

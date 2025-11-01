@@ -16,6 +16,7 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
   const initialSlide = parseInt(searchParams.get('slide') || '0', 10);
   const [currentSlide, setCurrentSlide] = useState(Math.max(0, Math.min(initialSlide, slideCount - 1)));
   const [mounted, setMounted] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const childArray = Children.toArray(children);
   const router = useRouter();
 
@@ -56,6 +57,14 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
 
   useEffect(() => {
     setMounted(true);
+
+    // Track fullscreen state
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
   // Update URL when slide changes
@@ -141,7 +150,8 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
         </div>
       ))}
 
-      {/* Navigation controls inside footer */}
+      {/* Navigation controls inside footer - hidden in fullscreen */}
+      {!isFullscreen && (
       <div className="fixed bottom-0 left-0 right-0 h-20 z-[100] flex items-center justify-between px-8 pointer-events-none">
         {/* Left side - Menu button */}
         <div className="flex items-center gap-3 pointer-events-auto">
@@ -185,6 +195,7 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
           </button>
         </div>
       </div>
+      )}
     </main>
   );
 }

@@ -23,11 +23,10 @@ export default function TeaSlide() {
           <CountdownTimer targetTime="14:20" eventDate="2025-11-03" />
         </div>
 
-        <div className="flex flex-col items-center gap-3">
-          <p className="text-xl text-white/60">Supported by</p>
+        <div className="flex justify-center">
           <Image
             src={assetPath("/logos/nuffield-white.png")}
-            alt="Nuffield Foundation"
+            alt="Supported by the Nuffield Foundation"
             width={250}
             height={80}
             className="opacity-70"

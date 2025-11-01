@@ -19,7 +19,6 @@ export const vatAnalysisConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    CoverSlide,
     IntroSlide,
     FirmDistributionSlide,
     FirmMicrodataSlide,
