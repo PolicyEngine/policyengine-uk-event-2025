@@ -1,10 +1,10 @@
 import { SlideshowConfig } from '@/lib/types';
-import CoverSlide from './slides/CoverSlide';
-import ContextSlide from './slides/ContextSlide';
-import AIUsesSlide from './slides/AIUsesSlide';
-import AIBuildingSlide from './slides/AIBuildingSlide';
-import AIInterfaceSlide from './slides/AIInterfaceSlide';
-import EndSlide from './slides/EndSlide';
+import CoverSlide from './slides/1_CoverSlide';
+import ContextSlide from './slides/2_ContextSlide';
+import AIUsesSlide from './slides/3_AIUsesSlide';
+import AIBuildingSlide from './slides/4_AIBuildingSlide';
+import AIInterfaceSlide from './slides/5_AIInterfaceSlide';
+import EndSlide from './slides/6_EndSlide';
 
 export const techAI2025Config: SlideshowConfig = {
   id: 'tech-ai-2025',
