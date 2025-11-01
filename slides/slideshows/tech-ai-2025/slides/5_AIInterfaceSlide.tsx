@@ -32,7 +32,7 @@ export default function AIInterfaceSlide() {
               },
               {
                 text: 'Automated slide decks and reports',
-                subtext: 'This presentation itself was scaffolded with Claude Code',
+                subtext: 'This presentation itself was scaffolded with Claude Code. I spent the time saved doing more fun things, like tax-benefit policy modelling.',
               },
             ]}
           />
