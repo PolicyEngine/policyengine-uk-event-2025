@@ -16,23 +16,23 @@ export default function AIBuildingSlide() {
 
         <SlideContent size="lg">
           <SlideSubtitle>
-            LLM coding agents for policy modelling
+            LLM coding agents help us model the household sector
           </SlideSubtitle>
 
           <BulletList
             size="lg"
             items={[
               {
-                text: 'Structural tax-benefit reforms',
-                subtext: 'Rapid implementation of Budget changes and policy proposals',
+                text: 'Encoding tax-benefit reforms',
+                subtext: 'Going from a policy description to Python implementation',
               },
               {
                 text: 'Custom data imputation',
-                subtext: 'Imputing data from new surveys (LFS, EHS) at a fast pace',
+                subtext: 'Imputing data from new surveys (LFS, EHS) at a faster pace. Lots of time is spent reading codebooks!',
               },
               {
-                text: 'Time from announcement to model: hours instead of weeks',
-                subtext: 'Example: Autumn Budget 2024 NICs changes modelled same day',
+                text: 'Pulling out the outputs',
+                subtext: 'Scripts to transform household-level results into the metrics people actually care about',
               },
             ]}
           />

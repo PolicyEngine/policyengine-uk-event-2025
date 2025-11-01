@@ -21,10 +21,10 @@ export default function ContextSlide() {
                 text: 'Effective use of the SOTA is core to PolicyEngine\'s value-add',
               },
               {
-                text: '... because we think using a modern tech stack is critical to being agile',
+                text: 'We think using a modern tech stack is critical to being agile',
               },
               {
-                text: '... because being agile is critical to providing timely and accurate research that incorporates the best available modelling',
+                text: 'And we think being agile is critical to maximising accuracy and impact',
               },
             ]}
           />

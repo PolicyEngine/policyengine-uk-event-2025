@@ -23,8 +23,8 @@ export default function AIInterfaceSlide() {
             size="lg"
             items={[
               {
-                text: 'Interactive policy dashboards',
-                subtext: 'AI-generated Plotly charts and responsive layouts',
+                text: 'Interactive policy visualisations',
+                subtext: 'Even basic levels of interactivity improve cut-through',
               },
               {
                 text: 'Custom calculators and apps',
@@ -32,7 +32,7 @@ export default function AIInterfaceSlide() {
               },
               {
                 text: 'Automated slide decks and reports',
-                subtext: 'This presentation was scaffolded with Claude Code',
+                subtext: 'This presentation itself was scaffolded with Claude Code',
               },
             ]}
           />
