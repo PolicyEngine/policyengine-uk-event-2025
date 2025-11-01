@@ -12,23 +12,23 @@ interface BulletListProps {
 
 export default function BulletList({ items, size = 'md' }: BulletListProps) {
   const sizeClasses = {
+    sm: 'text-2xl',
+    md: 'text-3xl',
+    lg: 'text-4xl',
+  };
+
+  const subtextSizeClasses = {
     sm: 'text-xl',
     md: 'text-2xl',
     lg: 'text-3xl',
   };
 
-  const subtextSizeClasses = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl',
-  };
-
   return (
-    <div className="space-y-5 text-left">
+    <div className="space-y-8 text-left">
       {items.map((item, index) => (
-        <div key={index} className="flex items-center gap-4">
+        <div key={index} className="flex items-center gap-8">
           <div className="flex-shrink-0">
-            <div className="w-3 h-3 bg-pe-teal rounded-full"></div>
+            <div className="w-4 h-4 bg-pe-teal rounded-full"></div>
           </div>
           <div className="flex-1">
             <p className={`${sizeClasses[size]} text-gray-800 leading-relaxed`}>
