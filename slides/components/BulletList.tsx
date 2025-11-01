@@ -12,15 +12,15 @@ interface BulletListProps {
 
 export default function BulletList({ items, size = 'md' }: BulletListProps) {
   const sizeClasses = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl',
+    sm: 'text-xl',
+    md: 'text-2xl',
+    lg: 'text-3xl',
   };
 
   const subtextSizeClasses = {
-    sm: 'text-base',
-    md: 'text-lg',
-    lg: 'text-xl',
+    sm: 'text-lg',
+    md: 'text-xl',
+    lg: 'text-2xl',
   };
 
   return (

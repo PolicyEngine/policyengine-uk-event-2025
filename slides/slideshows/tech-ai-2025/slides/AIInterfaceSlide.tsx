@@ -14,7 +14,7 @@ export default function AIInterfaceSlide() {
         </SlideHeader>
 
         <SlideContent size="lg">
-          <h2 className="text-4xl font-semibold text-pe-dark text-left mb-8">
+          <h2 className="text-5xl font-semibold text-pe-dark text-left mb-12">
             Dashboards, apps, and presentations
           </h2>
 

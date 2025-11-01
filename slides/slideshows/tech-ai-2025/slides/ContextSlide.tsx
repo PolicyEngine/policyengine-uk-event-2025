@@ -3,6 +3,7 @@ import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
+import BulletList from '@/components/BulletList';
 
 export default function ContextSlide() {
   return (
@@ -13,12 +14,20 @@ export default function ContextSlide() {
         </SlideHeader>
 
         <SlideContent size="lg">
-          <p className="text-3xl text-gray-800 leading-relaxed text-left">
-            At PolicyEngine, tech is pretty core to what we do. We think using a modern tech stack is critical to being <span className="font-semibold text-pe-dark">agile</span>.
-          </p>
-          <p className="text-3xl text-gray-800 leading-relaxed text-left mt-8">
-            And being agile is critical to providing timely and accurate research that incorporates the best available modelling.
-          </p>
+          <BulletList
+            size="lg"
+            items={[
+              {
+                text: 'Tech is pretty core to what we do',
+              },
+              {
+                text: 'Using a modern tech stack is critical to being agile',
+              },
+              {
+                text: 'Being agile is critical to providing timely and accurate research that incorporates the best available modelling',
+              },
+            ]}
+          />
         </SlideContent>
       </div>
     </Slide>
