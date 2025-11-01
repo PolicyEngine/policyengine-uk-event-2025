@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 interface SpeakerHeadshotProps {
   name: string;
@@ -40,24 +41,27 @@ export default function SpeakerHeadshot({
     .toUpperCase()
     .slice(0, 2);
 
+  // Apply assetPath to the image URL for GitHub Pages compatibility
+  const fullImageUrl = imageUrl ? assetPath(imageUrl) : undefined;
+
   // Check if the image exists (simple check for now)
   const [imageExists, setImageExists] = React.useState(false);
 
   React.useEffect(() => {
-    if (imageUrl) {
+    if (fullImageUrl) {
       const img = new window.Image();
       img.onload = () => setImageExists(true);
       img.onerror = () => setImageExists(false);
-      img.src = imageUrl;
+      img.src = fullImageUrl;
     }
-  }, [imageUrl]);
+  }, [fullImageUrl]);
 
   return (
     <div className={`${positionClasses[position]} ${position === 'center' ? 'text-center' : ''}`}>
       <div className={`${sizeClasses[size]} relative overflow-hidden rounded-full bg-pe-teal/20 border-2 border-pe-teal`}>
-        {imageUrl && imageExists ? (
+        {fullImageUrl && imageExists ? (
           <Image
-            src={imageUrl}
+            src={fullImageUrl}
             alt={`${name} headshot`}
             fill
             className="object-cover"
