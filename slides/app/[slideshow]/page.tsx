@@ -1,4 +1,4 @@
-import { getAllSlideshowMetadata, getSlideshowById } from '@/lib/slideshows';
+import { getAllSlideshowMetadata } from '@/lib/slideshows';
 import SlideshowViewer from '@/components/SlideshowViewer';
 import { redirect } from 'next/navigation';
 
@@ -10,17 +10,12 @@ export function generateStaticParams() {
 }
 
 export default function SlideshowPage({ params }: { params: { slideshow: string } }) {
-  const slideshow = getSlideshowById(params.slideshow);
+  const slideshows = getAllSlideshowMetadata();
+  const slideshowExists = slideshows.some(s => s.id === params.slideshow);
 
-  if (!slideshow) {
+  if (!slideshowExists) {
     redirect('/');
   }
 
-  return (
-    <SlideshowViewer slideCount={slideshow.slides.length} initialSlide={0}>
-      {slideshow.slides.map((SlideComponent, index) => (
-        <SlideComponent key={index} />
-      ))}
-    </SlideshowViewer>
-  );
+  return <SlideshowViewer slideshowId={params.slideshow} />;
 }

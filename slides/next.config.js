@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? '/policyengine-uk-event-2025' : '',
-  assetPrefix: isProd ? '/policyengine-uk-event-2025/' : '',
+  assetPrefix: isProd ? '/policyengine-uk-event-2025' : '',
 }
 
 module.exports = nextConfig
