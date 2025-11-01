@@ -18,13 +18,13 @@ export default function ContextSlide() {
             size="lg"
             items={[
               {
-                text: 'Tech is pretty core to what we do',
+                text: 'Effective use of the SOTA is core to PolicyEngine\'s value-add',
               },
               {
-                text: 'Using a modern tech stack is critical to being agile',
+                text: '... because we think using a modern tech stack is critical to being agile',
               },
               {
-                text: 'Being agile is critical to providing timely and accurate research that incorporates the best available modelling',
+                text: '... because being agile is critical to providing timely and accurate research that incorporates the best available modelling',
               },
             ]}
           />

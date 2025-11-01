@@ -3,6 +3,7 @@ import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
+import SlideSubtitle from '@/components/SlideSubtitle';
 import BulletList from '@/components/BulletList';
 
 export default function AIBuildingSlide() {
@@ -14,9 +15,9 @@ export default function AIBuildingSlide() {
         </SlideHeader>
 
         <SlideContent size="lg">
-          <h2 className="text-5xl font-semibold text-pe-dark text-left mb-12">
+          <SlideSubtitle>
             LLM coding agents for policy modelling
-          </h2>
+          </SlideSubtitle>
 
           <BulletList
             size="lg"

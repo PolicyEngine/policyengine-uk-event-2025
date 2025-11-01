@@ -13,6 +13,8 @@ export default function AIUsesSlide() {
           <SlideTitle>AI at PolicyEngine: two uses</SlideTitle>
         </SlideHeader>
 
+        <p className="text-xl mb-6">We use AI in two main ways:</p>
+
         <SlideContent size="lg">
           <BulletList
             size="lg"
