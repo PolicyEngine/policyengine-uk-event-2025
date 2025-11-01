@@ -58,6 +58,9 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
   useEffect(() => {
     setMounted(true);
 
+    // Set initial fullscreen state
+    setIsFullscreen(!!document.fullscreenElement);
+
     // Track fullscreen state
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
