@@ -10,24 +10,24 @@ export default function AIInterfaceSlide() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>Communicating research</SlideTitle>
+          <SlideTitle>Communicating externally</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">
           <h2 className="text-4xl font-semibold text-pe-dark text-left mb-8">
-            Dashboards, calculators, and presentations
+            Dashboards, apps, and presentations
           </h2>
 
           <BulletList
             size="lg"
             items={[
               {
-                text: 'AI generates interactive dashboards from policy analysis',
-                subtext: 'Plotly charts, responsive layouts, publication-ready',
+                text: 'Interactive policy dashboards',
+                subtext: 'AI-generated Plotly charts and responsive layouts',
               },
               {
-                text: 'Custom calculators for specific audiences',
-                subtext: 'Benefit eligibility, tax liability tools',
+                text: 'Custom calculators and apps',
+                subtext: 'Benefit eligibility tools, tax liability calculators',
               },
               {
                 text: 'Automated slide decks and reports',

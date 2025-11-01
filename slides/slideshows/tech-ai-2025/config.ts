@@ -1,7 +1,7 @@
 import { SlideshowConfig } from '@/lib/types';
 import CoverSlide from './slides/CoverSlide';
 import ContextSlide from './slides/ContextSlide';
-import AIDataSlide from './slides/AIDataSlide';
+import AIUsesSlide from './slides/AIUsesSlide';
 import AIBuildingSlide from './slides/AIBuildingSlide';
 import AIInterfaceSlide from './slides/AIInterfaceSlide';
 import EndSlide from './slides/EndSlide';
@@ -15,7 +15,7 @@ export const techAI2025Config: SlideshowConfig = {
   slides: [
     CoverSlide,
     ContextSlide,
-    AIDataSlide,
+    AIUsesSlide,
     AIBuildingSlide,
     AIInterfaceSlide,
     EndSlide,

@@ -10,26 +10,27 @@ export default function AIBuildingSlide() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>Building internally: coding</SlideTitle>
+          <SlideTitle>Building internally</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">
           <h2 className="text-4xl font-semibold text-pe-dark text-left mb-8">
-            Modelling policy in Python
+            LLM coding agents for policy modelling
           </h2>
 
           <BulletList
             size="lg"
             items={[
               {
-                text: 'Claude Code and other LLMs accelerate policy rule implementation',
-                subtext: 'Natural language descriptions guide code generation',
+                text: 'Structural tax-benefit reforms',
+                subtext: 'Rapid implementation of Budget changes and policy proposals',
               },
               {
-                text: 'Automated testing catches errors before deployment',
+                text: 'Custom data imputation',
+                subtext: 'Imputing data from new surveys (LFS, EHS) at a fast pace',
               },
               {
-                text: 'Time from policy announcement to model update: hours instead of weeks',
+                text: 'Time from announcement to model: hours instead of weeks',
                 subtext: 'Example: Autumn Budget 2024 NICs changes modelled same day',
               },
             ]}
