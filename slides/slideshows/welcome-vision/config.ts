@@ -1,4 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
+import SectionTitle from './slides/SectionTitle';
 import CoverSlide from './slides/CoverSlide';
 import JourneyBeginning from './slides/JourneyBeginning';
 import RecognisingOpportunity from './slides/RecognisingOpportunity';
@@ -17,6 +18,7 @@ export const welcomeVisionConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
+    SectionTitle,
     CoverSlide,
     JourneyBeginning,
     RecognisingOpportunity,

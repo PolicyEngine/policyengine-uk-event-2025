@@ -16,7 +16,7 @@ export default function SlideHeader({ children, showLogo = true }: SlideHeaderPr
       {showLogo && (
         <div className="flex-shrink-0 pt-2">
           <Image
-            src={assetPath("/logos/profile_teal_bg.png")}
+            src={assetPath("/logos/profile_teal.svg")}
             alt="PolicyEngine"
             width={60}
             height={60}

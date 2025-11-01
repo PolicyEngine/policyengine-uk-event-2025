@@ -1,7 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
-import NuffieldSupport from './slides/NuffieldSupport';
-import EndSlide from './slides/EndSlide';
 
 export const nuffieldVisionConfig: SlideshowConfig = {
   id: 'nuffield-vision',
@@ -11,7 +9,5 @@ export const nuffieldVisionConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    NuffieldSupport,
-    EndSlide,
   ],
 };

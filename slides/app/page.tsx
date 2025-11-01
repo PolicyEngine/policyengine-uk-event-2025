@@ -62,7 +62,7 @@ export default function Home() {
             const isCurrent = index === currentIndex;
             const isNext = index === nextIndex && !isCurrent;
 
-            if (isBreakOrNetworking) {
+            if (isBreakOrNetworking && !hasSlides) {
               return (
                 <div key={index} className={`rounded-lg p-6 text-white/60 italic relative ${isCurrent ? 'bg-white/20 ring-2 ring-white' : 'bg-white/10'}`}>
                   {isCurrent && (
@@ -73,6 +73,24 @@ export default function Home() {
                   <p className="text-sm font-medium mb-1 text-left">{item.time}</p>
                   <p className="text-lg text-left">{item.title}</p>
                 </div>
+              );
+            }
+
+            if (isBreakOrNetworking && hasSlides) {
+              return (
+                <Link
+                  key={index}
+                  href={`/${item.slideshowId}`}
+                  className={`group block rounded-lg p-6 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer relative ${isCurrent ? 'bg-white/20 ring-2 ring-white text-white' : 'bg-white/10 text-white/80 hover:bg-white/15'}`}
+                >
+                  {isCurrent && (
+                    <div className="absolute -left-3 top-1/2 -translate-y-1/2 bg-white text-pe-dark text-xs font-bold px-2 py-1 rounded">
+                      NOW
+                    </div>
+                  )}
+                  <p className="text-sm font-medium mb-1 text-left">{item.time}</p>
+                  <p className="text-lg text-left font-medium">{item.title}</p>
+                </Link>
               );
             }
 
