@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function FirmDistributionSlide() {
   return (
@@ -16,7 +17,7 @@ export default function FirmDistributionSlide() {
         <div className="grid grid-cols-2 gap-8 mt-8">
           <div className="flex flex-col">
             <Image
-              src="/Screenshot 2025-11-01 at 17.43.00.png"
+              src={assetPath("/Screenshot 2025-11-01 at 17.43.00.png")}
               alt="Figure 1: Distribution of UK firms by turnover band, 2024 (ONS)"
               width={500}
               height={380}
@@ -25,7 +26,7 @@ export default function FirmDistributionSlide() {
           </div>
           <div className="flex flex-col">
             <Image
-              src="/Screenshot 2025-11-01 at 17.43.11.png"
+              src={assetPath("/Screenshot 2025-11-01 at 17.43.11.png")}
               alt="Figure 2: Distribution of VAT-registered firms by turnover band, 2024-25 (HMRC)"
               width={500}
               height={380}

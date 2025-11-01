@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function StaticSimulationSlide() {
   return (
@@ -15,7 +16,7 @@ export default function StaticSimulationSlide() {
 
         <div className="flex justify-center items-center mt-8">
           <Image
-            src="/Screenshot 2025-11-01 at 18.14.40.png"
+            src={assetPath("/Screenshot 2025-11-01 at 18.14.40.png")}
             alt="Static simulation dashboard"
             width={800}
             height={600}

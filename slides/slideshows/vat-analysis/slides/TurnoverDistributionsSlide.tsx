@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function TurnoverDistributionsSlide() {
   return (
@@ -15,7 +16,7 @@ export default function TurnoverDistributionsSlide() {
 
         <div className="flex justify-center items-center mt-8">
           <Image
-            src="/bunching_analysis.png"
+            src={assetPath("/bunching_analysis.png")}
             alt="Turnover distributions showing bunching effects"
             width={700}
             height={525}

@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function FirmMicrodataSlide() {
   return (
@@ -33,7 +34,7 @@ export default function FirmMicrodataSlide() {
 
           <div className="flex justify-center items-center">
             <Image
-              src="/Screenshot 2025-11-01 at 17.47.25.png"
+              src={assetPath("/Screenshot 2025-11-01 at 17.47.25.png")}
               alt="Firm-level microdata"
               width={500}
               height={380}

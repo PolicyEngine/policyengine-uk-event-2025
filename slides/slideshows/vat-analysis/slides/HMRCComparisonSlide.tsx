@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function HMRCComparisonSlide() {
   return (
@@ -33,7 +34,7 @@ export default function HMRCComparisonSlide() {
 
           <div className="flex justify-center items-center">
             <Image
-              src="/Screenshot 2025-11-01 at 18.12.51.png"
+              src={assetPath("/Screenshot 2025-11-01 at 18.12.51.png")}
               alt="HMRC comparison"
               width={500}
               height={380}
