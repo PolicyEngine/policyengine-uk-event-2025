@@ -26,8 +26,8 @@ export default function BulletList({ items, size = 'md' }: BulletListProps) {
   return (
     <div className="space-y-5 text-left">
       {items.map((item, index) => (
-        <div key={index} className="flex items-start gap-4">
-          <div className="flex-shrink-0 mt-2">
+        <div key={index} className="flex items-center gap-4">
+          <div className="flex-shrink-0">
             <div className="w-3 h-3 bg-pe-teal rounded-full"></div>
           </div>
           <div className="flex-1">
