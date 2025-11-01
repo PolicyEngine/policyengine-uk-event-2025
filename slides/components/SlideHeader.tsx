@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 interface SlideHeaderProps {
   children: ReactNode;
@@ -15,7 +16,7 @@ export default function SlideHeader({ children, showLogo = true }: SlideHeaderPr
       {showLogo && (
         <div className="flex-shrink-0 pt-2">
           <Image
-            src="/logos/profile_teal_bg.png"
+            src={assetPath("/logos/profile_teal_bg.png")}
             alt="PolicyEngine"
             width={60}
             height={60}

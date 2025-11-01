@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export interface SlideProps {
   children: ReactNode;
@@ -32,7 +33,7 @@ export default function Slide({
       {(isCover || isEnd) && (
         <div className="absolute top-16 left-1/2 -translate-x-1/2">
           <Image
-            src="/logos/white.svg"
+            src={assetPath("/logos/white.svg")}
             alt="PolicyEngine"
             width={350}
             height={100}

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { getAllSlideshowMetadata } from '@/lib/slideshows';
 import { agenda } from '@/lib/agenda';
 import { getCurrentAgendaIndex, getNextAgendaIndex } from '@/lib/timeUtils';
+import { assetPath } from '@/lib/assetPath';
 
 export default function Home() {
   const slideshows = getAllSlideshowMetadata();
@@ -32,7 +33,7 @@ export default function Home() {
         {/* Logo */}
         <div className="mb-12">
           <Image
-            src="/logos/white.svg"
+            src={assetPath("/logos/white.svg")}
             alt="PolicyEngine"
             width={450}
             height={120}
@@ -104,7 +105,7 @@ export default function Home() {
                 {hasSlides && (
                   <div className="flex-shrink-0 flex items-center">
                     <Image
-                      src="/logos/profile_teal_bg.png"
+                      src={assetPath("/logos/profile_teal_bg.png")}
                       alt=""
                       width={40}
                       height={40}
