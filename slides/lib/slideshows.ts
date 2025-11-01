@@ -1,11 +1,12 @@
 import { SlideshowConfig, SlideshowMetadata } from './types';
 import { event2025Config } from '@/slideshows/event-2025/config';
-import { techAI2025Config } from '@/slideshows/tech-ai-2025/config';
+import { vatAnalysisConfig } from '@/slideshows/vat-analysis/config';
 
 // Register all slideshows here
 export const slideshows: SlideshowConfig[] = [
   event2025Config,
-  techAI2025Config,
+  vatAnalysisConfig,
+
 ];
 
 export function getSlideshowById(id: string): SlideshowConfig | undefined {
