@@ -4,6 +4,7 @@ import { useState, useEffect, Children, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { agenda } from '@/lib/agenda';
+import { assetPath } from '@/lib/assetPath';
 
 interface SlideshowViewerProps {
   slideCount: number;
@@ -76,7 +77,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
   // Update URL when slide changes
   useEffect(() => {
     if (!slideshowId) return;
-    const url = `/${slideshowId}${currentSlide > 0 ? `?slide=${currentSlide}` : ''}`;
+    const url = assetPath(`/${slideshowId}${currentSlide > 0 ? `?slide=${currentSlide}` : ''}`);
     window.history.replaceState(null, '', url);
   }, [currentSlide, slideshowId]);
 
