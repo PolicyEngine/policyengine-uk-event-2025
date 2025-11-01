@@ -2,15 +2,21 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getSlideshowById } from '@/lib/slideshows';
 
 interface SlideshowViewerProps {
-  slideCount: number;
-  initialSlide: number;
-  children: React.ReactNode;
+  slideshowId: string;
 }
 
-export default function SlideshowViewer({ slideCount, initialSlide, children }: SlideshowViewerProps) {
-  const [currentSlide, setCurrentSlide] = useState(initialSlide);
+export default function SlideshowViewer({ slideshowId }: SlideshowViewerProps) {
+  const slideshow = getSlideshowById(slideshowId);
+
+  if (!slideshow) {
+    return null;
+  }
+
+  const slideCount = slideshow.slides.length;
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -48,13 +54,11 @@ export default function SlideshowViewer({ slideCount, initialSlide, children }: 
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === slideCount - 1;
 
-  // Only show the slide that matches currentSlide
-  const slides = Array.isArray(children) ? children : [children];
-  const currentSlideElement = slides[currentSlide];
+  const SlideComponent = slideshow.slides[currentSlide];
 
   return (
     <main className="relative">
-      {mounted && currentSlideElement}
+      {mounted && <SlideComponent />}
 
       {/* Navigation controls inside footer */}
       <div className="fixed bottom-0 left-0 right-0 h-20 z-[100] flex items-center justify-between px-8 pointer-events-none">
