@@ -4,6 +4,7 @@ import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
 import BulletList from '@/components/BulletList';
+import SlideSubtitle from '@/components/SlideSubtitle';
 
 export default function AIUsesSlide() {
   return (
@@ -12,8 +13,9 @@ export default function AIUsesSlide() {
         <SlideHeader>
           <SlideTitle>AI at PolicyEngine: two uses</SlideTitle>
         </SlideHeader>
-
-        <p className="text-xl mb-6">We use AI in two main ways:</p>
+        <SlideSubtitle>
+          We use AI in two main ways:
+        </SlideSubtitle>
 
         <SlideContent size="lg">
           <BulletList
