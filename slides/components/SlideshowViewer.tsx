@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Children } from 'react';
+import { useState, useEffect, Children, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { agenda } from '@/lib/agenda';
@@ -11,10 +11,9 @@ interface SlideshowViewerProps {
   slideshowId?: string;
 }
 
-export default function SlideshowViewer({ slideCount, children, slideshowId }: SlideshowViewerProps) {
+function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowViewerProps) {
   const searchParams = useSearchParams();
-  const initialSlide = parseInt(searchParams.get('slide') || '0', 10);
-  const [currentSlide, setCurrentSlide] = useState(Math.max(0, Math.min(initialSlide, slideCount - 1)));
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const childArray = Children.toArray(children);
@@ -58,6 +57,10 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
   useEffect(() => {
     setMounted(true);
 
+    // Initialize slide from URL parameter (client-side only)
+    const initialSlide = parseInt(searchParams.get('slide') || '0', 10);
+    setCurrentSlide(Math.max(0, Math.min(initialSlide, slideCount - 1)));
+
     // Set initial fullscreen state
     setIsFullscreen(!!document.fullscreenElement);
 
@@ -68,7 +71,7 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
+  }, [searchParams, slideCount]);
 
   // Update URL when slide changes
   useEffect(() => {
@@ -200,5 +203,13 @@ export default function SlideshowViewer({ slideCount, children, slideshowId }: S
       </div>
       )}
     </main>
+  );
+}
+
+export default function SlideshowViewer(props: SlideshowViewerProps) {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <SlideshowViewerClient {...props} />
+    </Suspense>
   );
 }
