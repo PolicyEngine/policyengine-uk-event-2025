@@ -7,9 +7,9 @@ export interface AgendaItem {
 }
 
 export const agenda: AgendaItem[] = [
-  { time: '12:00 PM - 12:30 PM', title: 'Registration, lunch and networking', type: 'networking' },
-  { time: '12:30 PM - 12:40 PM', title: 'Welcome and vision', speaker: 'Max Ghenis, Founder and CEO, PolicyEngine', slideshowId: 'event-2025', type: 'talk' },
-  { time: '12:40 PM - 12:50 PM', title: 'Technology and AI for UK policymaking: The PolicyEngine approach', speaker: 'Nikhil Woodruff, Co-founder and CTO, PolicyEngine', slideshowId: 'technology-ai', type: 'talk' },
+  { time: '12:00 PM - 12:30 PM', title: 'Registration, lunch & networking', type: 'networking' },
+  { time: '12:30 PM - 12:40 PM', title: 'Welcome and vision', speaker: 'Max Ghenis, Founder & CEO, PolicyEngine', slideshowId: 'event-2025', type: 'talk' },
+  { time: '12:40 PM - 12:50 PM', title: 'Technology and AI for UK policymaking: The PolicyEngine approach', speaker: 'Nikhil Woodruff, Co-founder & CTO, PolicyEngine', slideshowId: 'tech-ai-2025', type: 'talk' },
   { time: '12:50 PM - 1:00 PM', title: 'Scope of the model: Rules, data, and dynamics', speaker: 'Vahid Ahmadi, Research Associate, PolicyEngine', slideshowId: 'model-scope', type: 'talk' },
   { time: '1:00 PM - 1:20 PM', title: 'Live demo: PolicyEngine v2 platform', speaker: 'Anthony Volk, Software Engineer, PolicyEngine', slideshowId: 'platform-demo', type: 'demo' },
   { time: '1:20 PM - 1:40 PM', title: 'UX research and design of PolicyEngine v2 platform', speaker: 'Biniam Gebre and MaSara Myers, Citizen Codex', slideshowId: 'ux-design', type: 'talk' },

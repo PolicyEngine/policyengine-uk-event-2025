@@ -6,6 +6,7 @@ import { vatAnalysisConfig } from '@/slideshows/vat-analysis/config';
 export const slideshows: SlideshowConfig[] = [
   event2025Config,
   vatAnalysisConfig,
+
 ];
 
 export function getSlideshowById(id: string): SlideshowConfig | undefined {
