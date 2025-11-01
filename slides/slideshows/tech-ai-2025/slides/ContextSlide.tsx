@@ -13,33 +13,23 @@ export default function ContextSlide() {
         </SlideHeader>
 
         <SlideContent size="lg">
-          <div className="space-y-16">
-            <div className="flex items-start gap-6">
-              <div className="w-20 h-20 bg-pe-teal flex items-center justify-center flex-shrink-0">
-                <span className="text-4xl text-white font-bold">1</span>
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold text-pe-dark mb-2">
-                  Building internally
-                </h2>
-                <p className="text-2xl text-gray-700">
-                  Dataset enhancement and faster policy modelling
-                </p>
-              </div>
+          <div className="space-y-20">
+            <div>
+              <h2 className="text-5xl font-bold text-pe-dark mb-4 text-left">
+                Building internally
+              </h2>
+              <p className="text-3xl text-gray-700 text-left">
+                Dataset enhancement and faster policy modelling
+              </p>
             </div>
 
-            <div className="flex items-start gap-6">
-              <div className="w-20 h-20 bg-pe-dark flex items-center justify-center flex-shrink-0">
-                <span className="text-4xl text-white font-bold">2</span>
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold text-pe-dark mb-2">
-                  Communicating research
-                </h2>
-                <p className="text-2xl text-gray-700">
-                  Dashboards, calculators, and presentations
-                </p>
-              </div>
+            <div>
+              <h2 className="text-5xl font-bold text-pe-dark mb-4 text-left">
+                Communicating research
+              </h2>
+              <p className="text-3xl text-gray-700 text-left">
+                Dashboards, calculators, and presentations
+              </p>
             </div>
           </div>
         </SlideContent>

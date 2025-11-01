@@ -13,13 +13,13 @@ export default function AIBuildingSlide() {
           <SlideTitle>Building internally: coding</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="md">
-          <h2 className="text-3xl font-semibold text-pe-dark text-left mb-10">
+        <SlideContent size="lg">
+          <h2 className="text-4xl font-semibold text-pe-dark text-left mb-12">
             Modelling policy in Python
           </h2>
 
           <BulletList
-            size="md"
+            size="lg"
             items={[
               {
                 text: 'Claude Code and other LLMs accelerate policy rule implementation',

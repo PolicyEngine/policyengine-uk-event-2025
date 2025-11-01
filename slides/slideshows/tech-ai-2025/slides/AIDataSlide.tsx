@@ -13,13 +13,13 @@ export default function AIDataSlide() {
           <SlideTitle>Building internally: data</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="md">
-          <h2 className="text-3xl font-semibold text-pe-dark text-left mb-10">
+        <SlideContent size="lg">
+          <h2 className="text-4xl font-semibold text-pe-dark text-left mb-12">
             Dataset enhancement with machine learning
           </h2>
 
           <BulletList
-            size="md"
+            size="lg"
             items={[
               {
                 text: 'Neural network reweighting to match administrative targets',

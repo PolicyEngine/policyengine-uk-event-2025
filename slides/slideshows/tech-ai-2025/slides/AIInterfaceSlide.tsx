@@ -13,13 +13,13 @@ export default function AIInterfaceSlide() {
           <SlideTitle>Communicating research</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="md">
-          <h2 className="text-3xl font-semibold text-pe-dark text-left mb-10">
+        <SlideContent size="lg">
+          <h2 className="text-4xl font-semibold text-pe-dark text-left mb-12">
             Dashboards, calculators, and presentations
           </h2>
 
           <BulletList
-            size="md"
+            size="lg"
             items={[
               {
                 text: 'AI generates interactive dashboards from policy analysis',
