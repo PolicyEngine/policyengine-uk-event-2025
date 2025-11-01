@@ -1,23 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Children } from 'react';
 import Link from 'next/link';
-import { getSlideshowById } from '@/lib/slideshows';
 
 interface SlideshowViewerProps {
-  slideshowId: string;
+  slideCount: number;
+  children: React.ReactNode;
 }
 
-export default function SlideshowViewer({ slideshowId }: SlideshowViewerProps) {
-  const slideshow = getSlideshowById(slideshowId);
-
-  if (!slideshow) {
-    return null;
-  }
-
-  const slideCount = slideshow.slides.length;
+export default function SlideshowViewer({ slideCount, children }: SlideshowViewerProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const childArray = Children.toArray(children);
 
   useEffect(() => {
     setMounted(true);
@@ -54,11 +48,18 @@ export default function SlideshowViewer({ slideshowId }: SlideshowViewerProps) {
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === slideCount - 1;
 
-  const SlideComponent = slideshow.slides[currentSlide];
-
   return (
     <main className="relative">
-      {mounted && <SlideComponent />}
+      {mounted && childArray.map((child, index) => (
+        <div
+          key={index}
+          style={{
+            display: index === currentSlide ? 'block' : 'none',
+          }}
+        >
+          {child}
+        </div>
+      ))}
 
       {/* Navigation controls inside footer */}
       <div className="fixed bottom-0 left-0 right-0 h-20 z-[100] flex items-center justify-between px-8 pointer-events-none">

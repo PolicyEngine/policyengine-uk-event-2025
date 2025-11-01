@@ -1,0 +1,43 @@
+import React from 'react';
+import Slide from '@/components/Slide';
+import SlideTitle from '@/components/SlideTitle';
+import SlideHeader from '@/components/SlideHeader';
+import SlideContent from '@/components/SlideContent';
+import SlideSubtitle from '@/components/SlideSubtitle';
+import BulletList from '@/components/BulletList';
+
+export default function AIInterfaceSlide() {
+  return (
+    <Slide>
+      <div className="max-w-7xl">
+        <SlideHeader>
+          <SlideTitle>Communicating externally</SlideTitle>
+        </SlideHeader>
+
+        <SlideContent size="lg">
+          <SlideSubtitle>
+            Dashboards, apps, and presentations
+          </SlideSubtitle>
+
+          <BulletList
+            size="lg"
+            items={[
+              {
+                text: 'Interactive policy visualisations',
+                subtext: 'Even basic levels of interactivity improve cut-through',
+              },
+              {
+                text: 'Custom calculators and apps',
+                subtext: 'Benefit eligibility tools, tax liability calculators',
+              },
+              {
+                text: 'Automated slide decks and reports',
+                subtext: 'This presentation itself was scaffolded with Claude Code. I spent the time saved doing more fun things, like tax-benefit policy modelling.',
+              },
+            ]}
+          />
+        </SlideContent>
+      </div>
+    </Slide>
+  );
+}
