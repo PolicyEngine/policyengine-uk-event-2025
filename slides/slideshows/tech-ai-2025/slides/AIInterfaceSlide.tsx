@@ -8,12 +8,12 @@ import BulletList from '@/components/BulletList';
 export default function AIInterfaceSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="h-full flex flex-col justify-center max-w-5xl mx-auto">
         <SlideHeader>
           <SlideTitle>Communicating research</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="lg">
+        <div className="mt-16">
           <h2 className="text-4xl font-semibold text-pe-dark text-left mb-12">
             Dashboards, calculators, and presentations
           </h2>
@@ -35,7 +35,7 @@ export default function AIInterfaceSlide() {
               },
             ]}
           />
-        </SlideContent>
+        </div>
       </div>
     </Slide>
   );

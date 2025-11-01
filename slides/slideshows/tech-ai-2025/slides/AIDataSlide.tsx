@@ -8,12 +8,12 @@ import BulletList from '@/components/BulletList';
 export default function AIDataSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="h-full flex flex-col justify-center max-w-5xl mx-auto">
         <SlideHeader>
           <SlideTitle>Building internally: data</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="lg">
+        <div className="mt-16">
           <h2 className="text-4xl font-semibold text-pe-dark text-left mb-12">
             Dataset enhancement with machine learning
           </h2>
@@ -34,7 +34,7 @@ export default function AIDataSlide() {
               },
             ]}
           />
-        </SlideContent>
+        </div>
       </div>
     </Slide>
   );
