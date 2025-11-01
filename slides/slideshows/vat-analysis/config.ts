@@ -1,4 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
+import SectionTitle from './slides/SectionTitle';
 import CoverSlide from './slides/CoverSlide';
 import IntroSlide from './slides/IntroSlide';
 import FirmDistributionSlide from './slides/FirmDistributionSlide';
@@ -17,6 +18,7 @@ export const vatAnalysisConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
+    SectionTitle,
     CoverSlide,
     IntroSlide,
     FirmDistributionSlide,

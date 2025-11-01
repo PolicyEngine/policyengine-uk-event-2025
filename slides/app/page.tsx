@@ -57,7 +57,8 @@ export default function Home() {
         {/* Agenda with linked presentations */}
         <div className="space-y-3">
           {agenda.map((item, index) => {
-            const hasSlides = item.slideshowId && slideshowIds.has(item.slideshowId);
+            // Any item with slideshowId can be clicked (will auto-generate section title if no full slideshow exists)
+            const hasSlides = !!item.slideshowId;
             const isBreakOrNetworking = item.type === 'break' || item.type === 'networking';
             const isCurrent = index === currentIndex;
             const isNext = index === nextIndex && !isCurrent;

@@ -14,10 +14,9 @@ export default function AutoSectionTitle() {
   const params = useParams();
   const slideshowId = params?.slideshow as string;
 
-  const slideshow = getSlideshowById(slideshowId);
   const agendaItem = agenda.find(item => item.slideshowId === slideshowId);
 
-  if (!slideshow || !agendaItem) {
+  if (!agendaItem) {
     return null;
   }
 

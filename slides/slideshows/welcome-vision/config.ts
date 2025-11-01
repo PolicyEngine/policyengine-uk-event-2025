@@ -19,11 +19,9 @@ export const welcomeVisionConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    CoverSlide,
     JourneyBeginning,
     RecognisingOpportunity,
     EarlyGrowth,
     IntroducingAnvar,
-    EndSlide,
   ],
 };

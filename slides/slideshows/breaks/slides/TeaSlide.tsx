@@ -24,9 +24,13 @@ export default function TeaSlide() {
         </div>
 
         <div className="flex justify-center">
-          <p className="text-2xl text-white/70">
-            Supported by the Nuffield Foundation
-          </p>
+          <Image
+            src={assetPath("/logos/nuffield-white.png")}
+            alt="Supported by the Nuffield Foundation"
+            width={250}
+            height={80}
+            className="opacity-70"
+          />
         </div>
       </div>
     </Slide>

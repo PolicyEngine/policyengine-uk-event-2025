@@ -10,6 +10,5 @@ export const uxDesignConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    CitizenCodexIntro,
   ],
 };
