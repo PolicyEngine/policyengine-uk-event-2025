@@ -83,42 +83,42 @@ export default function SectionTitleSlide({
 
     return (
       <Slide className="!bg-transparent gradient-bg" showFooter={false}>
-        <div className="max-w-7xl">
-          {/* Custom header with white logo */}
-          <div className="flex items-start justify-between gap-8 mb-10">
-            <div className="flex-1">
-              <SlideTitle className="text-white border-white">{slideTitle}</SlideTitle>
-            </div>
-            <div className="flex-shrink-0 pt-2">
-              <Image
-                src={assetPath("/logos/profile_white.svg")}
-                alt="PolicyEngine"
-                width={60}
-                height={60}
-                className="opacity-90"
-              />
-            </div>
+        <div className="w-full h-full flex flex-col items-center justify-center -mt-12">
+          {/* Centered title at top */}
+          <div className="text-center mb-20">
+            <h1 className="text-5xl font-bold text-white">
+              {slideTitle}
+            </h1>
           </div>
 
-          <div className={`${isThreeOrMore ? 'mt-8' : 'mt-16'} flex flex-col ${isThreeOrMore ? 'gap-8' : 'gap-12'}`}>
+          {/* Speakers in horizontal row with headshots above */}
+          <div className={`flex flex-row justify-center items-start ${isThreeOrMore ? 'gap-20' : 'gap-32'}`}>
             {speakers.map((speaker, idx) => (
-              <div key={idx} className="flex items-center justify-between gap-12">
-                <div className="flex-grow text-left space-y-1">
-                  <h2 className={`${isThreeOrMore ? 'text-3xl' : 'text-4xl'} font-bold text-white`}>{speaker!.name}</h2>
-                  <p className={`${isThreeOrMore ? 'text-xl' : 'text-2xl'} text-white/90`}>{speaker!.title}</p>
-                  <p className={`${isThreeOrMore ? 'text-xl' : 'text-2xl'} text-white/80`}>{speaker!.organisation}</p>
-                </div>
-
-                <div className="flex-shrink-0">
-                  <SpeakerHeadshot
-                    name={speaker!.name}
-                    imageUrl={speaker!.headshotUrl}
-                    size={isThreeOrMore ? 'medium' : 'large'}
-                    position="center"
-                  />
+              <div key={idx} className="flex flex-col items-center text-center space-y-4">
+                <SpeakerHeadshot
+                  name={speaker!.name}
+                  imageUrl={speaker!.headshotUrl}
+                  size={isThreeOrMore ? 'medium' : 'large'}
+                  position="center"
+                />
+                <div className="space-y-1">
+                  <h2 className={`${isThreeOrMore ? 'text-2xl' : 'text-3xl'} font-bold text-white`}>{speaker!.name}</h2>
+                  <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/90`}>{speaker!.title}</p>
+                  <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/80`}>{speaker!.organisation}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Logo at bottom center */}
+          <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+            <Image
+              src={assetPath("/logos/profile_white.svg")}
+              alt="PolicyEngine"
+              width={80}
+              height={80}
+              className="opacity-70"
+            />
           </div>
         </div>
       </Slide>
