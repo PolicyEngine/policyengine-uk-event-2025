@@ -87,7 +87,7 @@ export const speakersById: Record<string, Speaker> = {
   'pavel-makarchuk': {
     id: 'pavel-makarchuk',
     name: 'Pavel Makarchuk',
-    title: 'Policy Modeling Manager',
+    title: 'Policy Modelling Manager',
     organisation: 'PolicyEngine',
     headshotUrl: '/headshots/pavel-makarchuk.jpg'
   },

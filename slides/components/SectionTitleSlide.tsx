@@ -79,6 +79,7 @@ export default function SectionTitleSlide({
   // Handle multiple speakers by IDs
   if (speakerIds && speakerIds.length > 0) {
     const speakers = speakerIds.map(id => getSpeakerById(id)).filter(Boolean);
+    const isThreeOrMore = speakers.length >= 3;
 
     return (
       <Slide className="!bg-transparent gradient-bg" showFooter={false}>
@@ -99,28 +100,25 @@ export default function SectionTitleSlide({
             </div>
           </div>
 
-          <div className="mt-16 flex items-center justify-between gap-12">
-            <div className="flex-grow text-left space-y-6">
-              {speakers.map((speaker, idx) => (
-                <div key={idx} className="space-y-2">
-                  <h2 className="text-4xl font-bold text-white">{speaker!.name}</h2>
-                  <p className="text-2xl text-white/90">{speaker!.title}</p>
-                  <p className="text-2xl text-white/80">{speaker!.organisation}</p>
+          <div className={`${isThreeOrMore ? 'mt-8' : 'mt-16'} flex flex-col ${isThreeOrMore ? 'gap-8' : 'gap-12'}`}>
+            {speakers.map((speaker, idx) => (
+              <div key={idx} className="flex items-center justify-between gap-12">
+                <div className="flex-grow text-left space-y-1">
+                  <h2 className={`${isThreeOrMore ? 'text-3xl' : 'text-4xl'} font-bold text-white`}>{speaker!.name}</h2>
+                  <p className={`${isThreeOrMore ? 'text-xl' : 'text-2xl'} text-white/90`}>{speaker!.title}</p>
+                  <p className={`${isThreeOrMore ? 'text-xl' : 'text-2xl'} text-white/80`}>{speaker!.organisation}</p>
                 </div>
-              ))}
-            </div>
 
-            <div className="flex-shrink-0 flex flex-col gap-6">
-              {speakers.map((speaker, idx) => (
-                <SpeakerHeadshot
-                  key={idx}
-                  name={speaker!.name}
-                  imageUrl={speaker!.headshotUrl}
-                  size="large"
-                  position="center"
-                />
-              ))}
-            </div>
+                <div className="flex-shrink-0">
+                  <SpeakerHeadshot
+                    name={speaker!.name}
+                    imageUrl={speaker!.headshotUrl}
+                    size={isThreeOrMore ? 'medium' : 'large'}
+                    position="center"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Slide>

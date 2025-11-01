@@ -59,26 +59,20 @@ export default function CountdownTimer({ targetTime, eventDate }: CountdownTimer
 
   if (isExpired) {
     return (
-      <div className="text-6xl font-bold text-pe-teal animate-pulse">
+      <div className="text-6xl font-bold text-white animate-pulse">
         Time to resume!
       </div>
     );
   }
 
   return (
-    <div className="flex items-center justify-center gap-4">
-      <div className="text-center">
-        <div className="text-9xl font-bold text-pe-teal tabular-nums">
-          {formatNumber(timeLeft.minutes)}
-        </div>
-        <div className="text-3xl text-gray-600 mt-2">minutes</div>
+    <div className="flex items-center justify-center gap-8">
+      <div className="text-9xl font-bold text-white/70 tabular-nums">
+        {formatNumber(timeLeft.minutes)}
       </div>
-      <div className="text-9xl font-bold text-pe-dark">:</div>
-      <div className="text-center">
-        <div className="text-9xl font-bold text-pe-teal tabular-nums">
-          {formatNumber(timeLeft.seconds)}
-        </div>
-        <div className="text-3xl text-gray-600 mt-2">seconds</div>
+      <div className="text-9xl font-bold text-white/50">:</div>
+      <div className="text-9xl font-bold text-white/70 tabular-nums">
+        {formatNumber(timeLeft.seconds)}
       </div>
     </div>
   );

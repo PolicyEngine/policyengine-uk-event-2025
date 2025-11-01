@@ -6,35 +6,27 @@ import CountdownTimer from '@/components/CountdownTimer';
 
 export default function LunchSlide() {
   return (
-    <Slide showFooter={false}>
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
-        {/* Logo at top */}
-        <div>
+    <Slide className="!bg-transparent gradient-bg" showFooter={false}>
+      <div className="flex flex-col justify-between h-full py-24">
+        <div className="flex justify-center">
           <Image
-            src={assetPath("/logos/teal.svg")}
+            src={assetPath("/logos/white.svg")}
             alt="PolicyEngine"
-            width={350}
-            height={105}
+            width={400}
+            height={120}
             priority
           />
         </div>
 
-        {/* Main message */}
-        <div className="text-center space-y-3">
-          <h1 className="text-5xl font-bold text-pe-dark">
-            Lunch Break
-          </h1>
-          <p className="text-2xl text-gray-600">
-            Enjoy your meal and networking!
-          </p>
+        <div className="flex flex-col items-center gap-6">
+          <p className="text-3xl text-white/80">Programming begins in</p>
+          <CountdownTimer targetTime="12:30" eventDate="2025-11-03" />
         </div>
 
-        {/* Countdown timer */}
-        <div className="mt-4">
-          <p className="text-2xl text-gray-700 text-center mb-6">
-            Programming starts in:
+        <div className="flex justify-center">
+          <p className="text-2xl text-white/70">
+            Supported by the Nuffield Foundation
           </p>
-          <CountdownTimer targetTime="12:30" eventDate="2025-11-03" />
         </div>
       </div>
     </Slide>
