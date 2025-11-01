@@ -48,8 +48,20 @@ export default function SlideshowViewer({ slideCount, children }: SlideshowViewe
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === slideCount - 1;
 
+  const handleMainClick = (e: React.MouseEvent) => {
+    // Only advance if we're not clicking on navigation controls
+    // Navigation controls have pointer-events-auto, so they'll handle their own clicks
+    const target = e.target as HTMLElement;
+    if (target.closest('.pointer-events-auto')) {
+      return;
+    }
+
+    // Advance to next slide
+    setCurrentSlide((prev) => Math.min(prev + 1, slideCount - 1));
+  };
+
   return (
-    <main className="relative">
+    <main className="relative cursor-pointer" onClick={handleMainClick}>
       {mounted && childArray.map((child, index) => (
         <div
           key={index}
@@ -72,7 +84,7 @@ export default function SlideshowViewer({ slideCount, children }: SlideshowViewe
             ← Menu
           </Link>
           <span className="text-white/60 text-xs">
-            Arrow keys • F for fullscreen
+            Click or arrow keys • F for fullscreen
           </span>
         </div>
 

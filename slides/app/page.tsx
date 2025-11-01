@@ -7,6 +7,8 @@ import { getAllSlideshowMetadata } from '@/lib/slideshows';
 import { agenda } from '@/lib/agenda';
 import { getCurrentAgendaIndex, getNextAgendaIndex } from '@/lib/timeUtils';
 import { assetPath } from '@/lib/assetPath';
+import { getSpeakersByIds } from '@/lib/speakers';
+import MenuHeadshot from '@/components/MenuHeadshot';
 
 export default function Home() {
   const slideshows = getAllSlideshowMetadata();
@@ -74,6 +76,8 @@ export default function Home() {
               );
             }
 
+            const speakers = item.speakerIds ? getSpeakersByIds(item.speakerIds) : [];
+
             const content = (
               <div className="flex items-start justify-between gap-6">
                 <div className="flex-1 text-left">
@@ -102,16 +106,23 @@ export default function Home() {
                     </p>
                   )}
                 </div>
-                {hasSlides && (
-                  <div className="flex-shrink-0 flex items-center">
+                <div className="flex-shrink-0 flex items-center gap-2">
+                  {speakers.map((speaker, idx) => (
+                    <MenuHeadshot
+                      key={idx}
+                      name={speaker.name}
+                      imageUrl={speaker.headshotUrl}
+                    />
+                  ))}
+                  {hasSlides && speakers.length === 0 && (
                     <Image
                       src={assetPath("/logos/profile_teal_bg.png")}
                       alt=""
                       width={40}
                       height={40}
                     />
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             );
 

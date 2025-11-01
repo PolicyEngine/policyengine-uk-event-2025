@@ -87,11 +87,71 @@ www.policyengine.org
 
 <div style="page-break-after: always;"></div>
 
+## Speakers
+
+### PolicyEngine Team
+
+**Max Ghenis**
+*Founder & CEO, PolicyEngine*
+![Max Ghenis](/headshots/max-ghenis.jpg)
+Max Ghenis founded PolicyEngine in 2021 to democratise access to tax and benefit policy analysis. He leads the organisation's strategic vision and US expansion.
+
+**Nikhil Woodruff**
+*Co-founder & CTO, PolicyEngine*
+![Nikhil Woodruff](/headshots/nikhil-woodruff.jpg)
+Nikhil Woodruff leads PolicyEngine's technical architecture and oversees the development of the UK microsimulation model and AI integration.
+
+**Vahid Ahmadi**
+*Research Associate, PolicyEngine*
+![Vahid Ahmadi](/headshots/vahid-ahmadi.jpg)
+Vahid Ahmadi specialises in data enhancement, behavioural modelling, and expanding PolicyEngine's capabilities to firm-level microsimulation.
+
+**Anthony Volk**
+*Software Engineer, PolicyEngine*
+![Anthony Volk](/headshots/anthony-volk.jpg)
+Anthony Volk leads the development of PolicyEngine 2.0's user interface and API infrastructure.
+
+### External Speakers
+
+**Anvar Sarygulov**
+*Research Grants and Programmes Manager, Nuffield Foundation*
+![Anvar Sarygulov](/headshots/anvar-sarygulov.jpg)
+Anvar Sarygulov manages the Nuffield Foundation's grant programme supporting evidence-based policy research.
+
+**Arun Advani**
+*Director of CenTax and Professor of Economics, University of Warwick*
+![Arun Advani](/headshots/arun-advani.jpg)
+Arun Advani directs the Centre for Tax Analysis and conducts research on taxation, inequality, and economic policy.
+
+**Max Mosley**
+*Senior Economist, New Economics Foundation*
+![Max Mosley](/headshots/max-mosley.jpg)
+Max Mosley, formerly at NIESR, specialises in living standards analysis and poverty reduction policy.
+
+**Malcolm Torry**
+*Senior Visiting Fellow, Institute for Social and Economic Research*
+![Malcolm Torry](/headshots/malcolm-torry.jpg)
+Malcolm Torry researches universal basic income and carbon dividend policies using microsimulation methods.
+
+**Biniam Gebre**
+*Co-Founder, Citizen Codex*
+![Biniam Gebre](/headshots/biniam-gebre.jpg)
+Biniam Gebre leads user experience research and design for social impact technology projects.
+
+**MaSara Myers**
+*Creative Director, Citizen Codex*
+![MaSara Myers](/headshots/masara-myers.jpg)
+MaSara Myers specialises in accessible design for complex policy analysis tools.
+
+---
+
+<div style="page-break-after: always;"></div>
+
 ## Welcome and Vision
 
 **Speaker: Max Ghenis**
 
-Max Ghenis opens the event by introducing PolicyEngine as a nonprofit providing free, open-source microsimulation tools that make sophisticated tax and benefit policy analysis accessible to policymakers, researchers, journalists, and citizens. He describes PolicyEngine UK as the UK's only open-source tax-benefit microsimulation model, built on the OpenFisca framework, combining an intuitive web interface with a sophisticated engine processing millions of policy reforms in real-time. The platform uses the Family Resources Survey enhanced through fusion with other datasets and machine learning techniques. Ghenis announces the Nuffield Foundation's December 2024 grant of £251,296 to enhance the UK model, supporting local authority and constituency datasets, integration of childcare subsidies and major public services, an open validation dashboard, and AI-capable design improvements.
+Max Ghenis opens the event by introducing PolicyEngine as a nonprofit providing free, open-source microsimulation tools that make sophisticated tax and benefit policy analysis accessible to policymakers, researchers, journalists, and citizens. He describes PolicyEngine UK as the UK's only open-source tax-benefit microsimulation model, built on the OpenFisca framework, combining an intuitive web interface with a sophisticated engine processing millions of policy reforms in real-time. The platform uses the Family Resources Survey enhanced through fusion with other datasets and machine learning techniques. Ghenis announces the Nuffield Foundation's transformative support in December 2024, enabling the UK model to expand with local authority and constituency datasets, integration of childcare subsidies and major public services, an open validation dashboard, and AI-capable design improvements.
 
 Ghenis highlights PolicyEngine's growing impact: formal recognition from HM Treasury, rapid analysis of major policy moments, and expansion to cover all 50 US states with comprehensive tax-benefit modeling. The organization has expanded into environmental policy with carbon tax modeling, firm-level microsimulation for VAT analysis, and behavioral response modeling. He previews the day's agenda, explaining how PolicyEngine 2.0—with AI-powered explanations, enhanced user experience, and expanded analytical capabilities—represents a transformative step toward making evidence-based policy analysis an integral part of democratic discourse.
 
