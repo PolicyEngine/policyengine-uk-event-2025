@@ -1,6 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
-import CitizenCodexIntro from './slides/CitizenCodexIntro';
 
 export const uxDesignConfig: SlideshowConfig = {
   id: 'ux-design',
