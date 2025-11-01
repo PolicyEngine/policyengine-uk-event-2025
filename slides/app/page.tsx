@@ -88,27 +88,38 @@ export default function Home() {
                         Up next
                       </span>
                     )}
-                    {!hasSlides && (
-                      <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
-                        Slides coming soon
-                      </span>
-                    )}
                   </div>
-                  <h2 className={`text-xl font-bold mb-2 ${hasSlides ? 'text-pe-dark group-hover:text-pe-teal' : 'text-gray-700'}`}>
+                  <h2 className="text-xl font-bold mb-2 text-pe-dark">
                     {item.title}
                   </h2>
                   {item.speaker && (
                     <p className="text-sm text-gray-600 italic">{item.speaker}</p>
                   )}
+                  {!hasSlides && (
+                    <p className="text-sm text-gray-500 mt-2">
+                      Slides coming soon
+                    </p>
+                  )}
                 </div>
-                {hasSlides && (
-                  <div className="flex-shrink-0">
+                {hasSlides ? (
+                  <div className="flex-shrink-0 flex flex-col items-end gap-2">
                     <Image
                       src="/logos/profile_teal_bg.png"
                       alt=""
                       width={40}
                       height={40}
                     />
+                    <span className="text-xs text-pe-teal font-medium">
+                      View slides →
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex-shrink-0 flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
                   </div>
                 )}
               </div>
@@ -119,7 +130,7 @@ export default function Home() {
                 <Link
                   key={index}
                   href={`/${item.slideshowId}`}
-                  className={`block bg-white rounded-lg p-6 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer ${isCurrent ? 'ring-4 ring-pe-teal shadow-xl' : ''}`}
+                  className={`group block bg-white rounded-lg p-6 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer ${isCurrent ? 'ring-4 ring-pe-teal shadow-xl' : ''}`}
                 >
                   {content}
                 </Link>
@@ -129,7 +140,7 @@ export default function Home() {
             return (
               <div
                 key={index}
-                className={`block bg-white rounded-lg p-6 transition-all duration-300 opacity-60 ${isCurrent ? 'ring-4 ring-pe-teal opacity-100' : ''}`}
+                className={`block bg-white rounded-lg p-6 transition-all duration-300 ${isCurrent ? 'ring-4 ring-pe-teal shadow-xl' : ''}`}
               >
                 {content}
               </div>
