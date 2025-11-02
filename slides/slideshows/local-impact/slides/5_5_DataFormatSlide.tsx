@@ -3,36 +3,39 @@ import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
+import SlideSubtitle from '@/components/SlideSubtitle';
+import BulletList from '@/components/BulletList';
 
 export default function DataFormatSlide() {
   return (
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>Data format for local area modelling</SlideTitle>
+          <SlideTitle>Data output format</SlideTitle>
         </SlideHeader>
 
-        <SlideContent size="md">
-          <div className="space-y-6 text-left">
-            <div>
-              <h2 className="text-3xl font-semibold text-pe-dark mb-4">UK approach: reweighting</h2>
-              <ul className="list-disc list-inside space-y-3 text-xl">
-                <li>Produced a weight file of 650,100k weights (100k households × 650 constituencies)</li>
-                <li>Each household in the Enhanced FRS has a weight for each constituency</li>
-                <li>Allows flexible analysis across all areas using the same base dataset</li>
-              </ul>
-            </div>
+        <SlideContent size="lg">
+          <SlideSubtitle>
+            650,100k weights for UK constituencies
+          </SlideSubtitle>
 
-            <div>
-              <h2 className="text-3xl font-semibold text-pe-dark mb-4">US approach: L0 optimised sampling</h2>
-              <ul className="list-disc list-inside space-y-3 text-xl">
-                <li>Create small, targeted datasets for each local area</li>
-                <li>L0 regularisation selects the most representative records</li>
-                <li>Improves efficiency by reducing dataset size</li>
-                <li>Improves accuracy by allowing local records to truly represent local policy outcomes</li>
-              </ul>
-            </div>
-          </div>
+          <BulletList
+            size="lg"
+            items={[
+              {
+                text: 'Weight file for each constituency',
+                subtext: '100k Enhanced FRS households × 650 constituencies',
+              },
+              {
+                text: 'Flexible analysis across all areas',
+                subtext: 'Same base dataset, different weights for each constituency',
+              },
+              {
+                text: 'US: L0 optimised sampling',
+                subtext: 'Smaller datasets improve efficiency and accuracy by allowing local records to represent local policy outcomes',
+              },
+            ]}
+          />
         </SlideContent>
       </div>
     </Slide>
