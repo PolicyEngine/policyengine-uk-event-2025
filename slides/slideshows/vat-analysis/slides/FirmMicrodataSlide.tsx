@@ -20,14 +20,14 @@ export default function FirmMicrodataSlide() {
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
                 We construct synthetic firm microdata using weight optimisation and multi-objective
-                calibration to match ONS firm structures and HMRC VAT profiles.
+                calibration to match ONS firm structures and HMRC VAT profiles
               </span>
             </li>
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
                 We capture turnover, sector, employment size, and VAT liability with
-                over <span className="font-bold">200</span> calibration targets.
+                over <span className="font-bold">200</span> calibration targets
               </span>
             </li>
           </ul>

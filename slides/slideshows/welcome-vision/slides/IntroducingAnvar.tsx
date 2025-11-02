@@ -32,16 +32,16 @@ export default function IntroducingAnvar() {
             <div className="space-y-6">
               <p className="text-2xl">
                 The Nuffield Foundation recognised PolicyEngine's potential to transform
-                evidence-based policymaking in the UK.
+                evidence-based policymaking in the UK
               </p>
 
               <p className="text-2xl">
                 Their support enabled us to build the infrastructure that UK policy
-                analysis desperately needed.
+                analysis desperately needed
               </p>
 
               <p className="text-2xl font-medium text-pe-teal">
-                Our first major UK grant — a transformative moment for PolicyEngine.
+                Our first major UK grant — a transformative moment for PolicyEngine
               </p>
             </div>
 

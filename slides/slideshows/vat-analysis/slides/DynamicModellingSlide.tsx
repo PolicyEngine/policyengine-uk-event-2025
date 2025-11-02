@@ -17,7 +17,7 @@ export default function DynamicModellingSlide() {
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
-                Firms respond to tax incentives! We extend the model to capture behavioural responses.
+                Firms respond to tax incentives! We extend the model to capture behavioural responses
               </span>
             </li>
             <li className="flex items-start gap-4">
@@ -33,7 +33,7 @@ export default function DynamicModellingSlide() {
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
-                Firms choose output where marginal revenue net of VAT equals marginal cost.
+                Firms choose output where marginal revenue net of VAT equals marginal cost
               </span>
             </li>
             <li className="flex items-start gap-4">
@@ -49,7 +49,7 @@ export default function DynamicModellingSlide() {
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
                 This lets us back out firm-specific marginal costs from observed input and output data,
-                capturing heterogeneity in productivity across firms.
+                capturing heterogeneity in productivity across firms
               </span>
             </li>
             <li className="flex items-start gap-4">

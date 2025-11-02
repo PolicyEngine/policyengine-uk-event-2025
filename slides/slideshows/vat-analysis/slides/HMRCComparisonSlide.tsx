@@ -20,14 +20,14 @@ export default function HMRCComparisonSlide() {
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
                 We benchmark our results against HMRC's published projections for raising
-                the VAT threshold from £85k to £90k.
+                the VAT threshold from £85k to £90k
               </span>
             </li>
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
                 We apply OBR Retail Price Index growth to firm turnover and VAT liabilities,
-                holding firm counts constant and assuming no behavioural responses.
+                holding firm counts constant and assuming no behavioural responses
               </span>
             </li>
           </ul>

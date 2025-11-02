@@ -47,13 +47,13 @@ export default function BehaviouralExtensionSlide() {
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
-                <span className="font-bold">No-notch:</span> We follow the bunching literature (Saez, 2010; Chetty et al., 2011; Kleven & Waseem, 2013; Liu & Lockwood, 2015) by fitting a smooth polynomial to the turnover distribution.
+                <span className="font-bold">No-notch:</span> We follow the bunching literature (Saez, 2010; Chetty et al., 2011; Kleven & Waseem, 2013; Liu & Lockwood, 2015) by fitting a smooth polynomial to the turnover distribution
               </span>
             </li>
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
-                <span className="font-bold">Elasticity Estimation:</span> We find the mapping from each firm's real-world turnover to its turnover under the counterfactual scenario (here, the no-notch distribution), and then estimate elasticities.
+                <span className="font-bold">Elasticity Estimation:</span> We find the mapping from each firm's real-world turnover to its turnover under the counterfactual scenario (here, the no-notch distribution), and then estimate elasticities
               </span>
             </li>
           </ul>
