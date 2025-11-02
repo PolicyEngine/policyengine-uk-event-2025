@@ -183,7 +183,7 @@ export default function ConstituencyMap() {
         return constData ? colorScale(constData.average_gain) : '#ddd';
       })
       .attr('stroke', '#fff')
-      .attr('stroke-width', 0.1)
+      .attr('stroke-width', 0.05)
       .attr('class', 'constituency-path')
       .style('cursor', 'pointer')
       .on('click', function(event, d: any) {
@@ -193,10 +193,10 @@ export default function ConstituencyMap() {
         console.log('Clicked constituency:', d.properties.Name, 'Code:', d.properties.GSScode, 'Data:', constData);
 
         if (constData) {
-          // Update border styling for all paths
+          // Update styling for all paths
           svg.selectAll('.constituency-path')
             .attr('stroke', '#fff')
-            .attr('stroke-width', 0.1);
+            .attr('stroke-width', 0.05);
 
           // Highlight selected constituency
           d3.select(this)
@@ -220,27 +220,31 @@ export default function ConstituencyMap() {
         }
       })
       .on('mouseover', function(_event, _d: any) {
-        const currentStroke = d3.select(this).attr('stroke');
-        // Only change if not already highlighted
-        if (currentStroke !== '#1D4044') {
+        const currentStrokeWidth = d3.select(this).attr('stroke-width');
+        // Only change if not already highlighted (selected has 0.6)
+        if (currentStrokeWidth === '0.05') {
           d3.select(this)
             .attr('stroke', '#666')
-            .attr('stroke-width', 0.5);
+            .attr('stroke-width', 0.3);
         }
       })
       .on('mouseout', function(_event, _d: any) {
-        const currentStroke = d3.select(this).attr('stroke');
+        const currentStrokeWidth = d3.select(this).attr('stroke-width');
         // Only reset if not highlighted
-        if (currentStroke !== '#1D4044') {
+        if (currentStrokeWidth !== '0.6') {
           d3.select(this)
             .attr('stroke', '#fff')
-            .attr('stroke-width', 0.1);
+            .attr('stroke-width', 0.05);
         }
       });
 
-    // Zoom behavior
+    // Zoom behavior - disable mouse panning to prevent interference with clicks
     const zoom = d3.zoom()
       .scaleExtent([1, 8])
+      .filter((event) => {
+        // Disable all mouse interactions - only allow programmatic zoom
+        return false;
+      })
       .on('zoom', (event) => {
         g.attr('transform', event.transform);
       });
@@ -258,7 +262,46 @@ export default function ConstituencyMap() {
     // Add reset button listener
     (window as any).resetConstituencyZoom = resetZoom;
 
-  }, [geoData, data, selectedScenario]);
+  }, [geoData, data]);
+
+  // Update colors when scenario changes (without re-rendering whole map)
+  useEffect(() => {
+    if (!svgRef.current || !geoData || !data.length) return;
+
+    const svg = d3.select(svgRef.current);
+    const scenarioData = data.filter(d => d.scenario === selectedScenario);
+    const dataMap = new Map(scenarioData.map(d => [d.constituency_code, d]));
+
+    // Color scale
+    const extent = d3.extent(scenarioData, d => d.average_gain) as [number, number];
+    const maxAbsValue = Math.max(Math.abs(extent[0]), Math.abs(extent[1]));
+    const colorScale = d3.scaleDiverging<string>()
+      .domain([-maxAbsValue, 0, maxAbsValue])
+      .interpolator(d3.interpolateRdYlGn);
+
+    // Update fill colors with transition
+    svg.selectAll('.constituency-path')
+      .transition()
+      .duration(500)
+      .attr('fill', (d: any) => {
+        const constData = dataMap.get(d.properties.GSScode);
+        return constData ? colorScale(constData.average_gain) : '#ddd';
+      });
+
+  }, [selectedScenario, data, geoData]);
+
+  // Update selected constituency data when scenario changes
+  useEffect(() => {
+    if (!selectedConstituency || !data.length) return;
+
+    const scenarioData = data.filter(d => d.scenario === selectedScenario);
+    const dataMap = new Map(scenarioData.map(d => [d.constituency_code, d]));
+    const newData = dataMap.get(selectedConstituency.constituency_code);
+
+    if (newData) {
+      setSelectedConstituency(newData);
+    }
+  }, [selectedScenario, data]);
 
   // Prevent F key from triggering fullscreen
   useEffect(() => {
@@ -299,10 +342,10 @@ export default function ConstituencyMap() {
     const svg = d3.select(svgRef.current);
     const g = svg.select('g');
 
-    // Update border styling for all paths
+    // Update styling for all paths
     svg.selectAll('.constituency-path')
       .attr('stroke', '#fff')
-      .attr('stroke-width', 0.1);
+      .attr('stroke-width', 0.05);
 
     // Highlight selected constituency and get its bounds
     const selectedPath = svg.selectAll('.constituency-path')
@@ -388,7 +431,6 @@ export default function ConstituencyMap() {
                 key={key}
                 onClick={() => {
                   setSelectedScenario(key);
-                  setSelectedConstituency(null);
                 }}
                 className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                   selectedScenario === key
@@ -408,7 +450,7 @@ export default function ConstituencyMap() {
               <h3 className="text-lg font-semibold text-pe-dark mb-2">
                 {selectedConstituency.constituency_name}
               </h3>
-              <p className="text-2xl font-bold" style={{
+              <p className="text-2xl font-bold transition-all duration-300" style={{
                 color: selectedConstituency.average_gain >= 0 ? '#16a34a' : '#dc2626'
               }}>
                 £{selectedConstituency.average_gain.toFixed(2)}
