@@ -1,6 +1,7 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
 import Beginnings from './slides/Beginnings';
+import FirstReport from './slides/FirstReport';
 import UBICenterLaunch from './slides/UBICenterLaunch';
 import MakeEveryonePolicymaker from './slides/MakeEveryonePolicymaker';
 import USLaunch from './slides/USLaunch';
@@ -18,6 +19,7 @@ export const welcomeVisionConfig: SlideshowConfig = {
   slides: [
     SectionTitle,
     Beginnings,
+    FirstReport,
     UBICenterLaunch,
     MakeEveryonePolicymaker,
     USLaunch,

@@ -1,5 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/0_SectionTitle';
+import AgendaSlide from './slides/1_AgendaSlide';
 import ContextSlide from './slides/2_ContextSlide';
 import AIUsesSlide from './slides/3_AIUsesSlide';
 import AIBuildingSlide from './slides/4_AIBuildingSlide';
@@ -15,6 +16,7 @@ export const techAI2025Config: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
+    AgendaSlide,
     ContextSlide,
     AIUsesSlide,
     AIBuildingSlide,
