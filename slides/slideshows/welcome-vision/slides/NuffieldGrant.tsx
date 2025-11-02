@@ -10,7 +10,7 @@ export default function NuffieldGrant() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>September 2024: Nuffield Foundation support</SlideTitle>
+          <SlideTitle>The turning point: Nuffield Foundation support</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>

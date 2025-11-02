@@ -4,20 +4,22 @@ import React, { useState, useEffect } from 'react';
 import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
+import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function GrowingAdoption() {
   const [visibleLogos, setVisibleLogos] = useState(0);
 
   const organizations = [
-    { name: 'Green Party', description: 'Political party' },
-    { name: 'Centre for Policy Studies', description: 'Think tank' },
-    { name: 'NIESR', description: 'Research institute' },
-    { name: 'Institute of Economic Affairs', description: 'Think tank' },
-    { name: 'Social Market Foundation', description: 'Think tank' },
-    { name: 'Liberal Democrats', description: 'Political party' },
-    { name: 'UBI Lab Network', description: 'Research network' },
-    { name: 'UK in a Changing Europe', description: 'Research initiative' },
-    { name: 'UN Digital Public Good', description: 'Recognition', isUN: true },
+    { name: 'Green Party', logo: '/logos/organizations/gpew.png', height: 60 },
+    { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png', height: 50 },
+    { name: 'NIESR', logo: '/logos/organizations/niesr.jpeg', height: 50 },
+    { name: 'Institute of Economic Affairs', logo: '/logos/organizations/iea.svg', height: 50 },
+    { name: 'Social Market Foundation', logo: '/logos/organizations/smf.png', height: 50 },
+    { name: 'Liberal Democrats', logo: '/logos/organizations/liberal-party.jpeg', height: 60 },
+    { name: 'UBI Lab Network', logo: '/logos/organizations/ubilabs.png', height: 50 },
+    { name: 'UK in a Changing Europe', logo: '/logos/organizations/ukeu.svg', height: 50 },
+    { name: 'UN Digital Public Good', logo: '/logos/organizations/dpga.png', height: 80, isUN: true },
   ];
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export default function GrowingAdoption() {
               <div
                 key={idx}
                 className={`
-                  rounded-xl p-8 border-2 transition-all duration-500
+                  rounded-xl p-8 border-2 transition-all duration-500 flex items-center justify-center
                   ${idx < visibleLogos
                     ? 'opacity-100 scale-100 border-pe-teal bg-white shadow-lg'
                     : 'opacity-0 scale-95 border-transparent'
@@ -55,17 +57,16 @@ export default function GrowingAdoption() {
                 `}
                 style={{
                   transitionDelay: `${idx * 100}ms`,
-                  minHeight: org.isUN ? '120px' : '140px'
+                  minHeight: org.isUN ? '140px' : '120px'
                 }}
               >
-                <div className="flex flex-col items-center justify-center h-full text-center gap-3">
-                  <h3 className={`font-bold text-pe-dark ${org.isUN ? 'text-3xl' : 'text-2xl'}`}>
-                    {org.name}
-                  </h3>
-                  <p className={`text-gray-600 ${org.isUN ? 'text-lg' : 'text-base'}`}>
-                    {org.description}
-                  </p>
-                </div>
+                <Image
+                  src={assetPath(org.logo)}
+                  alt={org.name}
+                  width={org.isUN ? 300 : 200}
+                  height={org.height}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>

@@ -203,6 +203,48 @@ function generateHtmlHeader() {
             overflow: hidden;
         }
 
+        .page-content.two-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .page-content.two-sections .section {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .page-content.two-sections .section h1 {
+            font-size: 24px;
+            margin: 0 0 12px 0;
+            padding: 0 0 10px 0;
+        }
+
+        .page-content.two-sections .section h1.long-title {
+            font-size: 22px;
+        }
+
+        .page-content.two-sections .section p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 6px 0;
+        }
+
+        .page-content.two-sections .speakers-container {
+            margin: 6px 0 12px 0;
+        }
+
+        .page-content.two-sections .speaker-line {
+            font-size: 12px;
+            gap: 8px;
+            margin: 4px 0;
+        }
+
+        .page-content.two-sections .speaker-inline-headshot {
+            width: 40px;
+            height: 40px;
+        }
+
         .cover-page {
             background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
             display: flex;
@@ -574,7 +616,7 @@ function generateSpeakersPage(speakers, agendaItems) {
   return html;
 }
 
-function generateContentPage(agendaItem, speakers, pageNumber) {
+function generateSectionContent(agendaItem, speakers) {
   const slideshowId = agendaItem.slideshowId;
   const reportMdPath = path.join(SLIDES_DIR, `slideshows/${slideshowId}/report.md`);
 
@@ -585,10 +627,10 @@ function generateContentPage(agendaItem, speakers, pageNumber) {
     // Convert basic markdown to HTML (simple conversion for now)
     content = content
       .split('\n\n')
-      .map(para => `        <p>${para.trim()}</p>`)
+      .map(para => `            <p>${para.trim()}</p>`)
       .join('\n\n');
   } else {
-    content = `        <p><em>Content for this section will be added from slideshows/${slideshowId}/report.md</em></p>`;
+    content = `            <p><em>Content for this section will be added from slideshows/${slideshowId}/report.md</em></p>`;
   }
 
   // Format title
@@ -612,29 +654,62 @@ function generateContentPage(agendaItem, speakers, pageNumber) {
       const headshot = s.headshotUrl
         ? `<img src="../slides/public${s.headshotUrl}" alt="${s.name}" class="speaker-inline-headshot">`
         : '';
-      return `        <div class="speaker-line">${headshot}<span>${s.name}, ${s.title}, ${s.organisation}</span></div>`;
+      return `            <div class="speaker-line">${headshot}<span>${s.name}, ${s.title}, ${s.organisation}</span></div>`;
     }).join('\n');
 
-    speakerHtml = `        <div class="speakers-container">\n${speakerLines}\n        </div>`;
+    speakerHtml = `            <div class="speakers-container">\n${speakerLines}\n            </div>`;
   }
 
-  const commentTitle = title.toUpperCase().replace(/:/g, '');
+  return {
+    title,
+    titleClass,
+    speakerHtml,
+    content
+  };
+}
 
-  return `
-<!-- PAGE ${pageNumber}: ${commentTitle} -->
+function generateTwoSectionPage(item1, item2, speakers, pageNumber) {
+  const section1 = generateSectionContent(item1, speakers);
+  const section2 = item2 ? generateSectionContent(item2, speakers) : null;
+
+  const title1Comment = section1.title.toUpperCase().replace(/:/g, '');
+  const title2Comment = section2 ? section2.title.toUpperCase().replace(/:/g, '') : '';
+  const pageComment = section2
+    ? `${title1Comment} / ${title2Comment}`
+    : title1Comment;
+
+  let html = `
+<!-- PAGE ${pageNumber}: ${pageComment} -->
 <div class="page">
-    <div class="page-content">
-        <h1${titleClass}>${title}</h1>
-${speakerHtml}
+    <div class="page-content two-sections">
+        <div class="section">
+            <h1${section1.titleClass}>${section1.title}</h1>
+${section1.speakerHtml}
 
-${content}
-    </div>
+${section1.content}
+        </div>
+`;
+
+  if (section2) {
+    html += `
+        <div class="section">
+            <h1${section2.titleClass}>${section2.title}</h1>
+${section2.speakerHtml}
+
+${section2.content}
+        </div>
+`;
+  }
+
+  html += `    </div>
     <div class="page-footer">
         <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
         <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 `;
+
+  return html;
 }
 
 function generateBackCover() {
@@ -678,14 +753,24 @@ function generateReport() {
   html += generateAgendaPage(agendaItems, speakers);
   html += generateSpeakersPage(speakers, agendaItems);
 
-  // Generate content pages for items with slideshowId
+  // Generate content pages for items with slideshowId (2 sections per page)
+  const contentItems = agendaItems.filter(
+    item => item.slideshowId && item.type !== 'break' && item.type !== 'networking'
+  );
+
   let pageNumber = 4;
-  for (const item of agendaItems) {
-    if (item.slideshowId && item.type !== 'break' && item.type !== 'networking') {
-      console.log(`  - Generating page ${pageNumber} for: ${item.title}`);
-      html += generateContentPage(item, speakers, pageNumber);
-      pageNumber++;
+  for (let i = 0; i < contentItems.length; i += 2) {
+    const item1 = contentItems[i];
+    const item2 = contentItems[i + 1] || null;
+
+    if (item2) {
+      console.log(`  - Generating page ${pageNumber} for: ${item1.title} / ${item2.title}`);
+    } else {
+      console.log(`  - Generating page ${pageNumber} for: ${item1.title}`);
     }
+
+    html += generateTwoSectionPage(item1, item2, speakers, pageNumber);
+    pageNumber++;
   }
 
   html += generateBackCover();

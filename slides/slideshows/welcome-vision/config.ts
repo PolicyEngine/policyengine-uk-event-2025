@@ -7,7 +7,6 @@ import PolicyScoring from './slides/PolicyScoring';
 import MLAccuracy from './slides/MLAccuracy';
 import GrowingAdoption from './slides/GrowingAdoption';
 import NuffieldGrant from './slides/NuffieldGrant';
-import IntroducingAnvar from './slides/IntroducingAnvar';
 
 export const welcomeVisionConfig: SlideshowConfig = {
   id: 'welcome-vision',
@@ -24,6 +23,5 @@ export const welcomeVisionConfig: SlideshowConfig = {
     MLAccuracy,
     GrowingAdoption,
     NuffieldGrant,
-    IntroducingAnvar,
   ],
 };
