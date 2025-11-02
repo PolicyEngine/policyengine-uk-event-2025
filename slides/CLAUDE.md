@@ -28,26 +28,22 @@ Each slide is a React component. Create files in `slideshows/your-talk-id/slides
 // slideshows/your-talk-id/slides/IntroSlide.tsx
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
-import SlideHeader from '@/components/SlideHeader';
-import SlideContent from '@/components/SlideContent';
+import SlideLayout from '@/components/SlideLayout';
+import BulletList from '@/components/BulletList';
 
 export default function IntroSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
-        <SlideHeader>
-          <SlideTitle>Your slide title</SlideTitle>
-        </SlideHeader>
-
-        <p className="text-xl italic text-gray-600 mb-8 text-left">
-          Speaker: Your Name
-        </p>
-
-        <SlideContent size="md">
-          <p>Your content here. Keep it concise and left-aligned.</p>
-        </SlideContent>
-      </div>
+      <SlideLayout title="Your slide title">
+        <BulletList
+          size="md"
+          items={[
+            { text: 'Your first point here' },
+            { text: 'Your second point here' },
+            { text: 'Your third point here' },
+          ]}
+        />
+      </SlideLayout>
     </Slide>
   );
 }
@@ -59,20 +55,16 @@ export default function IntroSlide() {
 // slideshows/your-talk-id/slides/CoverSlide.tsx
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
+import CoverSlideLayout from '@/components/CoverSlideLayout';
 
 export default function CoverSlide() {
   return (
     <Slide isCover showFooter={false}>
-      <div className="flex flex-col items-center justify-center space-y-16">
-        <SlideTitle isCover>
-          Your talk title
-        </SlideTitle>
-        <div className="text-3xl text-white space-y-3 text-center">
-          <p className="font-medium">Your Name</p>
-          <p>Your Organisation</p>
-        </div>
-      </div>
+      <CoverSlideLayout
+        title="Your talk title"
+        presenter="Your Name"
+        organization="Your Organisation"
+      />
     </Slide>
   );
 }
@@ -82,17 +74,12 @@ export default function CoverSlide() {
 // slideshows/your-talk-id/slides/EndSlide.tsx
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
+import EndSlideLayout from '@/components/EndSlideLayout';
 
 export default function EndSlide() {
   return (
     <Slide isEnd showFooter={false}>
-      <div className="flex flex-col items-center justify-center space-y-12">
-        <SlideTitle isEnd>Thank you</SlideTitle>
-        <div className="text-2xl text-white space-y-6 text-center">
-          <p className="text-3xl font-medium">Questions?</p>
-        </div>
-      </div>
+      <EndSlideLayout />
     </Slide>
   );
 }
@@ -152,50 +139,88 @@ Edit `lib/agenda.ts` to link your talk:
 
 ## Slide components
 
-### SlideContent
+### BulletList
 
-Use for main content with different sizes:
+Use for lists with different sizes:
 
 ```tsx
-<SlideContent size="sm">...</SlideContent>  // Smaller text (text-xl)
-<SlideContent size="md">...</SlideContent>  // Medium text (text-2xl)
-<SlideContent size="lg">...</SlideContent>  // Large text (text-3xl)
+<BulletList
+  size="sm"  // or "md" or "lg"
+  items={[
+    { text: 'First point' },
+    { text: 'Second point', subtext: 'Optional additional detail' },
+    { text: 'Third point' },
+  ]}
+/>
 ```
 
-### Two-column layout
+### SlideLayout
+
+Standard slide with title:
 
 ```tsx
-<SlideContent columns={2}>
-  <div>
-    <h2 className="text-3xl font-semibold text-pe-dark mb-4">Left column</h2>
-    <p>Content here</p>
-  </div>
-  <div>
-    <h2 className="text-3xl font-semibold text-pe-dark mb-4">Right column</h2>
-    <p>Content here</p>
-  </div>
-</SlideContent>
+<SlideLayout title="Your slide title">
+  <BulletList items={[...]} />
+</SlideLayout>
 ```
 
-### Lists
+### Image layouts
 
 ```tsx
-<ul className="list-disc list-inside space-y-3 text-xl text-left">
-  <li>First point</li>
-  <li>Second point</li>
-  <li>Third point</li>
-</ul>
+// Single image
+<SingleImageLayout
+  title="Your title"
+  image={{ src: "/path/to/image.png", alt: "Description", caption: "Figure 1: Caption" }}
+/>
+
+// Two images side by side
+<TwoImageLayout
+  title="Your title"
+  images={[
+    { src: "/image1.png", alt: "First", caption: "Figure 1: First" },
+    { src: "/image2.png", alt: "Second", caption: "Figure 2: Second" }
+  ]}
+/>
+
+// Text with image
+<TextImageLayout
+  title="Your title"
+  image={{ src: "/image.png", alt: "Description" }}
+>
+  <BulletList items={[...]} />
+</TextImageLayout>
 ```
 
 ## Design guidelines
 
 - **Font**: Use Inter (automatically applied)
-- **Alignment**: Always left-align text (use `text-left`)
+- **Alignment**: All text is left-aligned, including cover and end slides
 - **Colors**:
   - Teal: `text-pe-teal` (#319795)
   - Dark teal: `text-pe-dark` (#1D4044)
 - **Logo**: Profile logo appears automatically on middle slides (aligned with title)
 - **Keep it simple**: Use large text, minimal content per slide
+
+## Component usage rules
+
+**CRITICAL**: Slide `.tsx` files must NEVER contain custom `<p>`, `<div>`, or inline styling unless absolutely necessary. Always use the existing reusable components to maintain consistency across all presentations.
+
+Available components:
+- `SlideLayout` - standard slide layout with title
+- `CoverSlideLayout` - cover slide with title, presenter, organisation
+- `EndSlideLayout` - end slide with thank you message
+- `BulletList` - consistent bullet point lists with size options
+- `SlideSubtitle` - subtitle text
+- `TwoImageLayout` - two images side by side
+- `SingleImageLayout` - single image with caption
+- `TextImageLayout` - text and image layout
+- `ImageGrid` - grid of images
+- `StatCard` - statistics card
+- `HighlightBox` - highlighted content box
+- `MathFormula` - mathematical formulas
+- `SVGGraphic` - SVG graphics
+
+If you need custom styling or layout that doesn't exist, create a new reusable component in `slides/components/` rather than adding inline styles to slide files.
 
 ## Testing locally
 
@@ -225,28 +250,35 @@ Ask Claude Code:
 
 ## Common patterns
 
-### Speaker attribution
+### Slides with subtitles
 
 ```tsx
-<p className="text-xl italic text-gray-600 mb-8 text-left">
-  Speaker: Your Name, Organisation
-</p>
+<SlideLayout title="Main title">
+  <SlideSubtitle>
+    Your subtitle or introductory text
+  </SlideSubtitle>
+  <BulletList items={[...]} />
+</SlideLayout>
 ```
 
-### Emphasised text
+### Highlighted content
 
 ```tsx
-<p className="text-3xl font-bold text-pe-teal mb-6">
-  Key takeaway message
-</p>
+<SlideLayout title="Your title">
+  <HighlightBox>
+    Key takeaway message or important point
+  </HighlightBox>
+  <BulletList items={[...]} />
+</SlideLayout>
 ```
 
-### Section headers within slides
+### Statistics or metrics
 
 ```tsx
-<h2 className="text-3xl font-semibold text-pe-dark mb-4 text-left">
-  Section title
-</h2>
+<SlideLayout title="Key metrics">
+  <StatCard
+    value="42%"
+    label="Improvement in accuracy"
+  />
+</SlideLayout>
 ```
-
-Remember: Everything should be **left-aligned** except for cover/end slides which are centered.

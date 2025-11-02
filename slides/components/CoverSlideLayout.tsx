@@ -11,11 +11,11 @@ interface CoverSlideLayoutProps {
 
 export default function CoverSlideLayout({ title, presenter, organization, date, location }: CoverSlideLayoutProps) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-16">
+    <div className="flex flex-col justify-center space-y-16">
       <SlideTitle isCover>
         {title}
       </SlideTitle>
-      <div className="text-3xl text-white space-y-3 text-center">
+      <div className="text-3xl text-white space-y-3">
         {presenter && <p className="font-medium">{presenter}</p>}
         {organization && <p>{organization}</p>}
         {date && <p className="font-medium">{date}</p>}

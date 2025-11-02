@@ -9,9 +9,9 @@ interface EndSlideLayoutProps {
 
 export default function EndSlideLayout({ title = 'Thank you', subtitle = 'Questions?', email }: EndSlideLayoutProps) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-12">
+    <div className="flex flex-col justify-center space-y-12">
       <SlideTitle isEnd>{title}</SlideTitle>
-      <div className="text-2xl text-white space-y-6 text-center">
+      <div className="text-2xl text-white space-y-6">
         {subtitle && <p className="text-3xl font-medium">{subtitle}</p>}
         {email && <p className="opacity-90">{email}</p>}
       </div>
