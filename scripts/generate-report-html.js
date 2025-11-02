@@ -167,7 +167,7 @@ function generateHtmlHeader() {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 40px;
+            padding: 0 60px;
         }
 
         .page-footer .footer-logo {
@@ -180,6 +180,7 @@ function generateHtmlHeader() {
             color: white;
             font-size: 11px;
             opacity: 0.9;
+            text-align: right;
         }
 
         .page-content {
