@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetPath } from '@/lib/assetPath';
 
 interface MenuHeadshotProps {
   name: string;
@@ -14,15 +15,16 @@ export default function MenuHeadshot({ name, imageUrl }: MenuHeadshotProps) {
     .slice(0, 2);
 
   const [imageExists, setImageExists] = React.useState(false);
+  const fullImageUrl = imageUrl ? assetPath(imageUrl) : undefined;
 
   React.useEffect(() => {
-    if (imageUrl) {
+    if (fullImageUrl) {
       const img = new window.Image();
       img.onload = () => setImageExists(true);
       img.onerror = () => setImageExists(false);
-      img.src = imageUrl;
+      img.src = fullImageUrl;
     }
-  }, [imageUrl]);
+  }, [fullImageUrl]);
 
   // Adjust positioning for specific people
   const getObjectPosition = () => {
@@ -33,9 +35,9 @@ export default function MenuHeadshot({ name, imageUrl }: MenuHeadshotProps) {
 
   return (
     <div className="w-14 h-14 rounded-full overflow-hidden bg-pe-teal/20 border-2 border-pe-teal/30 flex-shrink-0 shadow-md">
-      {imageUrl && imageExists ? (
+      {fullImageUrl && imageExists ? (
         <img
-          src={imageUrl}
+          src={fullImageUrl}
           alt={name}
           className="w-full h-full object-cover"
           style={{ objectPosition: getObjectPosition() }}

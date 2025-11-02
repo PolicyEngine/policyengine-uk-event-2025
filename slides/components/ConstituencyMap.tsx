@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import { assetPath } from '@/lib/assetPath';
 
 interface ConstituencyData {
   scenario: string;
@@ -29,8 +30,8 @@ export default function ConstituencyMap() {
   // Load data
   useEffect(() => {
     Promise.all([
-      fetch('/data/scenario_gains_by_constituency.csv').then(r => r.text()),
-      fetch('/data/uk_constituencies_2024.geojson').then(r => r.json())
+      fetch(assetPath('/data/scenario_gains_by_constituency.csv')).then(r => r.text()),
+      fetch(assetPath('/data/uk_constituencies_2024.geojson')).then(r => r.json())
     ]).then(([csvText, geojson]) => {
       // Parse CSV with proper handling of quoted fields
       const parseCSVLine = (line: string): string[] => {
