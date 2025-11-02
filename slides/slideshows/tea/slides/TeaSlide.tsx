@@ -28,8 +28,8 @@ export default function TeaSlide() {
           <Image
             src={assetPath("/logos/nuffield-white.png")}
             alt="Nuffield Foundation"
-            width={180}
-            height={60}
+            width={140}
+            height={47}
             className="opacity-70"
           />
         </div>
