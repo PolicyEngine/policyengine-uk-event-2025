@@ -1,11 +1,7 @@
 import { SlideshowConfig } from '@/lib/types';
 import CoverSlide from './slides/CoverSlide';
 import ThreeIngredientsSlide from './slides/ThreeIngredientsSlide';
-import InnovationsSlide from './slides/InnovationsSlide';
-import DataMethodologySlide from './slides/DataMethodologySlide';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
-import UKBenefitsIframe from './slides/UKBenefitsIframe';
-import UKTaxesIframe from './slides/UKTaxesIframe';
 import EndSlide from './slides/EndSlide';
 
 export const modelScopeConfig: SlideshowConfig = {
@@ -17,11 +13,7 @@ export const modelScopeConfig: SlideshowConfig = {
   slides: [
     CoverSlide,
     ThreeIngredientsSlide,
-    InnovationsSlide,
-    DataMethodologySlide,
     GoogleSlidesEmbed,
-    UKTaxesIframe,
-    UKBenefitsIframe,
     EndSlide,
   ],
 };
