@@ -1,8 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
-import JourneyBeginning from './slides/JourneyBeginning';
-import RecognisingOpportunity from './slides/RecognisingOpportunity';
-import EarlyGrowth from './slides/EarlyGrowth';
+import TimelineSlide from './slides/TimelineSlide';
 import IntroducingAnvar from './slides/IntroducingAnvar';
 
 export const welcomeVisionConfig: SlideshowConfig = {
@@ -13,9 +11,7 @@ export const welcomeVisionConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    JourneyBeginning,
-    RecognisingOpportunity,
-    EarlyGrowth,
+    TimelineSlide,
     IntroducingAnvar,
   ],
 };
