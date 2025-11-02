@@ -1,39 +1,25 @@
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideHeader from '@/components/SlideHeader';
-import Image from 'next/image';
+import TwoImageLayout from '@/components/TwoImageLayout';
 
 export default function FirmDistributionSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl w-full">
-        <SlideHeader>
-          <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Firm turnover distribution (ONS and HMRC)
-          </h1>
-        </SlideHeader>
-
-        <div className="grid grid-cols-2 gap-8 mt-8">
-          <div className="flex flex-col">
-            <Image
-              src="/Screenshot 2025-11-01 at 17.43.00.png"
-              alt="Figure 1: Distribution of UK firms by turnover band, 2024 (ONS)"
-              width={500}
-              height={380}
-              className="h-auto"
-            />
-          </div>
-          <div className="flex flex-col">
-            <Image
-              src="/Screenshot 2025-11-01 at 17.43.11.png"
-              alt="Figure 2: Distribution of VAT-registered firms by turnover band, 2024-25 (HMRC)"
-              width={500}
-              height={380}
-              className="h-auto"
-            />
-          </div>
-        </div>
-      </div>
+      <TwoImageLayout
+        title="Firm turnover distribution (ONS and HMRC)"
+        images={[
+          {
+            src: "/Screenshot 2025-11-01 at 17.43.00.png",
+            alt: "Distribution of UK firms by turnover band, 2024 (ONS)",
+            caption: "Figure 1: Distribution of UK firms by turnover band, 2024 (ONS)"
+          },
+          {
+            src: "/Screenshot 2025-11-01 at 17.43.11.png",
+            alt: "Distribution of VAT-registered firms by turnover band, 2024-25 (HMRC)",
+            caption: "Figure 2: Distribution of VAT-registered firms by turnover band, 2024-25 (HMRC)"
+          }
+        ]}
+      />
     </Slide>
   );
 }

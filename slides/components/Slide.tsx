@@ -45,11 +45,11 @@ export default function Slide({
       {/* Content area */}
       <div className={`
         absolute inset-0
-        ${isCover || isEnd ? 'flex items-start pt-20 pb-20' : 'pt-12 pb-24'}
+        ${isCover || isEnd ? 'flex items-start pt-20 pb-20' : 'pt-16 pb-24'}
       `}>
         <div className={`
-          w-full h-full
-          ${isCover || isEnd ? 'max-w-6xl px-20 flex flex-col justify-center' : 'px-16'}
+          w-full h-full flex
+          ${isCover || isEnd ? 'max-w-6xl px-20 flex-col justify-center' : 'px-20'}
         `}>
           {children}
         </div>

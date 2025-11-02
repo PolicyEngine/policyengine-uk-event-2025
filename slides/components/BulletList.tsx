@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface BulletItem {
-  text: string;
-  subtext?: string;
+  text: string | ReactNode;
+  subtext?: string | ReactNode;
 }
 
 interface BulletListProps {

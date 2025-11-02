@@ -1,20 +1,14 @@
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
-import SlideHeader from '@/components/SlideHeader';
-import SlideContent from '@/components/SlideContent';
+import SlideLayout from '@/components/SlideLayout';
 import SlideSubtitle from '@/components/SlideSubtitle';
 import BulletList from '@/components/BulletList';
 
 export default function AIInterfaceSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
-        <SlideHeader>
-          <SlideTitle>Communicating externally</SlideTitle>
-        </SlideHeader>
-
-        <SlideContent size="lg">
+      <SlideLayout title="Communicating externally">
+        <div>
           <SlideSubtitle>
             Dashboards, apps, and presentations
           </SlideSubtitle>
@@ -36,8 +30,8 @@ export default function AIInterfaceSlide() {
               },
             ]}
           />
-        </SlideContent>
-      </div>
+        </div>
+      </SlideLayout>
     </Slide>
   );
 }

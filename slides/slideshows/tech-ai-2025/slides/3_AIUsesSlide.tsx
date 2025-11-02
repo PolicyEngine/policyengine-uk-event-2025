@@ -1,23 +1,17 @@
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
-import SlideHeader from '@/components/SlideHeader';
-import SlideContent from '@/components/SlideContent';
+import SlideLayout from '@/components/SlideLayout';
 import BulletList from '@/components/BulletList';
 import SlideSubtitle from '@/components/SlideSubtitle';
 
 export default function AIUsesSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
-        <SlideHeader>
-          <SlideTitle>AI at PolicyEngine: two uses</SlideTitle>
-        </SlideHeader>
-        <SlideSubtitle>
-          We use AI in two main ways:
-        </SlideSubtitle>
-
-        <SlideContent size="lg">
+      <SlideLayout title="AI at PolicyEngine: two uses">
+        <div>
+          <SlideSubtitle>
+            We use AI in two main ways:
+          </SlideSubtitle>
           <BulletList
             size="lg"
             items={[
@@ -31,8 +25,8 @@ export default function AIUsesSlide() {
               },
             ]}
           />
-        </SlideContent>
-      </div>
+        </div>
+      </SlideLayout>
     </Slide>
   );
 }

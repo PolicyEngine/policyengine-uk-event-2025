@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "deploy": "npm run build && touch out/.nojekyll"
+    "deploy": "npm run build && touch out/.nojekyll",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "next": "^14.0.0",

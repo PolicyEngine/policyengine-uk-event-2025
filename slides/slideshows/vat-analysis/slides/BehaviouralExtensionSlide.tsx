@@ -1,26 +1,21 @@
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideHeader from '@/components/SlideHeader';
+import SlideLayout from '@/components/SlideLayout';
+import BulletList from '@/components/BulletList';
 
 export default function BehaviouralExtensionSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
-        <SlideHeader>
-          <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Behavioural extension and elasticity
-          </h1>
-        </SlideHeader>
-
-        <div className="space-y-8 text-2xl text-left leading-relaxed mt-8" style={{maxWidth: '1250px'}}>
-          <ul className="space-y-8 pl-4">
-            <li className="flex items-start gap-4">
-              <span className="flex-shrink-0 mt-1.5">•</span>
-              <span className="leading-normal">
-                <span className="font-bold">Extension:</span> We incorporate asymmetric uncertainty around the threshold to capture realistic firm variation:
-              </span>
-            </li>
-          </ul>
+      <SlideLayout title="Behavioural extension and elasticity">
+        <div>
+          <BulletList
+            size="sm"
+            items={[
+              {
+                text: <><span className="font-bold">Extension:</span> We incorporate asymmetric uncertainty around the threshold to capture realistic firm variation:</>
+              }
+            ]}
+          />
 
           <div className="flex flex-col items-center gap-6 my-8" style={{fontFamily: 'Georgia, serif'}}>
             <div className="text-2xl">
@@ -43,22 +38,19 @@ export default function BehaviouralExtensionSlide() {
             </div>
           </div>
 
-          <ul className="space-y-8 pl-4">
-            <li className="flex items-start gap-4">
-              <span className="flex-shrink-0 mt-1.5">•</span>
-              <span className="leading-normal">
-                <span className="font-bold">No-notch:</span> We follow the bunching literature (Saez, 2010; Chetty et al., 2011; Kleven & Waseem, 2013; Liu & Lockwood, 2015) by fitting a smooth polynomial to the turnover distribution.
-              </span>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="flex-shrink-0 mt-1.5">•</span>
-              <span className="leading-normal">
-                <span className="font-bold">Elasticity Estimation:</span> We find the mapping from each firm's real-world turnover to its turnover under the counterfactual scenario (here, the no-notch distribution), and then estimate elasticities.
-              </span>
-            </li>
-          </ul>
+          <BulletList
+            size="sm"
+            items={[
+              {
+                text: <><span className="font-bold">No-notch:</span> We follow the bunching literature (Saez, 2010; Chetty et al., 2011; Kleven & Waseem, 2013; Liu & Lockwood, 2015) by fitting a smooth polynomial to the turnover distribution.</>
+              },
+              {
+                text: <><span className="font-bold">Elasticity Estimation:</span> We find the mapping from each firm's real-world turnover to its turnover under the counterfactual scenario (here, the no-notch distribution), and then estimate elasticities.</>
+              }
+            ]}
+          />
         </div>
-      </div>
+      </SlideLayout>
     </Slide>
   );
 }

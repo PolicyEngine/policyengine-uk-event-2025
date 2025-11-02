@@ -1,20 +1,14 @@
 import React from 'react';
 import Slide from '@/components/Slide';
-import SlideTitle from '@/components/SlideTitle';
-import SlideHeader from '@/components/SlideHeader';
-import SlideContent from '@/components/SlideContent';
+import SlideLayout from '@/components/SlideLayout';
 import SlideSubtitle from '@/components/SlideSubtitle';
 import BulletList from '@/components/BulletList';
 
 export default function AIBuildingSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
-        <SlideHeader>
-          <SlideTitle>Building internally</SlideTitle>
-        </SlideHeader>
-
-        <SlideContent size="lg">
+      <SlideLayout title="Building internally">
+        <div>
           <SlideSubtitle>
             LLM coding agents help us model the household sector
           </SlideSubtitle>
@@ -36,8 +30,8 @@ export default function AIBuildingSlide() {
               },
             ]}
           />
-        </SlideContent>
-      </div>
+        </div>
+      </SlideLayout>
     </Slide>
   );
 }
