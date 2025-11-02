@@ -8,6 +8,7 @@ export default function DataMethodologySlide() {
     <Slide>
       <div className="w-full h-full flex flex-col">
         <SlideHeader>
+<<<<<<< HEAD
           <SlideTitle className="text-4xl">PolicyEngine UK Data Methodology</SlideTitle>
         </SlideHeader>
 
@@ -16,6 +17,21 @@ export default function DataMethodologySlide() {
             src="/uk_methodology.html"
             className="w-full h-full rounded-lg shadow-2xl"
             style={{ border: '2px solid #ccc' }}
+=======
+          <SlideTitle>PolicyEngine UK Data Methodology</SlideTitle>
+        </SlideHeader>
+
+        <div className="flex-1 px-8 py-6 overflow-hidden">
+          <iframe
+            src="/uk_methodology.html"
+            className="w-full h-full"
+            style={{
+              border: '2px solid #ccc',
+              borderRadius: '8px',
+              backgroundColor: 'white'
+            }}
+            title="PolicyEngine UK Data Methodology"
+>>>>>>> 8fc1254 (scope)
           />
         </div>
       </div>
