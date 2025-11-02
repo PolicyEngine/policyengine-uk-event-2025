@@ -267,6 +267,60 @@ function updateHtmlSpeakerSections(html, agendaItems, speakers) {
   return updatedHtml;
 }
 
+function updateHtmlSectionTitles(html, agendaItems) {
+  // Build a mapping of slideshowId to title from agenda
+  const titleMap = {};
+
+  for (const item of agendaItems) {
+    if (item.slideshowId && item.title) {
+      titleMap[item.slideshowId] = item.title;
+    }
+  }
+
+  let updatedHtml = html;
+
+  // Update h1 titles based on slideshowId in HTML comments
+  // Pattern: <!-- PAGE X: COMMENT --> followed by h1 tag
+  // We need to match the comment to a slideshowId, then update the h1
+
+  // Common mappings from comment text to slideshowId
+  const commentToSlideshow = {
+    'SCOPE OF THE MODEL': 'model-scope',
+    'TECHNOLOGY AND AI': 'tech-ai-2025',
+    'WELCOME AND VISION': 'welcome-vision',
+    'LIVE DEMO': 'platform-demo',
+    'UX RESEARCH AND DESIGN': 'ux-design',
+    'LOCALISING POLICY IMPACT': 'local-impact',
+    'NIESR LIVING STANDARDS': 'niesr-review',
+    'CARBON DIVIDEND': 'carbon-dividend',
+    'VAT ANALYSIS': 'vat-analysis',
+    'POLICYENGINE US': 'policyengine-us',
+    'AI-POWERED ANALYSIS': 'ai-future'
+  };
+
+  for (const [commentKey, slideshowId] of Object.entries(commentToSlideshow)) {
+    const title = titleMap[slideshowId];
+    if (!title) continue;
+
+    // Format title with capitalization
+    const formattedTitle = title
+      .split(':')
+      .map(part => part.trim())
+      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(': ');
+
+    // Find and replace h1 after this comment
+    const commentRegex = new RegExp(
+      `(<!-- PAGE \\d+: ${commentKey} -->\\s*<div class="page">\\s*<div class="page-content">\\s*<h1[^>]*>)[^<]+(</h1>)`,
+      'i'
+    );
+
+    updatedHtml = updatedHtml.replace(commentRegex, `$1${formattedTitle}$2`);
+  }
+
+  return updatedHtml;
+}
+
 function updateReport() {
   console.log('Reading slides metadata...');
   const agendaItems = parseAgenda();
@@ -300,6 +354,10 @@ function updateReport() {
   // Update HTML agenda
   console.log('  - Updating HTML agenda section...');
   reportHtmlContent = updateHtmlAgenda(reportHtmlContent, agendaItems);
+
+  // Update section titles from metadata
+  console.log('  - Updating section titles from metadata...');
+  reportHtmlContent = updateHtmlSectionTitles(reportHtmlContent, agendaItems);
 
   // Update speaker sections with headshots
   console.log('  - Adding headshots to speaker sections...');
