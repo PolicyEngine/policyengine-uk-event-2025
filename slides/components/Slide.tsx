@@ -45,7 +45,7 @@ export default function Slide({
       {/* Content area */}
       <div className={`
         absolute inset-0
-        ${isCover || isEnd ? 'flex items-center pt-20 pb-20' : 'pt-12 pb-24'}
+        ${isCover || isEnd ? 'flex items-center justify-center' : 'pt-12 pb-24'}
       `}>
         <div className={`
           w-full h-full

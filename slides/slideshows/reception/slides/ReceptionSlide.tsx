@@ -19,10 +19,10 @@ export default function ReceptionSlide() {
 
         <div className="flex flex-col items-center gap-8">
           <h1 className="text-5xl font-bold text-white">
-            Reception and networking
+            Thank you for joining us!
           </h1>
           <p className="text-2xl text-white/80">
-            5:00 PM - 6:00 PM
+            hello@policyengine.org
           </p>
         </div>
 
