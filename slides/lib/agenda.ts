@@ -21,8 +21,8 @@ export const agenda: AgendaItem[] = [
   { time: '2:20 PM - 2:40 PM', title: "NIESR's use of PolicyEngine in its living standards review", speaker: 'Max Mosley, Senior Economist, New Economics Foundation', speakerIds: ['max-mosley'], slideshowId: 'niesr-review', type: 'talk' },
   { time: '2:40 PM - 3:00 PM', title: 'Microsimulation of a carbon dividend', speaker: 'Malcolm Torry, Institute for Social and Economic Research', speakerIds: ['malcolm-torry'], slideshowId: 'carbon-dividend', type: 'talk' },
   { time: '3:00 PM - 3:20 PM', title: 'VAT analysis with synthetic firm microdata', speaker: 'Vahid Ahmadi', speakerIds: ['vahid-ahmadi'], slideshowId: 'vat-analysis', type: 'talk' },
-  { time: '3:20 PM - 3:40 PM', title: 'PolicyEngine US: Household-by-household impacts and health insurance calculators', speaker: 'David Trimmer and Daphne Hansell, PolicyEngine', speakerIds: ['david-trimmer', 'daphne-hansell'], slideshowId: 'policyengine-us', type: 'talk', hasQA: true },
-  { time: '3:40 PM - 4:25 PM', title: 'Panel discussion: The future of evidence-based policymaking', speaker: 'Max Ghenis; Arun Advani; Anvar Sarygulov', speakerIds: ['max-ghenis', 'arun-advani', 'anvar-sarygulov'], type: 'panel' },
+  { time: '3:20 PM - 3:40 PM', title: 'PolicyEngine US: Tools for deconstructing complex policies', speaker: 'David Trimmer and Daphne Hansell, PolicyEngine', speakerIds: ['david-trimmer', 'daphne-hansell'], slideshowId: 'policyengine-us', type: 'talk', hasQA: true },
+  { time: '3:40 PM - 4:25 PM', title: 'Panel discussion: The future of evidence-based policymaking', speaker: 'Max Ghenis; Arun Advani; Anvar Sarygulov', speakerIds: ['max-ghenis', 'arun-advani', 'anvar-sarygulov'], slideshowId: 'panel-future', type: 'panel' },
   { time: '4:25 PM - 5:00 PM', title: 'Looking ahead: AI-powered policy analysis', speaker: 'Max Ghenis, Nikhil Woodruff, Vahid Ahmadi', speakerIds: ['max-ghenis', 'nikhil-woodruff', 'vahid-ahmadi'], slideshowId: 'ai-future', type: 'talk', hasQA: true },
   { time: '5:00 PM - 6:00 PM', title: 'Reception and networking', type: 'networking' },
 ];
