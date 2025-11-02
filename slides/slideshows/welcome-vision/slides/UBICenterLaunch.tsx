@@ -10,7 +10,7 @@ export default function UBICenterLaunch() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>2021: Introducing PolicyEngine UK</SlideTitle>
+          <SlideTitle>September 2021: Introducing PolicyEngine UK</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>
