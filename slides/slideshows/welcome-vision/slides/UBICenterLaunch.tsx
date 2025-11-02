@@ -13,15 +13,14 @@ export default function UBICenterLaunch() {
           <SlideTitle>2021: Introducing PolicyEngine UK</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-8 flex justify-center">
-          <div className="relative w-full max-w-5xl" style={{ height: 'calc(100vh - 280px)' }}>
-            <Image
-              src={assetPath("/timeline/ubi-center-launch.png")}
-              alt="UBI Center launches PolicyEngine UK"
-              fill
-              className="object-contain object-center"
-            />
-          </div>
+        <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>
+          <Image
+            src={assetPath("/timeline/ubi-center-launch.png")}
+            alt="UBI Center launches PolicyEngine UK"
+            width={1200}
+            height={800}
+            className="max-w-full max-h-full w-auto h-auto object-contain"
+          />
         </div>
       </div>
     </Slide>
