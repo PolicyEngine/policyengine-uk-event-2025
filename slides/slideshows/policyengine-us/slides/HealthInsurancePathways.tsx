@@ -151,11 +151,15 @@ export default function HealthInsurancePathways() {
           </p>
 
           {/* Treemap */}
-          <svg width={width} height={height} className="border-2 border-gray-300 rounded-lg">
+          <svg width={width + 200} height={height} className="border-2 border-gray-300 rounded-lg">
+            {/* Main treemap area */}
+            <rect x="0" y="0" width={width} height={height} fill="none" />
+
             {rects.map((rect, idx) => {
               const isSmall = rect.enrollment < 10;
               const isMedium = rect.enrollment >= 10 && rect.enrollment < 25;
               const isLarge = rect.enrollment >= 25;
+              const isTiny = rect.width < 80; // Too small for text
 
               return (
                 <g key={idx}>
@@ -169,8 +173,9 @@ export default function HealthInsurancePathways() {
                     stroke="white"
                     strokeWidth="3"
                   />
-                  {/* Label */}
-                  {rect.height > 50 && (
+
+                  {/* Labels for boxes with enough space */}
+                  {!isTiny && rect.height > 50 && (
                     <>
                       <text
                         x={rect.x + rect.width / 2}
@@ -207,8 +212,9 @@ export default function HealthInsurancePathways() {
                       )}
                     </>
                   )}
-                  {/* Compact label for small boxes */}
-                  {rect.height <= 50 && (
+
+                  {/* Compact label for medium boxes */}
+                  {!isTiny && rect.height <= 50 && (
                     <text
                       x={rect.x + rect.width / 2}
                       y={rect.y + rect.height / 2 + 5}
@@ -220,9 +226,60 @@ export default function HealthInsurancePathways() {
                       {rect.name}: {rect.enrollment.toFixed(1)}M
                     </text>
                   )}
+
+                  {/* Arrow and label for tiny boxes */}
+                  {isTiny && (
+                    <>
+                      {/* Arrow line */}
+                      <line
+                        x1={rect.x + rect.width}
+                        y1={rect.y + rect.height / 2}
+                        x2={width + 20}
+                        y2={rect.y + rect.height / 2}
+                        stroke="#666"
+                        strokeWidth="2"
+                        markerEnd="url(#arrowhead)"
+                      />
+                      {/* Label to the right */}
+                      <text
+                        x={width + 30}
+                        y={rect.y + rect.height / 2 - 10}
+                        textAnchor="start"
+                        fill="#333"
+                        fontSize="18"
+                        fontWeight="700"
+                      >
+                        {rect.name}
+                      </text>
+                      <text
+                        x={width + 30}
+                        y={rect.y + rect.height / 2 + 12}
+                        textAnchor="start"
+                        fill="#666"
+                        fontSize="16"
+                        fontWeight="600"
+                      >
+                        {rect.enrollment.toFixed(1)}M
+                      </text>
+                    </>
+                  )}
                 </g>
               );
             })}
+
+            {/* Arrow marker definition */}
+            <defs>
+              <marker
+                id="arrowhead"
+                markerWidth="10"
+                markerHeight="10"
+                refX="9"
+                refY="3"
+                orient="auto"
+              >
+                <polygon points="0 0, 10 3, 0 6" fill="#666" />
+              </marker>
+            </defs>
           </svg>
         </div>
 

@@ -1,5 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
+import OBBBAIntro from './slides/OBBBAIntro';
 import OBBBADashboard from './slides/OBBBADashboard';
 import HealthInsurancePathways from './slides/HealthInsurancePathways';
 import DaphneIntro from './slides/DaphneIntro';
@@ -14,6 +15,7 @@ export const policyengineUSConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
+    OBBBAIntro,
     OBBBADashboard,
     HealthInsurancePathways,
     DaphneIntro,
