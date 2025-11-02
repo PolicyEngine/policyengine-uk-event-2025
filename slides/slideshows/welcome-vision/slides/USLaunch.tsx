@@ -13,13 +13,13 @@ export default function USLaunch() {
           <SlideTitle>March 2022: PolicyEngine arrives stateside</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-8">
-          <div className="relative w-full" style={{ height: 'calc(100vh - 280px)' }}>
+        <div className="mt-8 flex justify-center">
+          <div className="relative w-full max-w-5xl" style={{ height: 'calc(100vh - 280px)' }}>
             <Image
               src={assetPath("/timeline/us-launch.png")}
               alt="PolicyEngine US Launch"
               fill
-              className="object-contain"
+              className="object-contain object-center"
             />
           </div>
         </div>

@@ -13,13 +13,13 @@ export default function NuffieldGrant() {
           <SlideTitle>September 2024: Nuffield Foundation support</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-8">
-          <div className="relative w-full" style={{ height: 'calc(100vh - 280px)' }}>
+        <div className="mt-8 flex justify-center">
+          <div className="relative w-full max-w-5xl" style={{ height: 'calc(100vh - 280px)' }}>
             <Image
               src={assetPath("/timeline/nuffield-grant.png")}
               alt="Nuffield Foundation grant"
               fill
-              className="object-contain"
+              className="object-contain object-center"
             />
           </div>
         </div>
