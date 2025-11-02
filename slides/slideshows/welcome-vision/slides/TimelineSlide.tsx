@@ -5,14 +5,17 @@ import SlideHeader from '@/components/SlideHeader';
 
 export default function TimelineSlide() {
   const milestones = [
-    { year: '2020', month: '', event: 'UBI Center builds UK microsimulation models for cash assistance policies' },
+    { year: '2020', event: 'UBI Center builds UK microsimulation models' },
     { year: '2021', month: 'Sep', event: 'Launch PolicyEngine within UBI Center' },
-    { year: '2021', month: 'Oct', event: 'Create separate entity to invest in open-source microsimulation' },
+    { year: '2021', month: 'Oct', event: 'Create independent nonprofit for open-source microsimulation' },
     { year: '2022', month: 'Mar', event: 'Expand to US' },
-    { year: '2022', month: 'Sep-Oct', event: 'Analyse UK Budget and emergency policies (energy cap, Growth Plan)' },
-    { year: '2023', month: 'Jan', event: 'Launch redesigned PolicyEngine platform' },
+    { year: '2022-23', event: 'Build world-class economic simulation: rigorous rule encoding + representative datasets' },
+    { year: '2023', month: 'Jan', event: 'Open surfaces: Python package, web app, AI summarisation' },
+    { year: '2023', event: 'UN recognises PolicyEngine as digital public good' },
+    { year: '2024', event: 'Users: Green Party, CPS, NIESR, IEA, SMF, Lib Dems, UBI Lab Network, UK in a Changing Europe' },
+    { year: '2024', month: 'Spring', event: 'AI-powered explanations launch' },
+    { year: '2024', month: 'Sep', event: 'Nuffield Foundation: childcare, public services, local datasets, validation, AI design' },
     { year: '2025', month: 'Mar', event: 'HM Treasury pilots PolicyEngine UK' },
-    { year: '2024', month: 'Sep', event: 'Nuffield Foundation grant for UK expansion' },
   ];
 
   return (
