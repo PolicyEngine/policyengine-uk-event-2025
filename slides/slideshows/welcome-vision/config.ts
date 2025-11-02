@@ -3,8 +3,11 @@ import SectionTitle from './slides/SectionTitle';
 import UBICenterLaunch from './slides/UBICenterLaunch';
 import MakeEveryonePolicymaker from './slides/MakeEveryonePolicymaker';
 import USLaunch from './slides/USLaunch';
+import PolicyScoring from './slides/PolicyScoring';
 import MLAccuracy from './slides/MLAccuracy';
+import GrowingAdoption from './slides/GrowingAdoption';
 import NuffieldGrant from './slides/NuffieldGrant';
+import IntroducingAnvar from './slides/IntroducingAnvar';
 
 export const welcomeVisionConfig: SlideshowConfig = {
   id: 'welcome-vision',
@@ -17,7 +20,10 @@ export const welcomeVisionConfig: SlideshowConfig = {
     UBICenterLaunch,
     MakeEveryonePolicymaker,
     USLaunch,
+    PolicyScoring,
     MLAccuracy,
+    GrowingAdoption,
     NuffieldGrant,
+    IntroducingAnvar,
   ],
 };
