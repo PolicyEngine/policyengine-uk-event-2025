@@ -11,36 +11,22 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common American -> British spelling pairs
+// Common American -> British spelling patterns (simplified with stems)
 const SPELLING_RULES = [
-  { american: /\borganization\b/gi, british: 'organisation', exceptions: [] },
-  { american: /\borganizations\b/gi, british: 'organisations', exceptions: [] },
-  { american: /\bmodeling\b/gi, british: 'modelling', exceptions: [] },
-  { american: /\bbehavior\b/gi, british: 'behaviour', exceptions: [] },
-  { american: /\bbehavioral\b/gi, british: 'behavioural', exceptions: [] },
-  { american: /\boptimize\b/gi, british: 'optimise', exceptions: [] },
-  { american: /\boptimization\b/gi, british: 'optimisation', exceptions: [] },
-  { american: /\boptimizing\b/gi, british: 'optimising', exceptions: [] },
+  { american: /\borganiz/gi, british: 'organis', exceptions: [] },
+  { american: /\bmodel(ing|ed)\b/gi, british: 'modell$1', exceptions: [] },
+  { american: /\bbehavior/gi, british: 'behaviour', exceptions: [] },
+  { american: /\boptimiz/gi, british: 'optimis', exceptions: [] },
   { american: /\blabor\b/gi, british: 'labour', exceptions: ['labor supply', 'Labor Day'] },
-  { american: /\brecognize\b/gi, british: 'recognise', exceptions: [] },
-  { american: /\brecognizing\b/gi, british: 'recognising', exceptions: [] },
-  { american: /\bdemocratize\b/gi, british: 'democratise', exceptions: [] },
-  { american: /\bdemocratizing\b/gi, british: 'democratising', exceptions: [] },
-  { american: /\bdemocratizes\b/gi, british: 'democratises', exceptions: [] },
-  { american: /\bvisualization\b/gi, british: 'visualisation', exceptions: [] },
-  { american: /\bvisualizations\b/gi, british: 'visualisations', exceptions: [] },
-  { american: /\bcustomize\b/gi, british: 'customise', exceptions: [] },
-  { american: /\bcustomizing\b/gi, british: 'customising', exceptions: [] },
-  { american: /\bcustomizable\b/gi, british: 'customisable', exceptions: [] },
+  { american: /\brecogniz/gi, british: 'recognis', exceptions: [] },
+  { american: /\bdemocratiz/gi, british: 'democratis', exceptions: [] },
+  { american: /\bvisualiz/gi, british: 'visualis', exceptions: [] },
+  { american: /\bcustomiz/gi, british: 'customis', exceptions: [] },
   { american: /\brigor\b/gi, british: 'rigour', exceptions: [] },
-  { american: /\bcentered\b/gi, british: 'centred', exceptions: [] },
-  { american: /\bcenter\b/gi, british: 'centre', exceptions: ['text-align: center', 'justify-content: center', 'Center for', 'Niskanen Center'] },
-  { american: /\banalyze\b/gi, british: 'analyse', exceptions: [] },
-  { american: /\banalyzing\b/gi, british: 'analysing', exceptions: [] },
-  { american: /\bfavor\b/gi, british: 'favour', exceptions: [] },
-  { american: /\bfavorable\b/gi, british: 'favourable', exceptions: [] },
-  { american: /\bcolor\b/gi, british: 'colour', exceptions: ['color code', 'color:', '#color'] },
-  { american: /\bcolored\b/gi, british: 'coloured', exceptions: [] },
+  { american: /\bcenter/gi, british: 'centre', exceptions: ['text-align: center', 'justify-content: center', 'Center for', 'Niskanen Center'] },
+  { american: /\banalyz/gi, british: 'analys', exceptions: [] },
+  { american: /\bfavor/gi, british: 'favour', exceptions: [] },
+  { american: /\bcolor/gi, british: 'colour', exceptions: ['color code', 'color:', '#color'] },
 ];
 
 function checkFile(filePath) {
