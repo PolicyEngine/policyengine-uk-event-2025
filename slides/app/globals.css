@@ -47,18 +47,33 @@ a {
 .mermaid .node rect,
 .mermaid .node polygon {
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+  min-width: 280px !important;
+  min-height: 100px !important;
+  padding: 25px !important;
 }
 
 .mermaid .cluster rect {
   fill: #e0e7ff !important;
+  padding: 30px !important;
 }
 
-.mermaid .cluster text {
-  fill: #312e81 !important;
+.mermaid .cluster text,
+.mermaid .cluster tspan,
+.mermaid g.cluster text,
+.mermaid g.cluster tspan {
+  fill: #f97316 !important;
+  color: #f97316 !important;
   font-weight: 700 !important;
+  font-size: 38px !important;
 }
 
 .mermaid g.node:not(.cluster) text {
   fill: #ffffff !important;
   font-weight: 600 !important;
+  font-size: 36px !important;
+}
+
+.mermaid text,
+.mermaid tspan {
+  font-size: 36px !important;
 }

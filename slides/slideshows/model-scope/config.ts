@@ -2,6 +2,7 @@ import { SlideshowConfig } from '@/lib/types';
 import CoverSlide from './slides/CoverSlide';
 import ThreeIngredientsSlide from './slides/ThreeIngredientsSlide';
 import DataMethodologySlide from './slides/DataMethodologySlide';
+import FlowchartSlide from './slides/FlowchartSlide';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
 import EndSlide from './slides/EndSlide';
 
@@ -14,8 +15,9 @@ export const modelScopeConfig: SlideshowConfig = {
   slides: [
     CoverSlide,
     ThreeIngredientsSlide,
-    DataMethodologySlide,
     GoogleSlidesEmbed,
+    FlowchartSlide,
+    DataMethodologySlide,
     EndSlide,
   ],
 };
