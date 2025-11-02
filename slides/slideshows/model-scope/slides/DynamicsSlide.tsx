@@ -14,22 +14,22 @@ export default function DynamicsSlide() {
         <div className="space-y-10 text-left px-12 py-6">
           <div className="flex items-start gap-4 text-2xl">
             <span className="flex-shrink-0" style={{ lineHeight: '1.5' }}>•</span>
-            <p style={{ lineHeight: '1.5' }}>PolicyEngine models <strong>labour supply elasticities</strong> and <strong>capital gains elasticities</strong> to capture behavioural responses to tax and benefit changes.</p>
+            <p style={{ lineHeight: '1.5' }}>PolicyEngine models <strong>labour supply elasticities</strong> and <strong>capital gains elasticities</strong> to capture behavioural responses to tax and benefit changes</p>
           </div>
 
           <div className="flex items-start gap-4 text-2xl">
             <span className="flex-shrink-0" style={{ lineHeight: '1.5' }}>•</span>
-            <p style={{ lineHeight: '1.5' }}>We model the <strong>pass-through of employer National Insurance</strong> and <strong>land and carbon taxes</strong> to understand economic incidence.</p>
+            <p style={{ lineHeight: '1.5' }}>We model the <strong>pass-through of employer National Insurance</strong> and <strong>land and carbon taxes</strong> to understand economic incidence</p>
           </div>
 
           <div className="flex items-start gap-4 text-2xl">
             <span className="flex-shrink-0" style={{ lineHeight: '1.5' }}>•</span>
-            <p style={{ lineHeight: '1.5' }}><strong>Private school VAT</strong> models enrollment responses to fee changes from VAT application.</p>
+            <p style={{ lineHeight: '1.5' }}><strong>Private school VAT</strong> models enrollment responses to fee changes from VAT application</p>
           </div>
 
           <div className="flex items-start gap-4 text-2xl">
             <span className="flex-shrink-0" style={{ lineHeight: '1.5' }}>•</span>
-            <p style={{ lineHeight: '1.5' }}>Follows <strong>Office for Budget Responsibility elasticity framework</strong> with adjustable parameters for users to customize behavioural assumptions.</p>
+            <p style={{ lineHeight: '1.5' }}>Follows <strong>Office for Budget Responsibility elasticity framework</strong> with adjustable parameters for users to customize behavioural assumptions</p>
           </div>
         </div>
       </div>

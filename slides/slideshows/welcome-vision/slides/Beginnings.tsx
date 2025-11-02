@@ -10,7 +10,7 @@ export default function Beginnings() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>Beginnings: August 2020</SlideTitle>
+          <SlideTitle>Aug 2020: Beginnings of PolicyEngine UK model</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>

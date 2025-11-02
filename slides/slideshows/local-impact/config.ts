@@ -7,6 +7,8 @@ import CalibrationSlide from './slides/5_CalibrationSlide';
 import DataFormatSlide from './slides/5_5_DataFormatSlide';
 import CalibrationDashboardSlide from './slides/5_6_CalibrationDashboardSlide';
 import ConstituencyMapSlide from './slides/5_7_ConstituencyMapSlide';
+import USImprovementsSlide from './slides/5_8_USImprovementsSlide';
+import USFoodStampMapSlide from './slides/5_9_USFoodStampMapSlide';
 import EndSlide from './slides/6_EndSlide';
 
 export const localImpactConfig: SlideshowConfig = {
@@ -24,6 +26,8 @@ export const localImpactConfig: SlideshowConfig = {
     DataFormatSlide,
     CalibrationDashboardSlide,
     ConstituencyMapSlide,
+    USImprovementsSlide,
+    USFoodStampMapSlide,
     EndSlide,
   ],
 };

@@ -10,7 +10,7 @@ export default function USLaunch() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>March 2022: PolicyEngine arrives stateside</SlideTitle>
+          <SlideTitle>Mar 2022: PolicyEngine arrives stateside</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>
