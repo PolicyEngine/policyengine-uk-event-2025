@@ -1,7 +1,10 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
-import TimelineSlide from './slides/TimelineSlide';
-import IntroducingAnvar from './slides/IntroducingAnvar';
+import UBICenterLaunch from './slides/UBICenterLaunch';
+import MakeEveryonePolicymaker from './slides/MakeEveryonePolicymaker';
+import USLaunch from './slides/USLaunch';
+import MLAccuracy from './slides/MLAccuracy';
+import NuffieldGrant from './slides/NuffieldGrant';
 
 export const welcomeVisionConfig: SlideshowConfig = {
   id: 'welcome-vision',
@@ -11,7 +14,10 @@ export const welcomeVisionConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    TimelineSlide,
-    IntroducingAnvar,
+    UBICenterLaunch,
+    MakeEveryonePolicymaker,
+    USLaunch,
+    MLAccuracy,
+    NuffieldGrant,
   ],
 };

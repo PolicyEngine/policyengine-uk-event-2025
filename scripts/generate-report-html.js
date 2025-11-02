@@ -272,10 +272,12 @@ function generateHtmlHeader() {
             padding: 0 0 15px 0;
             border-bottom: 3px solid #319795;
             font-weight: 700;
+            line-height: 1.1;
         }
 
         h1.long-title {
             font-size: 28px;
+            line-height: 1.1;
         }
 
         .speakers-container {
@@ -451,7 +453,7 @@ function generateAgendaPage(agendaItems, speakers) {
 
     let itemHtml = `            <div style="margin: 6px 0;">\n`;
     itemHtml += `                <strong style="color: #319795; font-size: 11px;">${item.time}</strong><br>\n`;
-    itemHtml += `                <strong style="font-size: 12px; line-height: 1.3;">${title}</strong><br>\n`;
+    itemHtml += `                <strong style="font-size: 12px; line-height: 1.1; display: inline-block;">${title}</strong><br>\n`;
 
     // Add speakers with headshots and affiliations
     if (item.speakerIds && item.speakerIds.length > 0) {
