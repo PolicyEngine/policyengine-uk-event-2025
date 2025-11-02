@@ -19,14 +19,14 @@ export default function SlideTitle({ children, isCover = false, isEnd = false, c
   // Allow className override for custom styles
   if (className) {
     return (
-      <h1 className={`text-6xl font-bold pb-5 border-b-4 text-left ${className}`}>
+      <h1 className={`text-6xl font-bold pb-5 text-left ${className}`}>
         {children}
       </h1>
     );
   }
 
   return (
-    <h1 className="text-6xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
+    <h1 className="text-6xl font-bold text-pe-teal pb-5 text-left">
       {children}
     </h1>
   );
