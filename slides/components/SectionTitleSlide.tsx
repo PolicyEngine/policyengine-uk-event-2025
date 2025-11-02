@@ -92,22 +92,24 @@ export default function SectionTitleSlide({
           </div>
 
           {/* Speakers in horizontal row with headshots above */}
-          <div className={`flex flex-row justify-center items-start ${isThreeOrMore ? 'gap-20' : 'gap-32'}`}>
-            {speakers.map((speaker, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center space-y-4">
-                <SpeakerHeadshot
-                  name={speaker!.name}
-                  imageUrl={speaker!.headshotUrl}
-                  size={isThreeOrMore ? 'medium' : 'large'}
-                  position="center"
-                />
-                <div className="space-y-1">
-                  <h2 className={`${isThreeOrMore ? 'text-2xl' : 'text-3xl'} font-bold text-white`}>{speaker!.name}</h2>
-                  <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/90`}>{speaker!.title}</p>
-                  <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/80`}>{speaker!.organisation}</p>
+          <div className="w-full flex justify-center">
+            <div className={`flex flex-row justify-evenly items-start ${isThreeOrMore ? 'max-w-5xl gap-12' : 'max-w-4xl gap-32'} w-full`}>
+              {speakers.map((speaker, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center space-y-4 flex-1">
+                  <SpeakerHeadshot
+                    name={speaker!.name}
+                    imageUrl={speaker!.headshotUrl}
+                    size={isThreeOrMore ? 'medium' : 'large'}
+                    position="center"
+                  />
+                  <div className="space-y-1">
+                    <h2 className={`${isThreeOrMore ? 'text-2xl' : 'text-3xl'} font-bold text-white`}>{speaker!.name}</h2>
+                    <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/90`}>{speaker!.title}</p>
+                    <p className={`${isThreeOrMore ? 'text-lg' : 'text-xl'} text-white/80`}>{speaker!.organisation}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Logo at bottom center */}
