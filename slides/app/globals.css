@@ -16,6 +16,11 @@ body {
   color: #000000;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @layer utilities {
   .gradient-bg {
     background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
