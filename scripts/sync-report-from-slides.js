@@ -232,37 +232,37 @@ function updateHtmlAgenda(html, agendaItems) {
   return html.replace(agendaRegex, `$1\n${agendaHtml}\n        $3`);
 }
 
-function updateHtmlSectionTitles(html, agendaItems) {
-  // Build a mapping of common sections to their metadata titles
-  const sectionMap = {};
-
-  for (const item of agendaItems) {
-    if (item.slideshowId) {
-      sectionMap[item.slideshowId] = item.title;
-    }
-  }
-
-  // Update section titles in the HTML content pages
-  // Pattern: <h1>Section Title</h1> after <!-- PAGE X: SECTION NAME -->
+function updateHtmlSpeakerSections(html, agendaItems, speakers) {
+  // Update speaker sections with headshots
   let updatedHtml = html;
 
-  for (const [slideshowId, title] of Object.entries(sectionMap)) {
-    // Capitalize first letter of each word for the title
-    const formattedTitle = title
-      .split(':')
-      .map(part => part.trim())
-      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(': ');
+  // Pattern: <div class="speaker">Speaker: Name</div> or <div class="speaker">Speakers: Name1 & Name2</div>
+  const speakerDivRegex = /<div class="speaker">(Speaker|Speakers):\s*([^<]+)<\/div>/g;
 
-    // Try to find and replace the h1 following a comment that might contain this section
-    // This is a heuristic approach - we look for h1 tags and update them
-    const patterns = [
-      new RegExp(`(<h1>)[^<]+(</h1>\\s*<div class="speaker">Speaker[^<]*${title.split(':')[0]}[^<]*</div>)`, 'i'),
-      new RegExp(`(<!-- PAGE \\d+: [^-]*-->\\s*<div class="page">\\s*<div class="page-content">\\s*<h1>)[^<]+(</h1>\\s*<div class="speaker">)`, 'g')
-    ];
+  updatedHtml = updatedHtml.replace(speakerDivRegex, (match, prefix, speakerText) => {
+    // Extract speaker names
+    const names = speakerText.split(/[&,;]/).map(n => n.trim());
 
-    // This is simplified - in production you'd want more robust matching
-  }
+    // Try to find matching speakers and build headshot HTML
+    const headshots = [];
+    for (const name of names) {
+      // Find speaker by name
+      const speaker = Object.values(speakers).find(s =>
+        name.toLowerCase().includes(s.name.toLowerCase()) ||
+        s.name.toLowerCase().includes(name.split(',')[0].toLowerCase())
+      );
+
+      if (speaker && speaker.headshotUrl) {
+        headshots.push(`<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" class="speaker-inline-headshot">`);
+      }
+    }
+
+    if (headshots.length > 0) {
+      return `<div class="speaker"><div class="speaker-headshots">${headshots.join('')}</div><span class="speaker-text">${prefix}: ${speakerText}</span></div>`;
+    }
+
+    return match; // Return unchanged if no headshots found
+  });
 
   return updatedHtml;
 }
@@ -300,6 +300,10 @@ function updateReport() {
   // Update HTML agenda
   console.log('  - Updating HTML agenda section...');
   reportHtmlContent = updateHtmlAgenda(reportHtmlContent, agendaItems);
+
+  // Update speaker sections with headshots
+  console.log('  - Adding headshots to speaker sections...');
+  reportHtmlContent = updateHtmlSpeakerSections(reportHtmlContent, agendaItems, speakers);
 
   fs.writeFileSync(REPORT_HTML_FILE, reportHtmlContent, 'utf8');
 
