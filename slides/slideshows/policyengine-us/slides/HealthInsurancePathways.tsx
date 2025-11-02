@@ -4,73 +4,233 @@ import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 
 export default function HealthInsurancePathways() {
-  const pathways = [
+  // 2023 MECE enrollment data from KFF - mutually exclusive categories
+  const coverageData = [
     {
-      name: 'ESI',
+      name: 'Employer-Sponsored Insurance (ESI)',
       fullName: 'Employer-Sponsored Insurance',
+      enrollment: 158.4, // million - employer only
       color: '#2C5F8D',
-      description: 'Coverage through employer'
+      description: 'Employer coverage only'
+    },
+    {
+      name: 'Medicaid/CHIP',
+      fullName: 'Medicaid/CHIP',
+      enrollment: 49.7, // million - Medicaid only (includes CHIP)
+      color: '#319795',
+      description: 'Low-income coverage only'
+    },
+    {
+      name: 'Dual Coverage',
+      fullName: 'Dual Coverage',
+      enrollment: 44.5, // million - calculated to reach 326.1M total
+      color: '#A78BFA',
+      description: 'Multiple coverage types'
+    },
+    {
+      name: 'Uninsured',
+      fullName: 'Uninsured',
+      enrollment: 25.8, // million
+      color: '#D1D5DB',
+      description: 'No health coverage'
     },
     {
       name: 'Medicare',
       fullName: 'Medicare',
+      enrollment: 23.0, // million - Medicare only
       color: '#1D4044',
-      description: 'Age 65+ or disability'
-    },
-    {
-      name: 'Medicaid',
-      fullName: 'Medicaid',
-      color: '#319795',
-      description: 'Low-income coverage'
-    },
-    {
-      name: 'CHIP',
-      fullName: 'Children\'s Health Insurance Program',
-      color: '#68B0AB',
-      description: 'Children in low-income families'
+      description: 'Age 65+ or disability only'
     },
     {
       name: 'Marketplace',
-      fullName: 'ACA Marketplace',
+      fullName: 'Non-Group/Marketplace',
+      enrollment: 20.4, // million - non-group only
       color: '#4A8B94',
-      description: 'Individual market with subsidies'
+      description: 'Individual market only'
+    },
+    {
+      name: 'Military/VA',
+      fullName: 'Military/VA',
+      enrollment: 4.3, // million
+      color: '#6B7280',
+      description: 'Military & veterans coverage'
     }
-  ];
+  ].sort((a, b) => b.enrollment - a.enrollment); // Sort by size
+
+  const totalEnrollment = coverageData.reduce((sum, d) => sum + d.enrollment, 0);
+
+  // Simple treemap layout using squarified algorithm
+  const width = 800;
+  const height = 500;
+  const padding = 3;
+
+  // Calculate rectangles for treemap
+  interface TreemapRect {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    name: string;
+    fullName: string;
+    enrollment: number;
+    color: string;
+    description: string;
+  }
+
+  const calculateTreemap = (): TreemapRect[] => {
+    const rects: TreemapRect[] = [];
+
+    // ESI (largest) - takes top portion
+    const esiHeight = (coverageData[0].enrollment / totalEnrollment) * height;
+    rects.push({
+      x: padding,
+      y: padding,
+      width: width - 2 * padding,
+      height: esiHeight - 2 * padding,
+      ...coverageData[0]
+    });
+
+    // Remaining items split into two rows
+    const remainingY = esiHeight;
+    const remainingHeight = height - esiHeight;
+    const remainingItems = coverageData.slice(1);
+    const remainingTotal = remainingItems.reduce((sum, d) => sum + d.enrollment, 0);
+
+    // Row 2: Medicaid, Dual Coverage (2 items)
+    const row2Items = remainingItems.slice(0, 2);
+    const row2Total = row2Items.reduce((sum, d) => sum + d.enrollment, 0);
+    const row2Height = (row2Total / remainingTotal) * remainingHeight;
+
+    let currentX = 0;
+    row2Items.forEach((item) => {
+      const itemWidth = (item.enrollment / row2Total) * width;
+      rects.push({
+        x: currentX + padding,
+        y: remainingY + padding,
+        width: itemWidth - 2 * padding,
+        height: row2Height - 2 * padding,
+        ...item
+      });
+      currentX += itemWidth;
+    });
+
+    // Row 3: Uninsured, Medicare, Marketplace, Military (4 items)
+    const row3Y = remainingY + row2Height;
+    const row3Items = remainingItems.slice(2);
+    const row3Total = row3Items.reduce((sum, d) => sum + d.enrollment, 0);
+    const row3Height = height - row3Y;
+
+    currentX = 0;
+    row3Items.forEach((item) => {
+      const itemWidth = (item.enrollment / row3Total) * width;
+      rects.push({
+        x: currentX + padding,
+        y: row3Y + padding,
+        width: itemWidth - 2 * padding,
+        height: row3Height - 2 * padding,
+        ...item
+      });
+      currentX += itemWidth;
+    });
+
+    return rects;
+  };
+
+  const rects = calculateTreemap();
 
   return (
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>US health insurance coverage pathways</SlideTitle>
+          <SlideTitle>US health insurance coverage (2023)</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-12">
-          <div className="grid grid-cols-5 gap-6">
-            {pathways.map((pathway, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                {/* Pathway box */}
-                <div
-                  className="w-full aspect-square rounded-2xl flex flex-col items-center justify-center p-6 text-white shadow-lg"
-                  style={{ backgroundColor: pathway.color }}
-                >
-                  <div className="text-4xl font-bold mb-3">{pathway.name}</div>
-                  <div className="text-sm text-center opacity-90 font-medium">{pathway.fullName}</div>
-                </div>
+        <div className="mt-12 flex flex-col items-center">
+          <p className="text-lg text-gray-600 mb-4 text-left w-full">
+            US Population: {totalEnrollment.toFixed(1)}M people (2023)
+          </p>
 
-                {/* Description */}
-                <div className="mt-4 text-center">
-                  <p className="text-lg text-gray-700">{pathway.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Treemap */}
+          <svg width={width} height={height} className="border-2 border-gray-300 rounded-lg">
+            {rects.map((rect, idx) => {
+              const isSmall = rect.enrollment < 10;
+              const isMedium = rect.enrollment >= 10 && rect.enrollment < 25;
+              const isLarge = rect.enrollment >= 25;
 
-          <div className="mt-12 bg-pe-teal/10 rounded-xl p-6 border-l-4 border-pe-teal">
-            <p className="text-xl text-left text-gray-700">
-              <span className="font-semibold text-pe-dark">ACA-Calc</span> models premium tax credits for Marketplace coverage,
-              including interactions with Medicaid and CHIP eligibility
-            </p>
-          </div>
+              return (
+                <g key={idx}>
+                  <rect
+                    x={rect.x}
+                    y={rect.y}
+                    width={rect.width}
+                    height={rect.height}
+                    fill={rect.color}
+                    opacity="0.9"
+                    stroke="white"
+                    strokeWidth="3"
+                  />
+                  {/* Label */}
+                  {rect.height > 50 && (
+                    <>
+                      <text
+                        x={rect.x + rect.width / 2}
+                        y={rect.y + rect.height / 2 - 20}
+                        textAnchor="middle"
+                        fill="white"
+                        fontSize={isLarge ? "28" : isMedium ? "22" : "18"}
+                        fontWeight="700"
+                      >
+                        {rect.name}
+                      </text>
+                      <text
+                        x={rect.x + rect.width / 2}
+                        y={rect.y + rect.height / 2 + 8}
+                        textAnchor="middle"
+                        fill="white"
+                        fontSize={isLarge ? "22" : isMedium ? "18" : "16"}
+                        fontWeight="600"
+                        opacity="0.95"
+                      >
+                        {rect.enrollment.toFixed(1)}M
+                      </text>
+                      {rect.height > 80 && (
+                        <text
+                          x={rect.x + rect.width / 2}
+                          y={rect.y + rect.height / 2 + 35}
+                          textAnchor="middle"
+                          fill="white"
+                          fontSize={isLarge ? "16" : "14"}
+                          opacity="0.85"
+                        >
+                          {rect.description}
+                        </text>
+                      )}
+                    </>
+                  )}
+                  {/* Compact label for small boxes */}
+                  {rect.height <= 50 && (
+                    <text
+                      x={rect.x + rect.width / 2}
+                      y={rect.y + rect.height / 2 + 5}
+                      textAnchor="middle"
+                      fill="white"
+                      fontSize="16"
+                      fontWeight="700"
+                    >
+                      {rect.name}: {rect.enrollment.toFixed(1)}M
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+          </svg>
+        </div>
+
+        <div className="mt-10 bg-pe-teal/10 rounded-xl p-6 border-l-4 border-pe-teal">
+          <p className="text-xl text-left text-gray-700">
+            <span className="font-semibold text-pe-dark">ACA-Calc</span> models premium tax credits for Marketplace coverage,
+            including interactions with Medicaid and CHIP eligibility
+          </p>
         </div>
       </div>
     </Slide>
