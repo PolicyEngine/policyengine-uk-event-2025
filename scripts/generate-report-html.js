@@ -517,25 +517,26 @@ function generateContentPage(agendaItem, speakers, pageNumber) {
 
   const titleClass = title.length > 50 ? ' class="long-title"' : '';
 
-  // Generate speaker attribution with headshots
+  // Generate speaker attribution with headshots and affiliations
   let speakerHtml = '';
   if (agendaItem.speakerIds && agendaItem.speakerIds.length > 0) {
-    const speakerNames = agendaItem.speakerIds
+    const speakerData = agendaItem.speakerIds
       .map(id => speakers[id])
-      .filter(Boolean)
-      .map(s => s.name);
+      .filter(Boolean);
 
-    const headshots = agendaItem.speakerIds
-      .map(id => speakers[id])
-      .filter(Boolean)
+    const headshots = speakerData
       .filter(s => s.headshotUrl)
       .map(s => `<img src="../slides/public${s.headshotUrl}" alt="${s.name}" class="speaker-inline-headshot">`)
       .join('');
 
-    const prefix = speakerNames.length > 1 ? 'Speakers' : 'Speaker';
-    const names = speakerNames.join(' & ');
+    const prefix = speakerData.length > 1 ? 'Speakers' : 'Speaker';
 
-    speakerHtml = `        <div class="speaker"><div class="speaker-headshots">${headshots}</div><span class="speaker-text">${prefix}: ${names}</span></div>`;
+    // Build speaker list with affiliations
+    const speakerList = speakerData
+      .map(s => `${s.name}, ${s.title}, ${s.organisation}`)
+      .join(' & ');
+
+    speakerHtml = `        <div class="speaker"><div class="speaker-headshots">${headshots}</div><span class="speaker-text">${prefix}: ${speakerList}</span></div>`;
   }
 
   const commentTitle = title.toUpperCase().replace(/:/g, '');
