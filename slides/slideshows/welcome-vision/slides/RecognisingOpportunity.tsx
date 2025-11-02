@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function RecognisingOpportunity() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>October 2021: Recognising the opportunity</SlideTitle>
         </SlideHeader>

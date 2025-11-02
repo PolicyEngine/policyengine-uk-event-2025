@@ -6,7 +6,7 @@ import SlideTitle from '@/components/SlideTitle';
 export default function ThreeIngredientsSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Three ingredients of a tax-benefit model</SlideTitle>
         </SlideHeader>

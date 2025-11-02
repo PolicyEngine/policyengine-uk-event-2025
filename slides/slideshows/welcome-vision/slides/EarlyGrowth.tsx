@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function EarlyGrowth() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>2022-2024: Building momentum</SlideTitle>
         </SlideHeader>

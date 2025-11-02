@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function DataFormatSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Data output format</SlideTitle>
         </SlideHeader>

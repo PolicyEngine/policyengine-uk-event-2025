@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function USLaunch() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Mar 2022: PolicyEngine arrives stateside</SlideTitle>
         </SlideHeader>

@@ -6,7 +6,7 @@ import SlideTitle from '@/components/SlideTitle';
 export default function DynamicsSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Dynamics</SlideTitle>
         </SlideHeader>

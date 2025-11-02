@@ -9,7 +9,7 @@ import SlideSubtitle from '@/components/SlideSubtitle';
 export default function AIUsesSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div>
         <SlideHeader>
           <SlideTitle>AI at PolicyEngine: two uses</SlideTitle>
         </SlideHeader>

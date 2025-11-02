@@ -6,7 +6,7 @@ import SlideTitle from '@/components/SlideTitle';
 export default function PoliciesScopeSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Policy Scope in PolicyEngine UK</SlideTitle>
         </SlideHeader>

@@ -16,7 +16,7 @@ export default function PolicyScoring() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>2021-2022: Demonstrating utility through policy scoring</SlideTitle>
         </SlideHeader>

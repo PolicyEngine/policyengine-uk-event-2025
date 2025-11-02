@@ -47,7 +47,7 @@ export default function AgendaSlide() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Event agenda</SlideTitle>
         </SlideHeader>

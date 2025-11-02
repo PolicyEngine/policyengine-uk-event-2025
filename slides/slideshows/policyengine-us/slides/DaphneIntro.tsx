@@ -9,7 +9,7 @@ export default function DaphneIntro() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Tool for estimating health insurance premium subsidies</SlideTitle>
         </SlideHeader>

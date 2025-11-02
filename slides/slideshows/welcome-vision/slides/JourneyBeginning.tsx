@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function JourneyBeginning() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>September 2021: The beginning</SlideTitle>
         </SlideHeader>

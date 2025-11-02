@@ -9,7 +9,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function IntroducingAnvar() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>The turning point</SlideTitle>
         </SlideHeader>

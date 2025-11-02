@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function FirstReport() {
   return (
     <Slide>
-      <div className="max-w-7xl h-full flex flex-col">
+      <div className="h-full flex flex-col">
         <SlideHeader>
           <SlideTitle>May 2021: Model powers its first report</SlideTitle>
         </SlideHeader>

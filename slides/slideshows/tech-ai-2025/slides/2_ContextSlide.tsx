@@ -8,7 +8,7 @@ import BulletList from '@/components/BulletList';
 export default function ContextSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Technology at PolicyEngine</SlideTitle>
         </SlideHeader>

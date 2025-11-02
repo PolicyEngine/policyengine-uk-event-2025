@@ -6,7 +6,7 @@ import SlideHeader from '@/components/SlideHeader';
 export default function TwoChildLimitSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl h-full flex flex-col">
+      <div className="h-full flex flex-col">
         <SlideHeader>
           <SlideTitle>Two-child limit comparison</SlideTitle>
         </SlideHeader>

@@ -10,7 +10,7 @@ export default function PavelIntro() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>OBBBA household-by-household explorer</SlideTitle>
         </SlideHeader>

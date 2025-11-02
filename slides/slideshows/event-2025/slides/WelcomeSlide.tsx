@@ -7,7 +7,7 @@ import SlideHeader from '@/components/SlideHeader';
 export default function WelcomeSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Welcome and vision</SlideTitle>
         </SlideHeader>

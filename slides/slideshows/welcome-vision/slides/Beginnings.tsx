@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function Beginnings() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Aug 2020: Beginnings of PolicyEngine UK model</SlideTitle>
         </SlideHeader>

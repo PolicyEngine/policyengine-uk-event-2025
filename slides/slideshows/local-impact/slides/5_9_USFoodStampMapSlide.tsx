@@ -9,7 +9,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function USFoodStampMapSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>US example: Food stamp benefits by congressional district</SlideTitle>
         </SlideHeader>

@@ -6,7 +6,7 @@ import SlideTitle from '@/components/SlideTitle';
 export default function InnovationsSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>PolicyEngine innovates on ingredients</SlideTitle>
         </SlideHeader>

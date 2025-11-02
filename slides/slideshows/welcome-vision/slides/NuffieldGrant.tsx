@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function NuffieldGrant() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>The turning point: Nuffield Foundation support</SlideTitle>
         </SlideHeader>

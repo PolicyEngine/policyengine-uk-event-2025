@@ -125,7 +125,7 @@ export default function ACASubsidySetup() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Premium tax credit calculation</SlideTitle>
         </SlideHeader>

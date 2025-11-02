@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function USImprovementsSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>We're improving this further in the US</SlideTitle>
         </SlideHeader>

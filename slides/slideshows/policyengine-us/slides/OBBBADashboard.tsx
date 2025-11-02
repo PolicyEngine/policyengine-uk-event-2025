@@ -9,7 +9,7 @@ export default function OBBBADashboard() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Tool for exploring household-by-household policy impacts</SlideTitle>
         </SlideHeader>

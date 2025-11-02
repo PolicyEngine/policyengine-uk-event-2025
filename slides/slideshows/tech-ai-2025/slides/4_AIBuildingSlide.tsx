@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function AIBuildingSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Building internally</SlideTitle>
         </SlideHeader>

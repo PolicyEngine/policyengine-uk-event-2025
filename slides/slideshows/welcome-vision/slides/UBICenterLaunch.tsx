@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function UBICenterLaunch() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Sep 2021: UBI Center launches PolicyEngine UK</SlideTitle>
         </SlideHeader>

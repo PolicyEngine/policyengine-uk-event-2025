@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function DemoSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>PolicyEngine v2 demo</SlideTitle>
         </SlideHeader>

@@ -9,7 +9,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function ACACalculator() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>ACA-Calc showing premium tax credit scenarios</SlideTitle>
         </SlideHeader>

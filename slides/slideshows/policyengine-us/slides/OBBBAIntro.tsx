@@ -7,7 +7,7 @@ import SlideContent from '@/components/SlideContent';
 export default function OBBBAIntro() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>The One Big Beautiful Bill Act</SlideTitle>
         </SlideHeader>

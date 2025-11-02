@@ -8,7 +8,7 @@ import OpenDashboardButton from './OpenDashboardButton';
 export default function StaticSimulationSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl w-full h-full flex flex-col">
+      <div className="w-full h-full flex flex-col">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
             Static simulation dashboard

@@ -37,7 +37,7 @@ export default function GrowingAdoption() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>2023-2024: Growing adoption</SlideTitle>
         </SlideHeader>

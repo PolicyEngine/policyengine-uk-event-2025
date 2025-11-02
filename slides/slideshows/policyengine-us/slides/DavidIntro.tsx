@@ -10,7 +10,7 @@ export default function DavidIntro() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>2024 Election Calculator</SlideTitle>
         </SlideHeader>

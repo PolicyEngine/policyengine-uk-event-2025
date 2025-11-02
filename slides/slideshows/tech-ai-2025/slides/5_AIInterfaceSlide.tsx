@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function AIInterfaceSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Communicating externally</SlideTitle>
         </SlideHeader>

@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function CalibrationSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>What we calibrate to</SlideTitle>
         </SlideHeader>

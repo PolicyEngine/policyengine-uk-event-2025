@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function MLAccuracy() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>We keep improving the product</SlideTitle>
         </SlideHeader>

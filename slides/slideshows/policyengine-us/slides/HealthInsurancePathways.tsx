@@ -140,7 +140,7 @@ export default function HealthInsurancePathways() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>US health insurance coverage (2023)</SlideTitle>
         </SlideHeader>

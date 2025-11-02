@@ -8,7 +8,7 @@ import BulletList from '@/components/BulletList';
 export default function LocalAreaImportanceSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Why local area impacts matter</SlideTitle>
         </SlideHeader>

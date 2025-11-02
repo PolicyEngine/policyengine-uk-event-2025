@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function ReweightingSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Reweighting for accuracy</SlideTitle>
         </SlideHeader>

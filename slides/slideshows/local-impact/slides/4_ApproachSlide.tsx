@@ -9,7 +9,7 @@ import BulletList from '@/components/BulletList';
 export default function ApproachSlide() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Flexible approach</SlideTitle>
         </SlideHeader>

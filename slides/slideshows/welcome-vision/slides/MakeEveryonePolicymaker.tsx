@@ -8,7 +8,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function MakeEveryonePolicymaker() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>Oct 2021: We launch PolicyEngine independently</SlideTitle>
         </SlideHeader>

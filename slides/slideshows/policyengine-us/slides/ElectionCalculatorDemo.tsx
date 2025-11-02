@@ -9,7 +9,7 @@ import { assetPath } from '@/lib/assetPath';
 export default function ElectionCalculatorDemo() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>2024 Election Calculator in action</SlideTitle>
         </SlideHeader>

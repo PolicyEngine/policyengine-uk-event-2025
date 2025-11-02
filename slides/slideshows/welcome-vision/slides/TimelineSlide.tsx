@@ -21,7 +21,7 @@ export default function TimelineSlide() {
 
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="">
         <SlideHeader>
           <SlideTitle>PolicyEngine journey</SlideTitle>
         </SlideHeader>
