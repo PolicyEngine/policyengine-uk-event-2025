@@ -55,8 +55,33 @@
             z-index: 1;
         }
 
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .page-footer .footer-logo {
+            width: 40px;
+            height: auto;
+            opacity: 0.9;
+        }
+
+        .page-footer .footer-text {
+            color: white;
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
         .page-content {
-            padding: 60px;
+            padding: 50px 60px 60px 60px;
             position: relative;
             z-index: 2;
             height: calc(100% - 80px);
@@ -128,8 +153,8 @@
         h1 {
             color: #1D4044;
             font-size: 32px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin: 0 0 20px 0;
+            padding: 0 0 15px 0;
             border-bottom: 3px solid #319795;
             font-weight: 700;
         }
@@ -281,107 +306,111 @@
         <h1>Event agenda</h1>
 
         <div class="agenda-columns">
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">12:00 PM - 12:30 PM</strong><br>
-                <strong style="font-size: 13px;">Registration, lunch and networking</strong><br>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">12:00 PM - 12:30 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Registration, lunch and networking</strong><br>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">12:30 PM - 12:35 PM</strong><br>
-                <strong style="font-size: 13px;">Welcome and vision</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">12:30 PM - 12:35 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Welcome and vision</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">12:35 PM - 12:40 PM</strong><br>
-                <strong style="font-size: 13px;">The Nuffield Foundation's vision for evidence-based policy</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">12:35 PM - 12:40 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">The Nuffield Foundation's vision for evidence-based policy</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">12:40 PM - 12:50 PM</strong><br>
-                <strong style="font-size: 13px;">Technology and AI for UK policymaking: The PolicyEngine approach</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">12:40 PM - 12:50 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Technology and AI for UK policymaking: The PolicyEngine approach</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">12:50 PM - 1:00 PM</strong><br>
-                <strong style="font-size: 13px;">Scope of the model: Policies, households, and dynamics</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">12:50 PM - 1:00 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Scope of the model: Policies, households, and dynamics</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">1:00 PM - 1:20 PM</strong><br>
-                <strong style="font-size: 13px;">UX research and design of PolicyEngine v2 platform</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/biniam-gebre.jpg" alt="Biniam Gebre" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Biniam Gebre, Co-Founder, Citizen Codex</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/masara-myers.jpg" alt="MaSara Myers" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">MaSara Myers, Creative Director, Citizen Codex</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">1:00 PM - 1:20 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">UX research and design of PolicyEngine v2 platform</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/biniam-gebre.jpg" alt="Biniam Gebre" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Biniam Gebre, Co-Founder, Citizen Codex</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/masara-myers.jpg" alt="MaSara Myers" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">MaSara Myers, Creative Director, Citizen Codex</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">1:20 PM - 1:40 PM</strong><br>
-                <strong style="font-size: 13px;">Live demo: PolicyEngine v2 platform</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/anthony-volk.jpg" alt="Anthony Volk" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Anthony Volk, Software Engineer, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">1:20 PM - 1:40 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Live demo: PolicyEngine v2 platform</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/anthony-volk.jpg" alt="Anthony Volk" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Anthony Volk, Software Engineer, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">1:40 PM - 2:00 PM</strong><br>
-                <strong style="font-size: 13px;">Localising policy impact: Parliamentary constituencies and local authorities</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Ben Ogorek, Senior Data Scientist, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">1:40 PM - 2:00 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Localising policy impact: Parliamentary constituencies and local authorities</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Ben Ogorek, Data Scientist, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">2:00 PM - 2:20 PM</strong><br>
-                <strong style="font-size: 13px;">Tea break and networking</strong><br>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">2:00 PM - 2:20 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Tea break and networking</strong><br>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">2:20 PM - 2:40 PM</strong><br>
-                <strong style="font-size: 13px;">NIESR's use of PolicyEngine in its living standards review</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/max-mosley.jpg" alt="Max Mosley" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Max Mosley, Senior Economist, New Economics Foundation</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">2:20 PM - 2:40 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">NIESR's use of PolicyEngine in its living standards review</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/max-mosley.jpg" alt="Max Mosley" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Max Mosley, Senior Economist, New Economics Foundation</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">2:40 PM - 3:00 PM</strong><br>
-                <strong style="font-size: 13px;">Microsimulation of a carbon dividend</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/malcolm-torry.jpg" alt="Malcolm Torry" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Malcolm Torry, Senior Visiting Fellow, Institute for Social and Economic Research</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">2:40 PM - 3:00 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Microsimulation of a carbon dividend</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/malcolm-torry.jpg" alt="Malcolm Torry" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Malcolm Torry, Senior Visiting Fellow, Institute for Social and Economic Research</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">3:00 PM - 3:20 PM</strong><br>
-                <strong style="font-size: 13px;">VAT analysis with synthetic firm microdata</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">3:00 PM - 3:20 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">VAT analysis with synthetic firm microdata</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">3:20 PM - 3:40 PM</strong><br>
-                <strong style="font-size: 13px;">PolicyEngine US: The One Big Beautiful Bill Act household-by-household</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/daphne-hansell.jpg" alt="Daphne Hansell" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Daphne Hansell, Research Associate, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/david-trimmer.jpg" alt="David Trimmer" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">David Trimmer, Policy Research Fellow, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">3:20 PM - 3:40 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">PolicyEngine US: The One Big Beautiful Bill Act household-by-household</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/daphne-hansell.jpg" alt="Daphne Hansell" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Daphne Hansell, Research Associate, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/david-trimmer.jpg" alt="David Trimmer" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">David Trimmer, Policy Research Fellow, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">3:40 PM - 4:25 PM</strong><br>
-                <strong style="font-size: 13px;">Panel discussion: The future of evidence-based policymaking</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/arun-advani.jpg" alt="Arun Advani" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Arun Advani, Director of CenTax and Professor of Economics, University of Warwick</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">3:40 PM - 4:25 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Panel discussion: The future of evidence-based policymaking</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/arun-advani.jpg" alt="Arun Advani" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Arun Advani, Director of CenTax and Professor of Economics, University of Warwick</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">4:25 PM - 5:00 PM</strong><br>
-                <strong style="font-size: 13px;">Looking ahead: AI-powered policy analysis</strong><br>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
-                <div style="margin-top: 3px;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;"><em style="font-size: 10px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">4:25 PM - 5:00 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Looking ahead: AI-powered policy analysis</strong><br>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></div>
+                <div style="margin-top: 2px; line-height: 1.2;"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;"><em style="font-size: 9px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></div>
             </div>
 
-            <div style="margin: 8px 0;">
-                <strong style="color: #319795; font-size: 12px;">5:00 PM - 6:00 PM</strong><br>
-                <strong style="font-size: 13px;">Reception and networking</strong><br>
+            <div style="margin: 6px 0;">
+                <strong style="color: #319795; font-size: 11px;">5:00 PM - 6:00 PM</strong><br>
+                <strong style="font-size: 12px; line-height: 1.3;">Reception and networking</strong><br>
             </div>
         </div>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 
@@ -420,7 +449,7 @@
                 <div class="speaker-card">
                     <img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-headshot">
                     <h3>Ben Ogorek</h3>
-                    <p class="title">Senior Data Scientist</p>
+                    <p class="title">Data Scientist</p>
                     <p class="org">PolicyEngine</p>
                 </div>
                 <div class="speaker-card">
@@ -480,6 +509,10 @@
             </div>
         </div>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 4: WELCOME AND VISION -->
@@ -494,6 +527,10 @@
 
         <p>Ghenis highlights PolicyEngine's growing impact: formal recognition from HM Treasury, rapid analysis of major policy moments, and expansion to cover all 50 US states with comprehensive tax-benefit modelling. The organisation has expanded into environmental policy with carbon tax modelling, firm-level microsimulation for VAT analysis, and behavioural response modelling. He previews the day's agenda, explaining how PolicyEngine 2.0—with AI-powered explanations, enhanced user experience, and expanded analytical capabilities—represents a transformative step toward making evidence-based policy analysis an integral part of democratic discourse.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 5: THE NUFFIELD FOUNDATION'S VISION FOR EVIDENCE-BASED POLICY -->
@@ -507,6 +544,10 @@
         <p>The Nuffield Foundation's vision for evidence-based policymaking centres on supporting high-quality research that informs better policy decisions. As one of the UK's leading funders of social policy research, the Nuffield Foundation recognises PolicyEngine as a transformative tool that democratises access to sophisticated policy analysis.</p>
 
         <p>Anvar Sarygulov explains how the Foundation's support enables PolicyEngine UK to expand its capabilities, improve its accuracy, and reach more users. The partnership reflects the Foundation's commitment to building infrastructure that strengthens the evidence base for public policy, ensuring that rigourous analysis is accessible to researchers, policymakers, and citizens alike.</p>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 
@@ -523,6 +564,10 @@
 
         <p>The session addresses the unique challenges of modelling the UK's tax and benefit system, with its complex interactions between means-tested benefits, tax credits, and universal programs. Woodruff explains how PolicyEngine employs machine learning for data enhancement, including addressing the Family Resources Survey's known undersampling of high-income households. He showcases how the platform's Python-based architecture maintains computational efficiency while supporting millions of possible policy configurations, and discusses the technical decisions that enable PolicyEngine to serve both individual users seeking personal calculations and researchers conducting population-wide microsimulation analysis.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 7: SCOPE OF THE MODEL POLICIES, HOUSEHOLDS, AND DYNAMICS -->
@@ -536,6 +581,10 @@
         <p>Vahid Ahmadi provides a comprehensive overview of PolicyEngine UK's modelling scope, detailing the extensive range of tax and benefit rules encoded in the platform. This presentation covers how PolicyEngine captures the full complexity of the UK fiscal system, from income tax and National Insurance to Universal Credit, Council Tax support, childcare programs (Tax-Free Childcare, Extended childcare entitlement, Universal childcare entitlement, Targeted childcare entitlement, and Care to Learn), and numerous other means-tested and universal programs. Ahmadi explains the methodology for maintaining an accurate, up-to-date representation of current policy while preserving the flexibility to simulate any hypothetical reform through the platform's modular architecture built on OpenFisca.</p>
 
         <p>The session explores PolicyEngine's sophisticated data enhancement capabilities, representing one of its most technically advanced features. Ahmadi details how the platform addresses fundamental challenges in microsimulation: under-sampling of demographic groups and measurement errors including underreporting of income and benefits. Using machine learning techniques—specifically random forest algorithms for imputation and gradient descent optimisation for reweighting—PolicyEngine enhances the Family Resources Survey by fusing it with the Wealth and Assets Survey and Living Costs and Food Survey, correcting underrepresentation of high-income households and significantly reducing deviations from official statistics. He explains the platform's behavioural response modelling, which incorporates key elasticities for income effects on labour supply, substitution effects on labour supply, and capital gains tax responses, with all parameters customisable by users. Ahmadi demonstrates how PolicyEngine's recent Capital Gains Tax analysis showed behavioural modelling projected substantially lower five-year revenue compared to static analysis, illustrating the critical importance of capturing how individuals adjust economic decisions when facing new incentives.</p>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 
@@ -552,6 +601,10 @@
 
         <p>The session explores the balance between simplicity and sophistication in policy analysis interfaces, demonstrating how PolicyEngine 2.0 serves both casual users seeking quick policy insights and expert researchers requiring detailed technical outputs. Gebre and Myers showcase specific design patterns developed to make distributional analysis, budget impacts, and household-level effects more intuitive, and discuss ongoing efforts to continuously improve the platform based on user feedback.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 9: LIVE DEMO POLICYENGINE V2 PLATFORM -->
@@ -566,6 +619,10 @@
 
         <p>The demo highlights transformative improvements to the platform's design and functionality, including enhanced visualisation tools, more intuitive navigation reflecting modern web standards, and new features specifically designed to lower barriers for first-time users. Volk demonstrates advanced capabilities such as customising household circumstances to understand policy impacts on specific family types, comparing multiple policy scenarios side-by-side with improved clarity, and using the enhanced API to integrate PolicyEngine analysis into external research workflows. He showcases new features including sign-in functionality for saving and sharing policy scenarios, mobile optimisation for analysis on any device, and increased opportunities for AI integration into the user workflow—demonstrating PolicyEngine's commitment to democratising access to sophisticated policy analysis tools while maintaining the technical rigour that professional researchers require.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 10: LOCALISING POLICY IMPACT PARLIAMENTARY CONSTITUENCIES AND LOCAL AUTHORITIES -->
@@ -574,12 +631,16 @@
         <h1 class="long-title">Localising policy impact: Parliamentary constituencies and local authorities</h1>
         <div class="speakers-container">
         <div class="speaker-line"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><span>Nikhil Woodruff, Co-founder & CTO, PolicyEngine</span></div>
-        <div class="speaker-line"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-inline-headshot"><span>Ben Ogorek, Senior Data Scientist, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-inline-headshot"><span>Ben Ogorek, Data Scientist, PolicyEngine</span></div>
         </div>
 
         <p>Nikhil Woodruff presents PolicyEngine's groundbreaking local area modelling framework, which estimates the impact of UK tax and benefit policies at the level of parliamentary constituencies and local authorities—a capability that transforms how policymakers understand the geographical distribution of policy effects. The system reweights national Family Resources Survey data to match administrative statistics on income, employment, and population for each local area, creating household weights that maintain consistency with national totals while reflecting local characteristics. Woodruff explains the sophisticated methodology that integrates data from HMRC, ONS, ASHE, and the House of Commons Library, using gradient-based optimisation to calibrate over 11,000 targets covering income brackets, age bands, and employment patterns across all constituencies and local authorities.</p>
 
         <p>The presentation demonstrates the interactive dashboard that allows users to explore local area data and compare impacts across regions, supporting analysis of income, consumption, wealth, taxes, benefits, and fiscal impacts at the constituency and local authority level. Woodruff showcases practical applications, including how Members of Parliament can understand how proposed reforms would affect their specific constituencies, and how local authorities can assess the implications of benefit changes for their communities. He explains the technical challenges of producing geographically granular analysis while maintaining statistical validity, and demonstrates how this local dimension adds crucial context to national policy debates. The framework represents a significant advance in UK policy analysis, enabling evidence-based discussions that account for regional variation in economic circumstances, demographic composition, and policy impacts.</p>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 
@@ -595,6 +656,10 @@
 
         <p>Mosley demonstrates how PolicyEngine enabled NIESR to analyze policy interventions with precision and speed. The platform was particularly valuable for evaluating poverty reduction measures, including analysis showing that removing the two-child limit would be the most cost-effective way to reduce poverty, lifting households out of deprivation while allowing direct comparison of fiscal impacts across alternative policy designs. He discusses how PolicyEngine's accessibility and transparency improved both the efficiency of NIESR's analysis and the communication of findings to policymakers and the public, providing a real-world example of how open-source microsimulation tools complement traditional economic research workflows at established institutions.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 12: MICROSIMULATION OF A CARBON DIVIDEND -->
@@ -609,6 +674,10 @@
 
         <p>The presentation reveals a fundamental tension in climate policy design: while both carbon tax scenarios redistribute from rich to poor (as wealthy households consume more carbon-intensive goods), PolicyEngine's microsimulation shows they would impose large income losses on too many low-income households to be politically feasible. Torry demonstrates how this distributional analysis informs the search for viable solutions, suggesting that a hybrid approach—combining a carbon tax with reforms to existing taxes and benefits—could achieve environmental goals while protecting vulnerable households. He references his broader Basic Income research using PolicyEngine, which identified feasible schemes meeting strict criteria including revenue neutrality within £2 billion, no more than 2% of low-income households experiencing losses above 5%, and substantial reductions in poverty and inequality. This work exemplifies how microsimulation reveals the political economy of climate policy by showing precisely which households win and lose under different policy designs.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 13: VAT ANALYSIS WITH SYNTHETIC FIRM MICRODATA -->
@@ -622,6 +691,10 @@
         <p>Vahid Ahmadi presents PolicyEngine's first application of firm-level microsimulation to UK tax policy, analyzing how VAT threshold changes between £70,000 and £120,000 would affect government revenues and VAT-registered businesses in 2026-27. This groundbreaking work addresses a critical gap in traditional microsimulation models by expanding beyond household-level analysis to incorporate business-side tax impacts. Ahmadi explains the methodology for constructing synthetic firm microdata through multi-objective optimisation, calibrated to match both ONS UK Business statistics for overall firm distributions and HMRC VAT statistics for registered businesses. The model captures firms by industry classification, turnover bands, employee counts, and VAT tax liability while protecting sensitive business information.</p>
 
         <p>The presentation showcases validation results showing PolicyEngine's estimates deviate an average of only 12.3% from HMRC's official projections across 2024-29, demonstrating the model's accuracy. Ahmadi reveals key findings from the analysis: raising the threshold to £100,000 would remove approximately 48,000 firms from VAT registration and reduce revenue by £371 million, while a £70,000 threshold would add 109,000 firms and generate £642 million additional revenue. He discusses observed distributions showing density drops above both the £90,000 VAT threshold and the £150,000 VAT Flat Rate Scheme limit. Ahmadi previews upcoming applications of this capability to sector-specific thresholds, phase-in mechanisms, and policies addressing cliff effects where businesses deliberately constrain growth to avoid VAT registration—demonstrating how firm-level microsimulation provides a more complete picture of tax policy impacts.</p>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 
@@ -640,6 +713,10 @@
 
         <p>This expansion has been supported by major grants from leading foundations and agencies. The National Science Foundation awarded PolicyEngine $300,000 through its Pathways to Enable Open-Source Ecosystems (POSE) program to strengthen organisational infrastructure and community engagement around economic policy analysis tools. Arnold Ventures has provided multiple awards supporting state and congressional district policy breakdowns, specialized calculators for SALT and AMT policies, and labor supply response modelling. MyFriendBen contracted PolicyEngine to power its benefit eligibility screener with comprehensive API support, while NEO Philanthropy provided general operating support through its Economic Mobility & Opportunity Fund. These partnerships demonstrate growing recognition of PolicyEngine's role in democratising sophisticated policy analysis across the United States.</p>
     </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 
 <!-- PAGE 15: LOOKING AHEAD AI-POWERED POLICY ANALYSIS -->
@@ -655,6 +732,10 @@
         <p>The PolicyEngine team concludes the event with a live demonstration of their multi-agent AI research workflow, recently tested on policy analysis tasks similar to their UK carbon dividend study. Using Claude Code's multi-agent system, PolicyEngine has configured specialized agents that automate different parts of the policy analysis pipeline: a data fetching agent that accesses PolicyEngine microsimulation data from GitHub repositories and documentation, a script writer that generates Python code using the policyengine-uk package, and a report generator that produces formatted research output with Plotly visualisations. The speakers demonstrate how Claude Code automatically routes tasks to appropriate agents based on natural language requests, showing real-time policy analysis without manual coordination between components.</p>
 
         <p>The presentation candidly addresses both successes and limitations discovered during testing. The team found that multi-agent workflows excel at standard distributional analyses—calculating poverty rates, Gini coefficients, and decile-level impacts—saving significant time on repetitive tasks while maintaining PolicyEngine's house style. However, they reveal challenges with complex benefit program interactions, the need for precise prompting rather than generic instructions, and the importance of specialized reviewer agents for meaningful code critique. The speakers announce the forthcoming policyengine-claude plugin, which packages these insights for other researchers using Claude Code with PolicyEngine, incorporating Anthropic's Skills ecosystem for common policy analyses and direct database access through the Model Context Protocol. They emphasize the right division of labor: AI handles routine policy updates with constant analysis structures, while human researchers focus on questions requiring genuine policy expertise, complex methodological choices, and political context—ensuring that advancing AI serves to augment rather than replace expert judgment in evidence-based policymaking.</p>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 

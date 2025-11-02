@@ -157,8 +157,33 @@ function generateHtmlHeader() {
             z-index: 1;
         }
 
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .page-footer .footer-logo {
+            width: 40px;
+            height: auto;
+            opacity: 0.9;
+        }
+
+        .page-footer .footer-text {
+            color: white;
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
         .page-content {
-            padding: 60px;
+            padding: 50px 60px 60px 60px;
             position: relative;
             z-index: 2;
             height: calc(100% - 80px);
@@ -230,8 +255,8 @@ function generateHtmlHeader() {
         h1 {
             color: #1D4044;
             font-size: 32px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin: 0 0 20px 0;
+            padding: 0 0 15px 0;
             border-bottom: 3px solid #319795;
             font-weight: 700;
         }
@@ -391,9 +416,9 @@ function generateAgendaPage(agendaItems, speakers) {
       .map(part => part.charAt(0).toUpperCase() + part.slice(1))
       .join(': ');
 
-    let itemHtml = `            <div style="margin: 8px 0;">\n`;
-    itemHtml += `                <strong style="color: #319795; font-size: 12px;">${item.time}</strong><br>\n`;
-    itemHtml += `                <strong style="font-size: 13px;">${title}</strong><br>\n`;
+    let itemHtml = `            <div style="margin: 6px 0;">\n`;
+    itemHtml += `                <strong style="color: #319795; font-size: 11px;">${item.time}</strong><br>\n`;
+    itemHtml += `                <strong style="font-size: 12px; line-height: 1.3;">${title}</strong><br>\n`;
 
     // Add speakers with headshots and affiliations
     if (item.speakerIds && item.speakerIds.length > 0) {
@@ -403,12 +428,12 @@ function generateAgendaPage(agendaItems, speakers) {
 
       for (const speaker of speakerData) {
         const headshot = speaker.headshotUrl
-          ? `<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;">`
+          ? `<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" style="width: 22px; height: 22px; border-radius: 50%; vertical-align: middle; margin-right: 5px; border: 1px solid #319795;">`
           : '';
-        itemHtml += `                <div style="margin-top: 3px;">${headshot}<em style="font-size: 10px; color: #5A5A5A;">${speaker.name}, ${speaker.title}, ${speaker.organisation}</em></div>\n`;
+        itemHtml += `                <div style="margin-top: 2px; line-height: 1.2;">${headshot}<em style="font-size: 9px; color: #5A5A5A;">${speaker.name}, ${speaker.title}, ${speaker.organisation}</em></div>\n`;
       }
     } else if (item.speaker) {
-      itemHtml += `                <em style="font-size: 10px; color: #5A5A5A;">${item.speaker}</em>\n`;
+      itemHtml += `                <em style="font-size: 9px; color: #5A5A5A;">${item.speaker}</em>\n`;
     }
 
     itemHtml += `            </div>`;
@@ -425,6 +450,10 @@ function generateAgendaPage(agendaItems, speakers) {
         <div class="agenda-columns">
 ${agendaHtml}
         </div>
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 `;
@@ -500,6 +529,10 @@ function generateSpeakersPage(speakers, agendaItems) {
   }
 
   html += `    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
+    </div>
 </div>
 `;
 
@@ -560,6 +593,10 @@ function generateContentPage(agendaItem, speakers, pageNumber) {
 ${speakerHtml}
 
 ${content}
+    </div>
+    <div class="page-footer">
+        <img src="../slides/public/logos/profile_white.svg" alt="PolicyEngine" class="footer-logo">
+        <div class="footer-text">PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025</div>
     </div>
 </div>
 `;

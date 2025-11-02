@@ -57,7 +57,18 @@ export default function Slide({
 
       {/* Footer with gradient - contains controls */}
       {showFooter && !isCover && !isEnd && (
-        <div className="absolute bottom-0 left-0 right-0 h-20 gradient-footer" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 gradient-footer flex items-center justify-between px-12">
+          <Image
+            src={assetPath("/logos/profile_white.svg")}
+            alt="PolicyEngine"
+            width={50}
+            height={50}
+            className="opacity-90"
+          />
+          <div className="text-white text-xs opacity-90">
+            PolicyEngine 2.0 and the Future of Public Policy Analysis • 3 November 2025
+          </div>
+        </div>
       )}
     </div>
   );
