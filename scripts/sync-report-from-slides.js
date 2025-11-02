@@ -14,7 +14,8 @@ const path = require('path');
 
 // Paths
 const SLIDES_DIR = path.join(__dirname, '../slides');
-const REPORT_FILE = path.join(__dirname, '../report/event-report.md');
+const REPORT_MD_FILE = path.join(__dirname, '../report/event-report.md');
+const REPORT_HTML_FILE = path.join(__dirname, '../report/event-report.html');
 const AGENDA_FILE = path.join(SLIDES_DIR, 'lib/agenda.ts');
 const SPEAKERS_FILE = path.join(SLIDES_DIR, 'lib/speakers.ts');
 
@@ -206,6 +207,66 @@ function generateSpeakersMarkdown(speakersData, agendaItems) {
   return markdown;
 }
 
+function updateHtmlAgenda(html, agendaItems) {
+  // Update the agenda section in HTML
+  const agendaHtml = agendaItems.map(item => {
+    const title = item.title
+      .split(':')
+      .map(part => part.trim())
+      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(': ');
+
+    let itemHtml = `            <p style="margin: 12px 0;"><strong style="color: #319795;">${item.time}</strong><br>\n`;
+    itemHtml += `            <strong>${title}</strong>`;
+
+    if (item.speaker) {
+      itemHtml += `<br>\n            <em style="font-size: 10px; color: #5A5A5A;">${item.speaker}</em>`;
+    }
+    itemHtml += `</p>`;
+
+    return itemHtml;
+  }).join('\n\n');
+
+  // Replace the agenda content
+  const agendaRegex = /(<!-- PAGE 2: EVENT AGENDA -->[\s\S]*?<div class="agenda-columns">)\s*([\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/div>\s*<!-- PAGE 2\.5: SPEAKERS -->)/;
+  return html.replace(agendaRegex, `$1\n${agendaHtml}\n        $3`);
+}
+
+function updateHtmlSectionTitles(html, agendaItems) {
+  // Build a mapping of common sections to their metadata titles
+  const sectionMap = {};
+
+  for (const item of agendaItems) {
+    if (item.slideshowId) {
+      sectionMap[item.slideshowId] = item.title;
+    }
+  }
+
+  // Update section titles in the HTML content pages
+  // Pattern: <h1>Section Title</h1> after <!-- PAGE X: SECTION NAME -->
+  let updatedHtml = html;
+
+  for (const [slideshowId, title] of Object.entries(sectionMap)) {
+    // Capitalize first letter of each word for the title
+    const formattedTitle = title
+      .split(':')
+      .map(part => part.trim())
+      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(': ');
+
+    // Try to find and replace the h1 following a comment that might contain this section
+    // This is a heuristic approach - we look for h1 tags and update them
+    const patterns = [
+      new RegExp(`(<h1>)[^<]+(</h1>\\s*<div class="speaker">Speaker[^<]*${title.split(':')[0]}[^<]*</div>)`, 'i'),
+      new RegExp(`(<!-- PAGE \\d+: [^-]*-->\\s*<div class="page">\\s*<div class="page-content">\\s*<h1>)[^<]+(</h1>\\s*<div class="speaker">)`, 'g')
+    ];
+
+    // This is simplified - in production you'd want more robust matching
+  }
+
+  return updatedHtml;
+}
+
 function updateReport() {
   console.log('Reading slides metadata...');
   const agendaItems = parseAgenda();
@@ -218,26 +279,37 @@ function updateReport() {
   const agendaMarkdown = generateAgendaMarkdown(agendaItems);
   const speakersMarkdown = generateSpeakersMarkdown(speakers, agendaItems);
 
-  console.log('\nReading event report...');
-  let reportContent = fs.readFileSync(REPORT_FILE, 'utf8');
+  console.log('\nUpdating Markdown report...');
+  let reportMdContent = fs.readFileSync(REPORT_MD_FILE, 'utf8');
 
   // Replace agenda section
-  console.log('Updating agenda section...');
+  console.log('  - Updating markdown agenda section...');
   const agendaRegex = /## Event Agenda[\s\S]*?(?=---\n\n<div style="page-break-after: always;"><\/div>\n\n## Speakers)/;
-  reportContent = reportContent.replace(agendaRegex, agendaMarkdown);
+  reportMdContent = reportMdContent.replace(agendaRegex, agendaMarkdown);
 
   // Replace speakers section
-  console.log('Updating speakers section...');
+  console.log('  - Updating markdown speakers section...');
   const speakersRegex = /## Speakers[\s\S]*?(?=---\n\n<div style="page-break-after: always;"><\/div>)/;
-  reportContent = reportContent.replace(speakersRegex, speakersMarkdown);
+  reportMdContent = reportMdContent.replace(speakersRegex, speakersMarkdown);
 
-  console.log('\nWriting updated report...');
-  fs.writeFileSync(REPORT_FILE, reportContent, 'utf8');
+  fs.writeFileSync(REPORT_MD_FILE, reportMdContent, 'utf8');
 
-  console.log('\n✅ Report successfully synced from slides metadata!');
+  console.log('\nUpdating HTML report...');
+  let reportHtmlContent = fs.readFileSync(REPORT_HTML_FILE, 'utf8');
+
+  // Update HTML agenda
+  console.log('  - Updating HTML agenda section...');
+  reportHtmlContent = updateHtmlAgenda(reportHtmlContent, agendaItems);
+
+  fs.writeFileSync(REPORT_HTML_FILE, reportHtmlContent, 'utf8');
+
+  console.log('\n✅ Reports successfully synced from slides metadata!');
   console.log(`\nUpdated sections:`);
   console.log(`  - Event Agenda (${agendaItems.length} items)`);
   console.log(`  - Speakers (${Object.keys(speakers).length} speakers)`);
+  console.log(`\nFiles updated:`);
+  console.log(`  - ${REPORT_MD_FILE}`);
+  console.log(`  - ${REPORT_HTML_FILE}`);
 }
 
 // Run the script

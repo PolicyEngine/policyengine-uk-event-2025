@@ -327,6 +327,61 @@
             line-height: 1.6;
         }
 
+        /* Speaker grid styles */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .speaker-card {
+            text-align: center;
+        }
+
+        .speaker-headshot {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            border: 3px solid #319795;
+        }
+
+        .speaker-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: #1D4044;
+        }
+
+        .speaker-card .title {
+            font-size: 13px;
+            color: #5A5A5A;
+            margin: 0 0 3px 0;
+            font-style: italic;
+        }
+
+        .speaker-card .org {
+            font-size: 12px;
+            color: #7A7A7A;
+            margin: 0;
+        }
+
+        .speakers-section {
+            margin-bottom: 40px;
+        }
+
+        .speakers-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #319795;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #319795;
+        }
+
         @media print {
             body {
                 background: white;
@@ -344,7 +399,7 @@
 <!-- PAGE 1: FRONT COVER -->
 <div class="page cover-page">
     <div>
-        <img src="white.png" alt="PolicyEngine Logo" class="logo">
+        <img src="../slides/public/logos/white.svg" alt="PolicyEngine Logo" class="logo">
         <h1>PolicyEngine 2.0 and the<br>Future of Public Policy Analysis</h1>
     </div>
     <div>
@@ -360,7 +415,10 @@
             <a href="https://github.com/policyengine" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://instagram.com/policyengine" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <div class="supporter">Supported by Nuffield Foundation</div>
+        <div class="supporter" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div>Supported by</div>
+            <img src="../slides/public/logos/nuffield-white.png" alt="Nuffield Foundation" style="width: 140px; height: auto; opacity: 0.7;">
+        </div>
     </div>
 </div>
 
@@ -371,34 +429,38 @@
 
         <div class="agenda-columns">
             <p style="margin: 12px 0;"><strong style="color: #319795;">12:00 PM - 12:30 PM</strong><br>
-            <strong>Registration, lunch & networking</strong></p>
+            <strong>Registration, lunch and networking</strong></p>
 
-            <p style="margin: 12px 0;"><strong style="color: #319795;">12:30 PM - 12:40 PM</strong><br>
+            <p style="margin: 12px 0;"><strong style="color: #319795;">12:30 PM - 12:35 PM</strong><br>
             <strong>Welcome and vision</strong><br>
             <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Founder & CEO, PolicyEngine</em></p>
 
+            <p style="margin: 12px 0;"><strong style="color: #319795;">12:35 PM - 12:40 PM</strong><br>
+            <strong>The Nuffield Foundation's vision for evidence-based policy</strong><br>
+            <em style="font-size: 10px; color: #5A5A5A;">Anvar Sarygulov, Nuffield Foundation</em></p>
+
             <p style="margin: 12px 0;"><strong style="color: #319795;">12:40 PM - 12:50 PM</strong><br>
             <strong>Technology and AI for UK policymaking: The PolicyEngine approach</strong><br>
-            <em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff, Co-founder & CTO, PolicyEngine</em></p>
+            <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis and Nikhil Woodruff, PolicyEngine</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">12:50 PM - 1:00 PM</strong><br>
-            <strong>Scope of the model: Rules, data, and dynamics</strong><br>
+            <strong>Scope of the model: Policies, households, and dynamics</strong><br>
             <em style="font-size: 10px; color: #5A5A5A;">Vahid Ahmadi, Research Associate, PolicyEngine</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">1:00 PM - 1:20 PM</strong><br>
+            <strong>UX research and design of PolicyEngine v2 platform</strong><br>
+            <em style="font-size: 10px; color: #5A5A5A;">Biniam Gebre and MaSara Myers, Citizen Codex</em></p>
+
+            <p style="margin: 12px 0;"><strong style="color: #319795;">1:20 PM - 1:40 PM</strong><br>
             <strong>Live demo: PolicyEngine v2 platform</strong><br>
             <em style="font-size: 10px; color: #5A5A5A;">Anthony Volk, Software Engineer, PolicyEngine</em></p>
 
-            <p style="margin: 12px 0;"><strong style="color: #319795;">1:20 PM - 1:40 PM</strong><br>
-            <strong>UX research and design of PolicyEngine v2 platform</strong><br>
-            <em style="font-size: 10px; color: #5A5A5A;">Biniam Gebre, Co-Founder, Citizen Codex & MaSara Myers, Creative Director, Citizen Codex</em></p>
-
             <p style="margin: 12px 0;"><strong style="color: #319795;">1:40 PM - 2:00 PM</strong><br>
-            <strong>Localising policy impact: Parliamentary constituencies & local authorities</strong><br>
-            <em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff</em></p>
+            <strong>Localising policy impact: Parliamentary constituencies and local authorities</strong><br>
+            <em style="font-size: 10px; color: #5A5A5A;">Nikhil Woodruff and Ben Ogorek, PolicyEngine</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">2:00 PM - 2:20 PM</strong><br>
-            <strong>Tea break & networking</strong></p>
+            <strong>Tea break and networking</strong></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">2:20 PM - 2:40 PM</strong><br>
             <strong>NIESR's use of PolicyEngine in its living standards review</strong><br>
@@ -414,18 +476,122 @@
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">3:20 PM - 3:40 PM</strong><br>
             <strong>PolicyEngine US: Modelling federal, state, and local policies</strong><br>
-            <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis</em></p>
+            <em style="font-size: 10px; color: #5A5A5A;">Pavel Makarchuk, Daphne Hansell, and David Trimmer, PolicyEngine</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">3:40 PM - 4:25 PM</strong><br>
             <strong>Panel discussion: The future of evidence-based policymaking</strong><br>
-            <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis; Arun Advani, Director of CenTax and Professor of Economics, University of Warwick; Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</em></p>
+            <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis; Arun Advani; Anvar Sarygulov</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">4:25 PM - 5:00 PM</strong><br>
             <strong>Looking ahead: AI-powered policy analysis</strong><br>
             <em style="font-size: 10px; color: #5A5A5A;">Max Ghenis, Nikhil Woodruff, Vahid Ahmadi</em></p>
 
             <p style="margin: 12px 0;"><strong style="color: #319795;">5:00 PM - 6:00 PM</strong><br>
-            <strong>Reception & networking</strong></p>
+            <strong>Reception and networking</strong></p>
+        
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 2.5: SPEAKERS -->
+<div class="page">
+    <div class="page-content">
+        <h1>Speakers</h1>
+
+        <div class="speakers-section">
+            <h2>PolicyEngine Team</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-headshot">
+                    <h3>Max Ghenis</h3>
+                    <p class="title">Founder & CEO</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-headshot">
+                    <h3>Nikhil Woodruff</h3>
+                    <p class="title">Co-founder & CTO</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-headshot">
+                    <h3>Vahid Ahmadi</h3>
+                    <p class="title">Research Associate</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/anthony-volk.jpg" alt="Anthony Volk" class="speaker-headshot">
+                    <h3>Anthony Volk</h3>
+                    <p class="title">Software Engineer</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-headshot">
+                    <h3>Ben Ogorek</h3>
+                    <p class="title">Senior Data Scientist</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/pavel-makarchuk.jpg" alt="Pavel Makarchuk" class="speaker-headshot">
+                    <h3>Pavel Makarchuk</h3>
+                    <p class="title">Policy Modelling Manager</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/daphne-hansell.jpg" alt="Daphne Hansell" class="speaker-headshot">
+                    <h3>Daphne Hansell</h3>
+                    <p class="title">Research Associate</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/david-trimmer.jpg" alt="David Trimmer" class="speaker-headshot">
+                    <h3>David Trimmer</h3>
+                    <p class="title">Policy Research Fellow</p>
+                    <p class="org">PolicyEngine</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speakers-section">
+            <h2>External Speakers</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" class="speaker-headshot">
+                    <h3>Anvar Sarygulov</h3>
+                    <p class="title">Research Grants and Programmes Manager</p>
+                    <p class="org">Nuffield Foundation</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/biniam-gebre.jpg" alt="Biniam Gebre" class="speaker-headshot">
+                    <h3>Biniam Gebre</h3>
+                    <p class="title">Co-Founder</p>
+                    <p class="org">Citizen Codex</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/masara-myers.jpg" alt="MaSara Myers" class="speaker-headshot">
+                    <h3>MaSara Myers</h3>
+                    <p class="title">Creative Director</p>
+                    <p class="org">Citizen Codex</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/max-mosley.jpg" alt="Max Mosley" class="speaker-headshot">
+                    <h3>Max Mosley</h3>
+                    <p class="title">Senior Economist</p>
+                    <p class="org">New Economics Foundation</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/malcolm-torry.jpg" alt="Malcolm Torry" class="speaker-headshot">
+                    <h3>Malcolm Torry</h3>
+                    <p class="title">Senior Visiting Fellow</p>
+                    <p class="org">Institute for Social and Economic Research</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="../slides/public/headshots/arun-advani.jpg" alt="Arun Advani" class="speaker-headshot">
+                    <h3>Arun Advani</h3>
+                    <p class="title">Director of CenTax and Professor of Economics</p>
+                    <p class="org">University of Warwick</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
