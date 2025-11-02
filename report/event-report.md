@@ -73,8 +73,8 @@ www.policyengine.org
 *Vahid Ahmadi*
 
 ### 3:20 PM - 3:40 PM
-**PolicyEngine US: Modelling federal, state, and local policies**
-*Pavel Makarchuk, Daphne Hansell, and David Trimmer, PolicyEngine*
+**PolicyEngine US: The One Big Beautiful Bill Act household-by-household**
+*Daphne Hansell and David Trimmer, PolicyEngine*
 
 ### 3:40 PM - 4:25 PM
 **Panel discussion: The future of evidence-based policymaking**
@@ -114,10 +114,6 @@ www.policyengine.org
 **Ben Ogorek**
 *Senior Data Scientist, PolicyEngine*
 ![Ben Ogorek](/headshots/ben-ogorek.jpg)
-
-**Pavel Makarchuk**
-*Policy Modelling Manager, PolicyEngine*
-![Pavel Makarchuk](/headshots/pavel-makarchuk.jpg)
 
 **Daphne Hansell**
 *Research Associate, PolicyEngine*
