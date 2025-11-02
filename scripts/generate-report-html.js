@@ -238,16 +238,20 @@ function generateHtmlHeader() {
             font-size: 28px;
         }
 
-        .speaker {
+        .speakers-container {
+            margin: 8px 0 20px 0;
+        }
+
+        .speaker-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 6px 0;
             font-style: italic;
             font-weight: 400;
             color: #344054;
-            margin: 8px 0 12px 0;
             font-size: 14px;
             font-family: 'Roboto', sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 15px;
         }
 
         .speaker-inline-headshot {
@@ -257,17 +261,6 @@ function generateHtmlHeader() {
             object-fit: cover;
             border: 2px solid #319795;
             flex-shrink: 0;
-        }
-
-        .speaker-headshots {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .speaker-text {
-            flex: 1;
         }
 
         p {
@@ -524,19 +517,15 @@ function generateContentPage(agendaItem, speakers, pageNumber) {
       .map(id => speakers[id])
       .filter(Boolean);
 
-    const headshots = speakerData
-      .filter(s => s.headshotUrl)
-      .map(s => `<img src="../slides/public${s.headshotUrl}" alt="${s.name}" class="speaker-inline-headshot">`)
-      .join('');
+    // Generate one line per speaker with their headshot
+    const speakerLines = speakerData.map(s => {
+      const headshot = s.headshotUrl
+        ? `<img src="../slides/public${s.headshotUrl}" alt="${s.name}" class="speaker-inline-headshot">`
+        : '';
+      return `        <div class="speaker-line">${headshot}<span>${s.name}, ${s.title}, ${s.organisation}</span></div>`;
+    }).join('\n');
 
-    const prefix = speakerData.length > 1 ? 'Speakers' : 'Speaker';
-
-    // Build speaker list with affiliations
-    const speakerList = speakerData
-      .map(s => `${s.name}, ${s.title}, ${s.organisation}`)
-      .join(' & ');
-
-    speakerHtml = `        <div class="speaker"><div class="speaker-headshots">${headshots}</div><span class="speaker-text">${prefix}: ${speakerList}</span></div>`;
+    speakerHtml = `        <div class="speakers-container">\n${speakerLines}\n        </div>`;
   }
 
   const commentTitle = title.toUpperCase().replace(/:/g, '');

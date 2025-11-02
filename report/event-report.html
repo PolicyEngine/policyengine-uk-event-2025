@@ -136,16 +136,20 @@
             font-size: 28px;
         }
 
-        .speaker {
+        .speakers-container {
+            margin: 8px 0 20px 0;
+        }
+
+        .speaker-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 6px 0;
             font-style: italic;
             font-weight: 400;
             color: #344054;
-            margin: 8px 0 12px 0;
             font-size: 14px;
             font-family: 'Roboto', sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 15px;
         }
 
         .speaker-inline-headshot {
@@ -155,17 +159,6 @@
             object-fit: cover;
             border: 2px solid #319795;
             flex-shrink: 0;
-        }
-
-        .speaker-headshots {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .speaker-text {
-            flex: 1;
         }
 
         p {
@@ -445,7 +438,9 @@
 <div class="page">
     <div class="page-content">
         <h1>Welcome and vision</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Max Ghenis, Founder & CEO, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"><span>Max Ghenis, Founder & CEO, PolicyEngine</span></div>
+        </div>
 
         <p>Max Ghenis opens the event by introducing PolicyEngine as a nonprofit providing free, open-source microsimulation tools that make sophisticated tax and benefit policy analysis accessible to policymakers, researchers, journalists, and citizens. He describes PolicyEngine UK as the UK's only open-source tax-benefit microsimulation model, built on the OpenFisca framework, combining an intuitive web interface with a sophisticated engine processing millions of policy reforms in real-time. The platform uses the Family Resources Survey enhanced through fusion with other datasets and machine learning techniques. Ghenis announces the Nuffield Foundation's transformative support in December 2024, enabling the UK model to expand with local authority and constituency datasets, integration of childcare subsidies and major public services, an open validation dashboard, and AI-capable design improvements.</p>
 
@@ -457,7 +452,9 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">The Nuffield Foundation's vision for evidence-based policy</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/anvar-sarygulov.jpg" alt="Anvar Sarygulov" class="speaker-inline-headshot"><span>Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation</span></div>
+        </div>
 
         <p>The Nuffield Foundation's vision for evidence-based policymaking centres on supporting high-quality research that informs better policy decisions. As one of the UK's leading funders of social policy research, the Nuffield Foundation recognises PolicyEngine as a transformative tool that democratises access to sophisticated policy analysis.</p>
 
@@ -469,7 +466,10 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">Technology and AI for UK policymaking: The PolicyEngine approach</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"></div><span class="speaker-text">Speakers: Max Ghenis, Founder & CEO, PolicyEngine & Nikhil Woodruff, Co-founder & CTO, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"><span>Max Ghenis, Founder & CEO, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><span>Nikhil Woodruff, Co-founder & CTO, PolicyEngine</span></div>
+        </div>
 
         <p>Nikhil Woodruff explores how PolicyEngine leverages artificial intelligence and modern software architecture to transform UK policy analysis. Building on the OpenFisca-Core framework, PolicyEngine has developed a sophisticated technical stack that processes complex policy simulations in real-time, enabling users to receive instant feedback on reform proposals. Woodruff demonstrates the platform's AI-powered explanation system, launched in 2024, which translates intricate tax and benefit calculations into clear, understandable language—making professional-grade analysis accessible regardless of technical background.</p>
 
@@ -481,7 +481,9 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">Scope of the model: Policies, households, and dynamics</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"><span>Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        </div>
 
         <p>Vahid Ahmadi provides a comprehensive overview of PolicyEngine UK's modelling scope, detailing the extensive range of tax and benefit rules encoded in the platform. This presentation covers how PolicyEngine captures the full complexity of the UK fiscal system, from income tax and National Insurance to Universal Credit, Council Tax support, childcare programs (Tax-Free Childcare, Extended childcare entitlement, Universal childcare entitlement, Targeted childcare entitlement, and Care to Learn), and numerous other means-tested and universal programs. Ahmadi explains the methodology for maintaining an accurate, up-to-date representation of current policy while preserving the flexibility to simulate any hypothetical reform through the platform's modular architecture built on OpenFisca.</p>
 
@@ -493,7 +495,10 @@
 <div class="page">
     <div class="page-content">
         <h1>UX research and design of PolicyEngine v2 platform</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/biniam-gebre.jpg" alt="Biniam Gebre" class="speaker-inline-headshot"><img src="../slides/public/headshots/masara-myers.jpg" alt="MaSara Myers" class="speaker-inline-headshot"></div><span class="speaker-text">Speakers: Biniam Gebre, Co-Founder, Citizen Codex & MaSara Myers, Creative Director, Citizen Codex</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/biniam-gebre.jpg" alt="Biniam Gebre" class="speaker-inline-headshot"><span>Biniam Gebre, Co-Founder, Citizen Codex</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/masara-myers.jpg" alt="MaSara Myers" class="speaker-inline-headshot"><span>MaSara Myers, Creative Director, Citizen Codex</span></div>
+        </div>
 
         <p>Biniam Gebre and MaSara Myers present the extensive user experience research that informed the design of PolicyEngine 2.0. This presentation reveals insights from interviews with policymakers, researchers, journalists, and citizens to understand their needs, pain points, and mental models when engaging with policy analysis tools. The speakers explain how these insights shaped critical design decisions, from information architecture to visual design, ensuring that complex microsimulation results are presented in ways that are both accurate and comprehensible.</p>
 
@@ -505,7 +510,9 @@
 <div class="page">
     <div class="page-content">
         <h1>Live demo: PolicyEngine v2 platform</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/anthony-volk.jpg" alt="Anthony Volk" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Anthony Volk, Software Engineer, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/anthony-volk.jpg" alt="Anthony Volk" class="speaker-inline-headshot"><span>Anthony Volk, Software Engineer, PolicyEngine</span></div>
+        </div>
 
         <p>Anthony Volk showcases PolicyEngine 2.0 through an interactive demonstration of the comprehensively redesigned platform. Based on extensive user research conducted by partner organisation Citizen Codex, the new design addresses user feedback requesting a more standard, accessible interface with lower experience and domain knowledge thresholds. Volk walks through the reimagined user journey from designing a policy reform to interpreting its economic and distributional impacts, demonstrating how the new interface reduces the time and understanding needed for users to successfully run their first microsimulation.</p>
 
@@ -517,7 +524,10 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">Localising policy impact: Parliamentary constituencies and local authorities</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-inline-headshot"></div><span class="speaker-text">Speakers: Nikhil Woodruff, Co-founder & CTO, PolicyEngine & Ben Ogorek, Senior Data Scientist, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><span>Nikhil Woodruff, Co-founder & CTO, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/ben-ogorek.jpg" alt="Ben Ogorek" class="speaker-inline-headshot"><span>Ben Ogorek, Senior Data Scientist, PolicyEngine</span></div>
+        </div>
 
         <p>Nikhil Woodruff presents PolicyEngine's groundbreaking local area modelling framework, which estimates the impact of UK tax and benefit policies at the level of parliamentary constituencies and local authorities—a capability that transforms how policymakers understand the geographical distribution of policy effects. The system reweights national Family Resources Survey data to match administrative statistics on income, employment, and population for each local area, creating household weights that maintain consistency with national totals while reflecting local characteristics. Woodruff explains the sophisticated methodology that integrates data from HMRC, ONS, ASHE, and the House of Commons Library, using gradient-based optimisation to calibrate over 11,000 targets covering income brackets, age bands, and employment patterns across all constituencies and local authorities.</p>
 
@@ -529,7 +539,9 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">NIESR's use of PolicyEngine in its living standards review</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/max-mosley.jpg" alt="Max Mosley" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Max Mosley, Senior Economist, New Economics Foundation</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/max-mosley.jpg" alt="Max Mosley" class="speaker-inline-headshot"><span>Max Mosley, Senior Economist, New Economics Foundation</span></div>
+        </div>
 
         <p>Max Mosley, Senior Economist at the New Economics Foundation and formerly Senior Economist at the National Institute of Economic and Social Research (NIESR), presents how PolicyEngine was integrated into NIESR's UK Living Standards Review 2025. The review revealed stark findings about UK economic stagnation: the poorest households in Slovenia and Malta are now better off than the poorest in the UK, real income growth has been among the slowest in Europe, and weak productivity is costing UK workers thousands of pounds per year. While real incomes grew consistently before the financial crisis, the stagnation afterwards has meant other countries have overtaken the UK standard of living. The UK now ranks as neither a high wage nor high welfare country, with welfare covering the cost of essentials in only two of the last fourteen years.</p>
 
@@ -541,7 +553,9 @@
 <div class="page">
     <div class="page-content">
         <h1>Microsimulation of a carbon dividend</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/malcolm-torry.jpg" alt="Malcolm Torry" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Malcolm Torry, Senior Visiting Fellow, Institute for Social and Economic Research</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/malcolm-torry.jpg" alt="Malcolm Torry" class="speaker-inline-headshot"><span>Malcolm Torry, Senior Visiting Fellow, Institute for Social and Economic Research</span></div>
+        </div>
 
         <p>Malcolm Torry, formerly General Manager of the Basic Income Earth Network and Senior Visiting Fellow at the London School of Economics, presents PolicyEngine's application to carbon tax and dividend proposals—an innovative approach where carbon tax revenue funds unconditional payments to every individual rather than being used for general government spending. Drawing on PolicyEngine's microsimulation capabilities developed by Nikhil Woodruff, Max Ghenis, and Vahid Ahmadi, Torry analyzes two scenarios: a £100 per tonne carbon tax funding an unconditional dividend of £18.60 per week, and a £200 per tonne tax funding £37.40 per week. He explains how carbon dividends address a critical policy challenge—ensuring that carbon taxes don't reduce household disposable incomes, particularly for lower-income families who spend proportionally more on energy.</p>
 
@@ -553,7 +567,9 @@
 <div class="page">
     <div class="page-content">
         <h1>VAT analysis with synthetic firm microdata</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"></div><span class="speaker-text">Speaker: Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"><span>Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        </div>
 
         <p>Vahid Ahmadi presents PolicyEngine's first application of firm-level microsimulation to UK tax policy, analyzing how VAT threshold changes between £70,000 and £120,000 would affect government revenues and VAT-registered businesses in 2026-27. This groundbreaking work addresses a critical gap in traditional microsimulation models by expanding beyond household-level analysis to incorporate business-side tax impacts. Ahmadi explains the methodology for constructing synthetic firm microdata through multi-objective optimisation, calibrated to match both ONS UK Business statistics for overall firm distributions and HMRC VAT statistics for registered businesses. The model captures firms by industry classification, turnover bands, employee counts, and VAT tax liability while protecting sensitive business information.</p>
 
@@ -565,7 +581,10 @@
 <div class="page">
     <div class="page-content">
         <h1 class="long-title">PolicyEngine US: The One Big Beautiful Bill Act household-by-household</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/daphne-hansell.jpg" alt="Daphne Hansell" class="speaker-inline-headshot"><img src="../slides/public/headshots/david-trimmer.jpg" alt="David Trimmer" class="speaker-inline-headshot"></div><span class="speaker-text">Speakers: Daphne Hansell, Research Associate, PolicyEngine & David Trimmer, Policy Research Fellow, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/daphne-hansell.jpg" alt="Daphne Hansell" class="speaker-inline-headshot"><span>Daphne Hansell, Research Associate, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/david-trimmer.jpg" alt="David Trimmer" class="speaker-inline-headshot"><span>David Trimmer, Policy Research Fellow, PolicyEngine</span></div>
+        </div>
 
         <p>Max Ghenis presents PolicyEngine's US operations, which expanded rapidly in 2024 to achieve comprehensive coverage of American tax and benefit policy. A flagship achievement was the launch of the household-by-household interactive for the One Big Beautiful Bill Act (OBBBA), which allowed users to explore the legislation's effects on over 40,000 representative households using PolicyEngine's Enhanced Current Population Survey data. Ghenis demonstrates the interactive's "Get Random Household" function, which reveals how the same policy affects different families across America's diverse population, with each household weighted by population representation to ensure realistic coverage. This capability showcases PolicyEngine's ability to deliver real-time, detailed analysis of complex legislation in ways that make policy impacts tangible and accessible.</p>
 
@@ -579,7 +598,11 @@
 <div class="page">
     <div class="page-content">
         <h1>Looking ahead: AI-powered policy analysis</h1>
-        <div class="speaker"><div class="speaker-headshots"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"></div><span class="speaker-text">Speakers: Max Ghenis, Founder & CEO, PolicyEngine & Nikhil Woodruff, Co-founder & CTO, PolicyEngine & Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        <div class="speakers-container">
+        <div class="speaker-line"><img src="../slides/public/headshots/max-ghenis.jpg" alt="Max Ghenis" class="speaker-inline-headshot"><span>Max Ghenis, Founder & CEO, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/nikhil-woodruff.jpg" alt="Nikhil Woodruff" class="speaker-inline-headshot"><span>Nikhil Woodruff, Co-founder & CTO, PolicyEngine</span></div>
+        <div class="speaker-line"><img src="../slides/public/headshots/vahid-ahmadi.jpg" alt="Vahid Ahmadi" class="speaker-inline-headshot"><span>Vahid Ahmadi, Research Associate, PolicyEngine</span></div>
+        </div>
 
         <p>The PolicyEngine team concludes the event with a live demonstration of their multi-agent AI research workflow, recently tested on policy analysis tasks similar to their UK carbon dividend study. Using Claude Code's multi-agent system, PolicyEngine has configured specialized agents that automate different parts of the policy analysis pipeline: a data fetching agent that accesses PolicyEngine microsimulation data from GitHub repositories and documentation, a script writer that generates Python code using the policyengine-uk package, and a report generator that produces formatted research output with Plotly visualisations. The speakers demonstrate how Claude Code automatically routes tasks to appropriate agents based on natural language requests, showing real-time policy analysis without manual coordination between components.</p>
 
