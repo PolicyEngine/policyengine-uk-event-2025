@@ -26,13 +26,6 @@ export default function MenuHeadshot({ name, imageUrl }: MenuHeadshotProps) {
     }
   }, [fullImageUrl]);
 
-  // Adjust positioning for specific people
-  const getObjectPosition = () => {
-    if (name === 'Arun Advani') return 'center 35%';
-    if (name === 'Ben Ogorek') return 'center 40%';
-    return 'center center';
-  };
-
   return (
     <div className="w-14 h-14 rounded-full overflow-hidden bg-pe-teal/20 border-2 border-pe-teal/30 flex-shrink-0 shadow-md">
       {fullImageUrl && imageExists ? (
@@ -40,7 +33,6 @@ export default function MenuHeadshot({ name, imageUrl }: MenuHeadshotProps) {
           src={fullImageUrl}
           alt={name}
           className="w-full h-full object-cover"
-          style={{ objectPosition: getObjectPosition() }}
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pe-teal/30 to-pe-teal/10">
