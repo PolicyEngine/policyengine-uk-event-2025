@@ -3,6 +3,7 @@ import SectionTitle from './slides/SectionTitle';
 import OBBBAIntro from './slides/OBBBAIntro';
 import OBBBADashboard from './slides/OBBBADashboard';
 import HealthInsurancePathways from './slides/HealthInsurancePathways';
+import ACASubsidySetup from './slides/ACASubsidySetup';
 import DaphneIntro from './slides/DaphneIntro';
 import ACACalculator from './slides/ACACalculator';
 import EndSlide from './slides/EndSlide';
@@ -18,6 +19,7 @@ export const policyengineUSConfig: SlideshowConfig = {
     OBBBAIntro,
     OBBBADashboard,
     HealthInsurancePathways,
+    ACASubsidySetup,
     DaphneIntro,
     ACACalculator,
     EndSlide,
