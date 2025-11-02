@@ -8,17 +8,17 @@ import { assetPath } from '@/lib/assetPath';
 export default function FirstReport() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="max-w-7xl h-full flex flex-col">
         <SlideHeader>
-          <SlideTitle>May 2021: First report using the model</SlideTitle>
+          <SlideTitle>May 2021: First report</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>
+        <div className="flex-1 flex justify-center items-center mt-8">
           <Image
             src={assetPath("/timeline/first-report-may-2021.png")}
             alt="Blank Slate UBI report cover"
-            width={800}
-            height={1000}
+            width={600}
+            height={800}
             className="max-w-full max-h-full w-auto h-auto object-contain"
           />
         </div>
