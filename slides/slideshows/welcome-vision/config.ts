@@ -1,5 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
+import Beginnings from './slides/Beginnings';
 import UBICenterLaunch from './slides/UBICenterLaunch';
 import MakeEveryonePolicymaker from './slides/MakeEveryonePolicymaker';
 import USLaunch from './slides/USLaunch';
@@ -16,6 +17,7 @@ export const welcomeVisionConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
+    Beginnings,
     UBICenterLaunch,
     MakeEveryonePolicymaker,
     USLaunch,
