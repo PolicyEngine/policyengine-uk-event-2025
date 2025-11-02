@@ -18,6 +18,21 @@ If you accidentally edit a generated file, discard changes with `git restore <fi
 
 See `slides/CLAUDE.md` for detailed instructions on creating and editing presentations.
 
+### Copying Files with Spaces in Names
+
+When copying files with spaces in filenames (e.g., screenshots from Desktop), use `find -exec` instead of direct `cp`:
+
+```bash
+# ❌ This may fail with "No such file or directory":
+cp ~/Desktop/Screenshot\ 2025-11-02\ at\ 9.56.17\ PM.png destination.png
+cp "/Users/maxghenis/Desktop/Screenshot 2025-11-02 at 9.56.17 PM.png" destination.png
+
+# ✅ Use find with -exec instead:
+find ~/Desktop -name "*9.56.17*" -exec cp {} destination.png \;
+```
+
+This workaround resolves shell escaping issues with the Bash tool.
+
 ## PolicyEngine Writing Style
 
 When editing reports and presentations:
