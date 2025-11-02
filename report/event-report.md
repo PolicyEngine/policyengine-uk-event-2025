@@ -27,61 +27,65 @@ www.policyengine.org
 **Central Hall Westminster, London**
 
 ### 12:00 PM - 12:30 PM
-**Registration, Lunch & Networking**
+**Registration, lunch and networking**
 
-### 12:30 PM - 12:40 PM
-**Welcome and Vision**
+### 12:30 PM - 12:35 PM
+**Welcome and vision**
 *Max Ghenis, Founder & CEO, PolicyEngine*
 
+### 12:35 PM - 12:40 PM
+**The Nuffield Foundation's vision for evidence-based policy**
+*Anvar Sarygulov, Nuffield Foundation*
+
 ### 12:40 PM - 12:50 PM
-**Technology and AI for UK Policymaking: The PolicyEngine Approach**
-*Nikhil Woodruff, Co-founder & CTO, PolicyEngine*
+**Technology and AI for UK policymaking: The PolicyEngine approach**
+*Max Ghenis and Nikhil Woodruff, PolicyEngine*
 
 ### 12:50 PM - 1:00 PM
-**Scope of the Model: Rules, Data, and Dynamics**
+**Scope of the model: Policies, households, and dynamics**
 *Vahid Ahmadi, Research Associate, PolicyEngine*
 
 ### 1:00 PM - 1:20 PM
-**Live Demo: PolicyEngine v2 Platform**
-*Anthony Volk, Software Engineer, PolicyEngine*
+**UX research and design of PolicyEngine v2 platform**
+*Biniam Gebre and MaSara Myers, Citizen Codex*
 
 ### 1:20 PM - 1:40 PM
-**UX Research and Design of PolicyEngine v2 Platform**
-*Biniam Gebre, Co-Founder, Citizen Codex & MaSara Myers, Creative Director, Citizen Codex*
+**Live demo: PolicyEngine v2 platform**
+*Anthony Volk, Software Engineer, PolicyEngine*
 
 ### 1:40 PM - 2:00 PM
-**Localising Policy Impact: Parliamentary Constituencies & Local Authorities**
-*Nikhil Woodruff, Co-founder & CTO, PolicyEngine*
+**Localising policy impact: Parliamentary constituencies and local authorities**
+*Nikhil Woodruff and Ben Ogorek, PolicyEngine*
 
 ### 2:00 PM - 2:20 PM
-**Tea Break & Networking**
+**Tea break and networking**
 
 ### 2:20 PM - 2:40 PM
-**NIESR's Use of PolicyEngine in its Living Standards Review**
+**NIESR's use of PolicyEngine in its living standards review**
 *Max Mosley, Senior Economist, New Economics Foundation*
 
 ### 2:40 PM - 3:00 PM
-**Microsimulation of a Carbon Dividend**
+**Microsimulation of a carbon dividend**
 *Malcolm Torry, Institute for Social and Economic Research*
 
 ### 3:00 PM - 3:20 PM
-**VAT Analysis with Synthetic Firm Microdata**
-*Vahid Ahmadi, Research Associate, PolicyEngine*
+**VAT analysis with synthetic firm microdata**
+*Vahid Ahmadi*
 
 ### 3:20 PM - 3:40 PM
-**PolicyEngine US: Modelling Federal, State, and Local Policies**
-*Max Ghenis, Founder & CEO, PolicyEngine*
+**PolicyEngine US: Modelling federal, state, and local policies**
+*Pavel Makarchuk, Daphne Hansell, and David Trimmer, PolicyEngine*
 
 ### 3:40 PM - 4:25 PM
-**Panel Discussion: The Future of Evidence-Based Policymaking**
-*Max Ghenis, Founder & CEO, PolicyEngine; Arun Advani, Director of CenTax and Professor of Economics, University of Warwick; Anvar Sarygulov, Research Grants and Programmes Manager, Nuffield Foundation*
+**Panel discussion: The future of evidence-based policymaking**
+*Max Ghenis; Arun Advani; Anvar Sarygulov*
 
 ### 4:25 PM - 5:00 PM
-**Looking Ahead: AI-Powered Policy Analysis**
-*Max Ghenis, Founder & CEO, PolicyEngine; Nikhil Woodruff, Co-founder & CTO, PolicyEngine; Vahid Ahmadi, Research Associate, PolicyEngine*
+**Looking ahead: AI-powered policy analysis**
+*Max Ghenis, Nikhil Woodruff, Vahid Ahmadi*
 
 ### 5:00 PM - 6:00 PM
-**Reception & Networking**
+**Reception and networking**
 
 ---
 
@@ -94,54 +98,60 @@ www.policyengine.org
 **Max Ghenis**
 *Founder & CEO, PolicyEngine*
 ![Max Ghenis](/headshots/max-ghenis.jpg)
-Max Ghenis founded PolicyEngine in 2021 to democratise access to tax and benefit policy analysis. He leads the organisation's strategic vision and US expansion.
 
 **Nikhil Woodruff**
 *Co-founder & CTO, PolicyEngine*
 ![Nikhil Woodruff](/headshots/nikhil-woodruff.jpg)
-Nikhil Woodruff leads PolicyEngine's technical architecture and oversees the development of the UK microsimulation model and AI integration.
 
 **Vahid Ahmadi**
 *Research Associate, PolicyEngine*
 ![Vahid Ahmadi](/headshots/vahid-ahmadi.jpg)
-Vahid Ahmadi specialises in data enhancement, behavioural modelling, and expanding PolicyEngine's capabilities to firm-level microsimulation.
 
 **Anthony Volk**
 *Software Engineer, PolicyEngine*
 ![Anthony Volk](/headshots/anthony-volk.jpg)
-Anthony Volk leads the development of PolicyEngine 2.0's user interface and API infrastructure.
+
+**Ben Ogorek**
+*Senior Data Scientist, PolicyEngine*
+![Ben Ogorek](/headshots/ben-ogorek.jpg)
+
+**Pavel Makarchuk**
+*Policy Modelling Manager, PolicyEngine*
+![Pavel Makarchuk](/headshots/pavel-makarchuk.jpg)
+
+**Daphne Hansell**
+*Research Associate, PolicyEngine*
+![Daphne Hansell](/headshots/daphne-hansell.jpg)
+
+**David Trimmer**
+*Policy Research Fellow, PolicyEngine*
+![David Trimmer](/headshots/david-trimmer.jpg)
 
 ### External Speakers
 
 **Anvar Sarygulov**
 *Research Grants and Programmes Manager, Nuffield Foundation*
 ![Anvar Sarygulov](/headshots/anvar-sarygulov.jpg)
-Anvar Sarygulov manages the Nuffield Foundation's grant programme supporting evidence-based policy research.
-
-**Arun Advani**
-*Director of CenTax and Professor of Economics, University of Warwick*
-![Arun Advani](/headshots/arun-advani.jpg)
-Arun Advani directs the Centre for Tax Analysis and conducts research on taxation, inequality, and economic policy.
-
-**Max Mosley**
-*Senior Economist, New Economics Foundation*
-![Max Mosley](/headshots/max-mosley.jpg)
-Max Mosley, formerly at NIESR, specialises in living standards analysis and poverty reduction policy.
-
-**Malcolm Torry**
-*Senior Visiting Fellow, Institute for Social and Economic Research*
-![Malcolm Torry](/headshots/malcolm-torry.jpg)
-Malcolm Torry researches universal basic income and carbon dividend policies using microsimulation methods.
 
 **Biniam Gebre**
 *Co-Founder, Citizen Codex*
 ![Biniam Gebre](/headshots/biniam-gebre.jpg)
-Biniam Gebre leads user experience research and design for social impact technology projects.
 
 **MaSara Myers**
 *Creative Director, Citizen Codex*
 ![MaSara Myers](/headshots/masara-myers.jpg)
-MaSara Myers specialises in accessible design for complex policy analysis tools.
+
+**Max Mosley**
+*Senior Economist, New Economics Foundation*
+![Max Mosley](/headshots/max-mosley.jpg)
+
+**Malcolm Torry**
+*Senior Visiting Fellow, Institute for Social and Economic Research*
+![Malcolm Torry](/headshots/malcolm-torry.jpg)
+
+**Arun Advani**
+*Director of CenTax and Professor of Economics, University of Warwick*
+![Arun Advani](/headshots/arun-advani.jpg)
 
 ---
 
@@ -171,7 +181,7 @@ The session addresses the unique challenges of modeling the UK's tax and benefit
 
 <div style="page-break-after: always;"></div>
 
-## Scope of the Model: Rules, Data, and Dynamics
+## Scope of the Model: Policies, Households, and Dynamics
 
 **Speaker: Vahid Ahmadi**
 
