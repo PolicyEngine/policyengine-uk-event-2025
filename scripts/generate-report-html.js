@@ -312,10 +312,13 @@ function generateHtmlHeader() {
         .agenda-columns {
             column-count: 2;
             column-gap: 30px;
-            column-fill: auto;
         }
 
         .agenda-columns > div:first-child {
+            margin-top: 0 !important;
+        }
+
+        .agenda-columns > div:nth-child(9) {
             margin-top: 0 !important;
         }
 
