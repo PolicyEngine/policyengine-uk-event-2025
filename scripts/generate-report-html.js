@@ -310,9 +310,9 @@ function generateHtmlHeader() {
         /* Speaker grid styles */
         .speakers-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .speaker-card {
@@ -320,45 +320,48 @@ function generateHtmlHeader() {
         }
 
         .speaker-headshot {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 15px;
+            margin: 0 auto 10px;
             display: block;
-            border: 3px solid #319795;
+            border: 2px solid #319795;
         }
 
         .speaker-card h3 {
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 600;
-            margin: 0 0 5px 0;
+            margin: 0 0 4px 0;
             color: #1D4044;
+            line-height: 1.2;
         }
 
         .speaker-card .title {
-            font-size: 13px;
+            font-size: 10px;
             color: #5A5A5A;
-            margin: 0 0 3px 0;
+            margin: 0 0 2px 0;
             font-style: italic;
+            line-height: 1.2;
         }
 
         .speaker-card .org {
-            font-size: 12px;
+            font-size: 9px;
             color: #7A7A7A;
             margin: 0;
+            line-height: 1.2;
         }
 
         .speakers-section {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
         .speakers-section h2 {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 600;
             color: #319795;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #319795;
         }
 

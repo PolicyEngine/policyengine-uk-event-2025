@@ -94,7 +94,7 @@ export const speakersById: Record<string, Speaker> = {
   'daphne-hansell': {
     id: 'daphne-hansell',
     name: 'Daphne Hansell',
-    title: 'Research Associate',
+    title: 'Research Analyst',
     organisation: 'PolicyEngine',
     headshotUrl: '/headshots/daphne-hansell.jpg'
   },
