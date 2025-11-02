@@ -4,6 +4,7 @@ import LocalAreaImportanceSlide from './slides/2_LocalAreaImportanceSlide';
 import ReweightingSlide from './slides/3_ReweightingSlide';
 import ApproachSlide from './slides/4_ApproachSlide';
 import CalibrationSlide from './slides/5_CalibrationSlide';
+import DataFormatSlide from './slides/5_5_DataFormatSlide';
 import CalibrationDashboardSlide from './slides/5_6_CalibrationDashboardSlide';
 import ConstituencyMapSlide from './slides/5_7_ConstituencyMapSlide';
 import EndSlide from './slides/6_EndSlide';
@@ -20,6 +21,7 @@ export const localImpactConfig: SlideshowConfig = {
     ReweightingSlide,
     ApproachSlide,
     CalibrationSlide,
+    DataFormatSlide,
     CalibrationDashboardSlide,
     ConstituencyMapSlide,
     EndSlide,
