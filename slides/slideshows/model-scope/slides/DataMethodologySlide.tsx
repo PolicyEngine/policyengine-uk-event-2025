@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Slide from '@/components/Slide';
+import SlideHeader from '@/components/SlideHeader';
+import SlideTitle from '@/components/SlideTitle';
 
 export default function DataMethodologySlide() {
   const mermaidRef = useRef<HTMLDivElement>(null);
@@ -114,8 +116,14 @@ graph TD
 
   return (
     <Slide>
-      <div className="w-full h-full flex items-center justify-center" style={{ background: 'linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%)' }}>
-        <div ref={mermaidRef} className="mermaid" style={{ width: '95%', height: '95%' }} />
+      <div className="w-full h-full flex flex-col">
+        <SlideHeader>
+          <SlideTitle>PolicyEngine UK Data Methodology</SlideTitle>
+        </SlideHeader>
+
+        <div className="flex-1 flex items-center justify-center" style={{ background: 'linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%)' }}>
+          <div ref={mermaidRef} className="mermaid" style={{ width: '95%', height: '90%' }} />
+        </div>
       </div>
     </Slide>
   );
