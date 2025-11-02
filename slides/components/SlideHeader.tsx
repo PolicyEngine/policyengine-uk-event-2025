@@ -7,7 +7,7 @@ interface SlideHeaderProps {
   showLogo?: boolean;
 }
 
-export default function SlideHeader({ children, showLogo = true }: SlideHeaderProps) {
+export default function SlideHeader({ children, showLogo = false }: SlideHeaderProps) {
   return (
     <div className="flex items-start justify-between gap-8 mb-10">
       <div className="flex-1">
