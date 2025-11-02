@@ -276,6 +276,11 @@ function generateHtmlHeader() {
             column-gap: 30px;
         }
 
+        .agenda-columns p {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
         /* Speaker grid styles */
         .speakers-grid {
             display: grid;
