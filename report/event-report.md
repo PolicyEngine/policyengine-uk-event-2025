@@ -73,7 +73,7 @@ www.policyengine.org
 *Vahid Ahmadi*
 
 ### 3:20 PM - 3:40 PM
-**PolicyEngine US: The One Big Beautiful Bill Act household-by-household**
+**PolicyEngine US household tools: OBBBA and ACA subsidies**
 *Daphne Hansell and David Trimmer, PolicyEngine*
 
 ### 3:40 PM - 4:25 PM
