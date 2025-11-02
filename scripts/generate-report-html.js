@@ -153,7 +153,7 @@ function generateHtmlHeader() {
             left: 0;
             right: 0;
             height: 80px;
-            background: linear-gradient(to right, #2C6975 0%, #68B0AB 50%, #2C6975 100%);
+            background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
             z-index: 1;
         }
 
@@ -166,7 +166,7 @@ function generateHtmlHeader() {
         }
 
         .cover-page {
-            background: linear-gradient(135deg, #2C6975 0%, #4A8B94 50%, #68B0AB 100%);
+            background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
