@@ -1,3 +1,1 @@
-Anthony Volk demonstrates PolicyEngine 2.0 through an interactive showcase of the redesigned platform. Based on user research by Citizen Codex, the new design provides a more accessible interface. Volk walks through the user journey from designing a policy reform to interpreting economic and distributional impacts.
-
-The demo highlights improvements including visualisation tools, navigation updates, and features to lower barriers for first-time users. Volk shows capabilities for customising household circumstances, comparing policy scenarios, and using the API for external research. New features include sign-in for saving scenarios, mobile optimisation, and AI integration opportunities.
+Anthony Volk conducts a live demonstration of PolicyEngine's platform at policyengine.org, showing the interface and functionality in real-time.
