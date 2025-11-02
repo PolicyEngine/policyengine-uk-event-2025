@@ -56,6 +56,13 @@ export default function SpeakerHeadshot({
     }
   }, [fullImageUrl]);
 
+  // Adjust positioning for specific people
+  const getObjectPosition = () => {
+    if (name === 'Arun Advani') return 'center 35%';
+    if (name === 'Ben Ogorek') return 'center 40%';
+    return 'center center';
+  };
+
   return (
     <div className={`${positionClasses[position]} ${position === 'center' ? 'text-center' : ''}`}>
       <div className={`${sizeClasses[size]} relative overflow-hidden rounded-full bg-pe-teal/20 border-2 border-pe-teal`}>
@@ -65,6 +72,7 @@ export default function SpeakerHeadshot({
             alt={`${name} headshot`}
             fill
             className="object-cover"
+            style={{ objectPosition: getObjectPosition() }}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pe-teal/30 to-pe-teal/10">

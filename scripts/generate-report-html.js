@@ -329,6 +329,15 @@ function generateHtmlHeader() {
             border: 2px solid #319795;
         }
 
+        /* Adjust specific headshot positioning */
+        .speaker-headshot[alt="Arun Advani"] {
+            object-position: center 35%;
+        }
+
+        .speaker-headshot[alt="Ben Ogorek"] {
+            object-position: center 40%;
+        }
+
         .speaker-card h3 {
             font-size: 13px;
             font-weight: 600;
@@ -608,12 +617,23 @@ ${content}
 function generateBackCover() {
   return `
 <!-- PAGE: BACK COVER -->
-<div class="page back-cover-page">
-    <h2 style="font-size: 20px;">About PolicyEngine</h2>
-    <p>PolicyEngine is a nonprofit organization providing free, open-source tools for computing the impact of public policy.</p>
-    <div style="margin-top: 40px;">
-        <p><strong>Contact:</strong> hello@policyengine.org</p>
-        <p><strong>Website:</strong> www.policyengine.org</p>
+<div class="page cover-page">
+    <div style="max-width: 600px; text-align: center;">
+        <img src="../slides/public/logos/white.svg" alt="PolicyEngine" style="width: 300px; height: auto; margin-bottom: 40px;">
+
+        <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: white; border: none; padding: 0;">About PolicyEngine</h2>
+
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 40px; color: white;">PolicyEngine is a nonprofit organisation providing free, open-source tools for computing the impact of public policy.</p>
+
+        <div style="margin-top: 50px; font-size: 15px; color: white;">
+            <p style="margin: 10px 0;"><strong>Contact:</strong> hello@policyengine.org</p>
+            <p style="margin: 10px 0;"><strong>Website:</strong> www.policyengine.org</p>
+        </div>
+
+        <div style="margin-top: 50px; font-size: 13px; color: rgba(255,255,255,0.8);">
+            <p>PolicyEngine is a registered charity with the Charity Commission of England and Wales (no. 1210532)</p>
+            <p style="margin-top: 8px;">Event made possible by the generous support of the Nuffield Foundation</p>
+        </div>
     </div>
 </div>
 `;
