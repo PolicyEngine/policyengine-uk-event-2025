@@ -17,7 +17,7 @@ const SPELLING_RULES = [
   { american: /\bmodel(ing|ed)\b/gi, british: 'modell$1', exceptions: [] },
   { american: /\bbehavior/gi, british: 'behaviour', exceptions: [] },
   { american: /\boptimiz/gi, british: 'optimis', exceptions: [] },
-  { american: /\blabor\b/gi, british: 'labour', exceptions: ['labor supply', 'Labor Day'] },
+  { american: /\blabor\b/gi, british: 'labour', exceptions: [] },
   { american: /\brecogniz/gi, british: 'recognis', exceptions: [] },
   { american: /\bdemocratiz/gi, british: 'democratis', exceptions: [] },
   { american: /\bvisualiz/gi, british: 'visualis', exceptions: [] },

@@ -59,8 +59,8 @@ export const speakersById: Record<string, Speaker> = {
   'malcolm-torry': {
     id: 'malcolm-torry',
     name: 'Malcolm Torry',
-    title: 'Senior Visiting Fellow',
-    organisation: 'Institute for Social and Economic Research',
+    title: 'Co-founder and Director Emeritus',
+    organisation: 'Citizen\'s Basic Income Trust',
     headshotUrl: '/headshots/malcolm-torry.jpg'
   },
   'biniam-gebre': {
@@ -161,9 +161,9 @@ export const speakers: Record<string, Speaker> = {
   malcolmTorry: {
     id: 'malcolm-torry',
     name: 'Malcolm Torry',
-    title: 'Senior Visiting Fellow',
-    organisation: 'Institute for Social and Economic Research',
-    headshotUrl: '/headshots/malcolm-torry.jpg' // Update with actual image
+    title: 'Co-founder and Director Emeritus',
+    organisation: 'Citizen\'s Basic Income Trust',
+    headshotUrl: '/headshots/malcolm-torry.jpg'
   },
   biniamGebre: {
     id: 'biniam-gebre',
