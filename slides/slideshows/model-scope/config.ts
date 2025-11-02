@@ -4,6 +4,8 @@ import ThreeIngredientsSlide from './slides/ThreeIngredientsSlide';
 import DataMethodologySlide from './slides/DataMethodologySlide';
 import FlowchartSlide from './slides/FlowchartSlide';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
+import PoliciesScopeSlide from './slides/PoliciesScopeSlide';
+import DynamicsSlide from './slides/DynamicsSlide';
 import EndSlide from './slides/EndSlide';
 
 export const modelScopeConfig: SlideshowConfig = {
@@ -16,6 +18,8 @@ export const modelScopeConfig: SlideshowConfig = {
     CoverSlide,
     ThreeIngredientsSlide,
     GoogleSlidesEmbed,
+    PoliciesScopeSlide,
+    DynamicsSlide,
     FlowchartSlide,
     DataMethodologySlide,
     EndSlide,
