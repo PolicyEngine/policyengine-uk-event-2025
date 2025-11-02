@@ -24,7 +24,7 @@ export default function HealthInsurancePathways() {
       name: 'Dual Coverage',
       fullName: 'Dual Coverage',
       enrollment: 44.5, // million - calculated to reach 326.1M total
-      color: '#A78BFA',
+      color: '#68B0AB',
       description: 'Multiple coverage types'
     },
     {
@@ -52,7 +52,7 @@ export default function HealthInsurancePathways() {
       name: 'Military/VA',
       fullName: 'Military/VA',
       enrollment: 4.3, // million
-      color: '#6B7280',
+      color: '#2C6975',
       description: 'Military & veterans coverage'
     }
   ].sort((a, b) => b.enrollment - a.enrollment); // Sort by size
@@ -146,12 +146,8 @@ export default function HealthInsurancePathways() {
         </SlideHeader>
 
         <div className="mt-12 flex flex-col items-center">
-          <p className="text-lg text-gray-600 mb-4 text-left w-full">
-            US Population: {totalEnrollment.toFixed(1)}M people (2023)
-          </p>
-
           {/* Treemap */}
-          <svg width={width + 200} height={height} className="border-2 border-gray-300 rounded-lg">
+          <svg width={width + 200} height={height}>
             {/* Main treemap area */}
             <rect x="0" y="0" width={width} height={height} fill="none" />
 
@@ -232,9 +228,9 @@ export default function HealthInsurancePathways() {
                     <>
                       {/* Arrow line */}
                       <line
-                        x1={rect.x + rect.width}
+                        x1={width + 20}
                         y1={rect.y + rect.height / 2}
-                        x2={width + 20}
+                        x2={rect.x + rect.width}
                         y2={rect.y + rect.height / 2}
                         stroke="#666"
                         strokeWidth="2"
@@ -281,13 +277,6 @@ export default function HealthInsurancePathways() {
               </marker>
             </defs>
           </svg>
-        </div>
-
-        <div className="mt-10 bg-pe-teal/10 rounded-xl p-6 border-l-4 border-pe-teal">
-          <p className="text-xl text-left text-gray-700">
-            <span className="font-semibold text-pe-dark">ACA-Calc</span> models premium tax credits for Marketplace coverage,
-            including interactions with Medicaid and CHIP eligibility
-          </p>
         </div>
       </div>
     </Slide>
