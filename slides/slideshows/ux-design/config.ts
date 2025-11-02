@@ -1,5 +1,7 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
+import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
+import EndSlide from './slides/EndSlide';
 
 export const uxDesignConfig: SlideshowConfig = {
   id: 'ux-design',
@@ -9,5 +11,7 @@ export const uxDesignConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
+    GoogleSlidesEmbed,
+    EndSlide,
   ],
 };
