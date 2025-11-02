@@ -188,6 +188,8 @@ function generateHtmlHeader() {
             line-height: 1.2;
             margin: 40px 0;
             color: #FFFFFF;
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .cover-page .event-info {
