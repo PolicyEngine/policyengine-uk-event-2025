@@ -13,13 +13,13 @@ export default function FirstReport() {
           <SlideTitle>May 2021: First report</SlideTitle>
         </SlideHeader>
 
-        <div className="flex-1 flex justify-center items-center mt-8">
+        <div className="flex-1 flex justify-center items-center mt-4 overflow-hidden">
           <Image
             src={assetPath("/timeline/first-report-may-2021.png")}
             alt="Blank Slate UBI report cover"
-            width={600}
-            height={800}
-            className="max-w-full max-h-full w-auto h-auto object-contain"
+            width={500}
+            height={700}
+            className="max-w-full max-h-[calc(100vh-320px)] w-auto h-auto object-contain"
           />
         </div>
       </div>
