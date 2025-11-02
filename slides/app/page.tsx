@@ -98,50 +98,49 @@ export default function Home() {
             const speakers = item.speakerIds ? getSpeakersByIds(item.speakerIds) : [];
 
             const content = (
-              <div className="flex items-start justify-between gap-6">
-                <div className="flex-1 text-left">
-                  <div className="flex items-center gap-3 mb-2 flex-wrap">
-                    <p className="text-sm font-medium text-pe-teal">{item.time}</p>
-                    {isCurrent && (
-                      <span className="text-xs px-2 py-1 bg-pe-teal text-white font-bold rounded">
-                        HAPPENING NOW
-                      </span>
-                    )}
-                    {isNext && (
-                      <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 font-medium rounded">
-                        Up next
-                      </span>
-                    )}
+              <div className="text-left">
+                <div className="flex items-center gap-3 mb-2 flex-wrap">
+                  <p className="text-sm font-medium text-pe-teal">{item.time}</p>
+                  {isCurrent && (
+                    <span className="text-xs px-2 py-1 bg-pe-teal text-white font-bold rounded">
+                      HAPPENING NOW
+                    </span>
+                  )}
+                  {isNext && (
+                    <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 font-medium rounded">
+                      Up next
+                    </span>
+                  )}
+                </div>
+                <h2 className="text-xl font-bold mb-3 text-pe-dark">
+                  {item.title}
+                </h2>
+                {speakers.length > 0 ? (
+                  <div className="space-y-2">
+                    {speakers.map((speaker, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <MenuHeadshot
+                          name={speaker.name}
+                          imageUrl={speaker.headshotUrl}
+                        />
+                        <p className="text-sm text-gray-600 italic">
+                          {speaker.name}, {speaker.title}, {speaker.organisation}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                  <h2 className="text-xl font-bold mb-2 text-pe-dark">
-                    {item.title}
-                  </h2>
-                  {item.speaker && (
-                    <p className="text-sm text-gray-600 italic">{item.speaker}</p>
-                  )}
-                  {!hasSlides && (
-                    <p className="text-sm text-gray-500 mt-2">
-                      Slides coming soon
-                    </p>
-                  )}
-                </div>
-                <div className="flex-shrink-0 flex items-center gap-2">
-                  {speakers.map((speaker, idx) => (
-                    <MenuHeadshot
-                      key={idx}
-                      name={speaker.name}
-                      imageUrl={speaker.headshotUrl}
-                    />
-                  ))}
-                  {hasSlides && speakers.length === 0 && (
-                    <Image
-                      src={assetPath("/logos/profile_teal_bg.png")}
-                      alt=""
-                      width={40}
-                      height={40}
-                    />
-                  )}
-                </div>
+                ) : (
+                  <>
+                    {item.speaker && (
+                      <p className="text-sm text-gray-600 italic">{item.speaker}</p>
+                    )}
+                  </>
+                )}
+                {!hasSlides && (
+                  <p className="text-sm text-gray-500 mt-2">
+                    Slides coming soon
+                  </p>
+                )}
               </div>
             );
 

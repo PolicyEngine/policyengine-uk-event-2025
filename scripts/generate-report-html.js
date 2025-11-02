@@ -276,7 +276,8 @@ function generateHtmlHeader() {
             column-gap: 30px;
         }
 
-        .agenda-columns p {
+        .agenda-columns p,
+        .agenda-columns div {
             break-inside: avoid;
             page-break-inside: avoid;
         }
@@ -382,7 +383,7 @@ function generateFrontCover() {
 `;
 }
 
-function generateAgendaPage(agendaItems) {
+function generateAgendaPage(agendaItems, speakers) {
   const agendaHtml = agendaItems.map(item => {
     const title = item.title
       .split(':')
@@ -390,13 +391,27 @@ function generateAgendaPage(agendaItems) {
       .map(part => part.charAt(0).toUpperCase() + part.slice(1))
       .join(': ');
 
-    let itemHtml = `            <p style="margin: 12px 0;"><strong style="color: #319795;">${item.time}</strong><br>\n`;
-    itemHtml += `            <strong>${title}</strong>`;
+    let itemHtml = `            <div style="margin: 12px 0;">\n`;
+    itemHtml += `                <strong style="color: #319795;">${item.time}</strong><br>\n`;
+    itemHtml += `                <strong>${title}</strong><br>\n`;
 
-    if (item.speaker) {
-      itemHtml += `<br>\n            <em style="font-size: 10px; color: #5A5A5A;">${item.speaker}</em>`;
+    // Add speakers with headshots and affiliations
+    if (item.speakerIds && item.speakerIds.length > 0) {
+      const speakerData = item.speakerIds
+        .map(id => speakers[id])
+        .filter(Boolean);
+
+      for (const speaker of speakerData) {
+        const headshot = speaker.headshotUrl
+          ? `<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" style="width: 30px; height: 30px; border-radius: 50%; vertical-align: middle; margin-right: 8px; border: 1px solid #319795;">`
+          : '';
+        itemHtml += `                <div style="margin-top: 4px;">${headshot}<em style="font-size: 11px; color: #5A5A5A;">${speaker.name}, ${speaker.title}, ${speaker.organisation}</em></div>\n`;
+      }
+    } else if (item.speaker) {
+      itemHtml += `                <em style="font-size: 11px; color: #5A5A5A;">${item.speaker}</em>\n`;
     }
-    itemHtml += `</p>`;
+
+    itemHtml += `            </div>`;
 
     return itemHtml;
   }).join('\n\n');
@@ -577,7 +592,7 @@ function generateReport() {
   console.log('Generating HTML...');
   let html = generateHtmlHeader();
   html += generateFrontCover();
-  html += generateAgendaPage(agendaItems);
+  html += generateAgendaPage(agendaItems, speakers);
   html += generateSpeakersPage(speakers, agendaItems);
 
   // Generate content pages for items with slideshowId
