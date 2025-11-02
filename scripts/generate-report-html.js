@@ -391,9 +391,9 @@ function generateAgendaPage(agendaItems, speakers) {
       .map(part => part.charAt(0).toUpperCase() + part.slice(1))
       .join(': ');
 
-    let itemHtml = `            <div style="margin: 12px 0;">\n`;
-    itemHtml += `                <strong style="color: #319795;">${item.time}</strong><br>\n`;
-    itemHtml += `                <strong>${title}</strong><br>\n`;
+    let itemHtml = `            <div style="margin: 8px 0;">\n`;
+    itemHtml += `                <strong style="color: #319795; font-size: 12px;">${item.time}</strong><br>\n`;
+    itemHtml += `                <strong style="font-size: 13px;">${title}</strong><br>\n`;
 
     // Add speakers with headshots and affiliations
     if (item.speakerIds && item.speakerIds.length > 0) {
@@ -403,12 +403,12 @@ function generateAgendaPage(agendaItems, speakers) {
 
       for (const speaker of speakerData) {
         const headshot = speaker.headshotUrl
-          ? `<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" style="width: 30px; height: 30px; border-radius: 50%; vertical-align: middle; margin-right: 8px; border: 1px solid #319795;">`
+          ? `<img src="../slides/public${speaker.headshotUrl}" alt="${speaker.name}" style="width: 26px; height: 26px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid #319795;">`
           : '';
-        itemHtml += `                <div style="margin-top: 4px;">${headshot}<em style="font-size: 11px; color: #5A5A5A;">${speaker.name}, ${speaker.title}, ${speaker.organisation}</em></div>\n`;
+        itemHtml += `                <div style="margin-top: 3px;">${headshot}<em style="font-size: 10px; color: #5A5A5A;">${speaker.name}, ${speaker.title}, ${speaker.organisation}</em></div>\n`;
       }
     } else if (item.speaker) {
-      itemHtml += `                <em style="font-size: 11px; color: #5A5A5A;">${item.speaker}</em>\n`;
+      itemHtml += `                <em style="font-size: 10px; color: #5A5A5A;">${item.speaker}</em>\n`;
     }
 
     itemHtml += `            </div>`;
