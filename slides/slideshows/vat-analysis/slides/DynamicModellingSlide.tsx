@@ -39,7 +39,7 @@ export default function DynamicModellingSlide() {
             <li className="flex items-start gap-4">
               <span className="flex-shrink-0 mt-1.5">•</span>
               <span className="leading-normal">
-                We assume a Cobb–Douglas production technology:{' '}
+                We assume a Cobb–Douglas production function:{' '}
                 <span style={{fontFamily: 'Georgia, serif'}}>
                   <i>y</i><sub className="text-base">i</sub> = <i>A</i><sub className="text-base">i</sub><i>x</i><sub className="text-base">i</sub><sup className="text-base">α</sup>
                 </span>
