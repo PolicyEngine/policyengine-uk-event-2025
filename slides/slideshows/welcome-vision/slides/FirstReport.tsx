@@ -10,7 +10,7 @@ export default function FirstReport() {
     <Slide>
       <div className="max-w-7xl h-full flex flex-col">
         <SlideHeader>
-          <SlideTitle>May 2021: First report</SlideTitle>
+          <SlideTitle>May 2021: Model powers its first report</SlideTitle>
         </SlideHeader>
 
         <div className="flex-1 flex justify-center items-center mt-4 overflow-hidden">

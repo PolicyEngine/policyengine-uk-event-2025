@@ -10,7 +10,7 @@ export default function MLAccuracy() {
     <Slide>
       <div className="max-w-7xl">
         <SlideHeader>
-          <SlideTitle>2022: Machine learning calibration</SlideTitle>
+          <SlideTitle>We keep improving the product</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8 flex justify-center items-center" style={{ height: 'calc(100vh - 280px)' }}>
