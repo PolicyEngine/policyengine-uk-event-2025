@@ -23,16 +23,20 @@ export default function AIInterfaceSlide() {
             size="lg"
             items={[
               {
+                text: 'AI-powered explanations (March 2024)',
+                subtext: 'GPT-4 translates complex tax calculations into plain English',
+              },
+              {
+                text: 'Conversational policy interface (October 2024)',
+                subtext: 'Natural language queries about household impacts and policy reforms',
+              },
+              {
                 text: 'Interactive policy visualisations',
                 subtext: 'Even basic levels of interactivity improve cut-through',
               },
               {
                 text: 'Custom calculators and apps',
                 subtext: 'Benefit eligibility tools, tax liability calculators',
-              },
-              {
-                text: 'Automated slide decks and reports',
-                subtext: 'This presentation itself was scaffolded with Claude Code. I spent the time saved doing more fun things, like tax-benefit policy modelling.',
               },
             ]}
           />
