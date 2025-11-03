@@ -15,13 +15,12 @@ export const techAI2025Config: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    
     AgendaSlide,
     ContextSlide,
     AIUsesSlide,
     AIBuildingSlide,
-    AIImprovingSlide,
     AIAugmentingSlide,
+    AIImprovingSlide,
     TwoChildLimitSlide,
     EndSlide,
   ],
