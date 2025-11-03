@@ -8,8 +8,6 @@ import Image from 'next/image';
 import { assetPath } from '@/lib/assetPath';
 
 export default function GrowingAdoption() {
-  const [visibleLogos, setVisibleLogos] = useState(0);
-
   const organizations = [
     { name: 'Green Party', logo: '/logos/organizations/gpew.png', height: 60 },
     { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png', height: 50 },
@@ -21,19 +19,6 @@ export default function GrowingAdoption() {
     { name: 'UK in a Changing Europe', logo: '/logos/organizations/ukeu.svg', height: 50 },
     { name: 'UN Digital Public Good', logo: '/logos/organizations/dpga.png', height: 80, isUN: true },
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleLogos((prev) => {
-        if (prev < organizations.length) {
-          return prev + 1;
-        }
-        return prev;
-      });
-    }, 600); // Show new logo every 0.6 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Slide>
@@ -48,15 +33,10 @@ export default function GrowingAdoption() {
               <div
                 key={idx}
                 className={`
-                  rounded-xl p-8 border-2 transition-all duration-500 flex items-center justify-center
-                  ${idx < visibleLogos
-                    ? 'opacity-100 scale-100 border-pe-teal bg-white shadow-lg'
-                    : 'opacity-0 scale-95 border-transparent'
-                  }
+                  rounded-xl p-8 border-2 flex items-center justify-center border-pe-teal bg-white shadow-lg
                   ${org.isUN ? 'col-span-3 bg-gradient-to-r from-blue-50 to-purple-50' : ''}
                 `}
                 style={{
-                  transitionDelay: `${idx * 100}ms`,
                   minHeight: org.isUN ? '140px' : '120px'
                 }}
               >
@@ -71,11 +51,6 @@ export default function GrowingAdoption() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-xl text-gray-600">
-              {visibleLogos}/{organizations.length} organizations
-            </p>
-          </div>
         </div>
       </div>
     </Slide>
