@@ -27,16 +27,9 @@ export default function AgendaSlide() {
               const speaker = getSpeakerById(speakerId);
               if (!speaker) return null;
               return (
-                <div key={speakerId} className="flex items-center gap-1">
-                  <img
-                    src={speaker.headshotUrl}
-                    alt={speaker.name}
-                    className="w-5 h-5 rounded-full object-cover border border-pe-teal flex-shrink-0"
-                  />
-                  <span className="text-xs italic text-gray-600">
-                    {speaker.name}
-                  </span>
-                </div>
+                <span key={speakerId} className="text-xs italic text-gray-600">
+                  {speaker.name}
+                </span>
               );
             })}
           </div>

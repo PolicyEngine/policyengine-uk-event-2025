@@ -8,7 +8,7 @@ export default function PoliciesScopeSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>We model hundreds of UK tax and benefit policies</SlideTitle>
+          <SlideTitle>We model dozens of tax and benefit policies</SlideTitle>
         </SlideHeader>
 
         <div className="space-y-10 text-left px-12 py-6">

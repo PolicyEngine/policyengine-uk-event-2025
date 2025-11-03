@@ -8,7 +8,7 @@ export default function FlowchartSlide() {
     <Slide>
       <div className="w-full h-full flex flex-col">
         <SlideHeader>
-          <SlideTitle>PolicyEngine UK Flowchart</SlideTitle>
+          <SlideTitle>And build tools to show interactions</SlideTitle>
         </SlideHeader>
 
         <div className="flex-1 px-4 pb-4">

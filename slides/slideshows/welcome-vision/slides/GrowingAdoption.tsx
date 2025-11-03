@@ -27,17 +27,17 @@ export default function GrowingAdoption() {
           <SlideTitle>2023-2024: Growing adoption</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-12">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="mt-8">
+          <div className="grid grid-cols-4 gap-6">
             {organizations.map((org, idx) => (
               <div
                 key={idx}
                 className={`
-                  rounded-xl p-8 border-2 flex items-center justify-center border-pe-teal bg-white shadow-lg
-                  ${org.isUN ? 'col-span-3 bg-gradient-to-r from-blue-50 to-purple-50' : ''}
+                  rounded-xl p-6 border-2 flex items-center justify-center border-pe-teal bg-white shadow-lg
+                  ${org.isUN ? 'col-span-4 bg-gradient-to-r from-blue-50 to-purple-50' : ''}
                 `}
                 style={{
-                  minHeight: org.isUN ? '140px' : '120px'
+                  minHeight: org.isUN ? '100px' : '100px'
                 }}
               >
                 <Image
