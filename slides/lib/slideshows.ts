@@ -14,6 +14,7 @@ import { carbonDividendConfig } from '@/slideshows/carbon-dividend/config';
 import { localImpactConfig } from '@/slideshows/local-impact/config';
 import { aiFutureConfig } from '@/slideshows/ai-future/config';
 import { receptionConfig } from '@/slideshows/reception/config';
+import { niesrReviewConfig } from '@/slideshows/niesr-review/config';
 
 // Register all slideshows here
 export const slideshows: SlideshowConfig[] = [
@@ -28,6 +29,7 @@ export const slideshows: SlideshowConfig[] = [
   policyengineUSConfig,
   lunchConfig,
   teaConfig,
+  niesrReviewConfig,
   carbonDividendConfig,
   localImpactConfig,
   aiFutureConfig,

@@ -9,20 +9,19 @@ import { assetPath } from '@/lib/assetPath';
 export default function ACAShutdown() {
   return (
     <Slide>
-      <div className="max-w-7xl">
+      <div className="w-full">
         <SlideHeader>
           <SlideTitle>Shutdown centers on premium tax credits</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-12 flex justify-center items-center">
-          <div className="relative w-full h-[600px]">
-            <Image
-              src={assetPath("/images/posts/aca-shutdown-news.png")}
-              alt="PBS News article on health care subsidies shutdown fight"
-              fill
-              className="object-contain"
-            />
-          </div>
+        <div className="flex justify-center items-center mt-8">
+          <Image
+            src={assetPath("/images/posts/aca-shutdown-news.png")}
+            alt="PBS News article on health care subsidies shutdown fight"
+            width={700}
+            height={450}
+            className="h-auto"
+          />
         </div>
       </div>
     </Slide>
