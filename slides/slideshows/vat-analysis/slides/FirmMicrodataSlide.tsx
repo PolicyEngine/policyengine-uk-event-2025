@@ -10,7 +10,7 @@ export default function FirmMicrodataSlide() {
       <div className="w-full">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            We use ML to synthesize detailed firm microdata
+            We use ML to synthesise detailed firm microdata
           </h1>
         </SlideHeader>
 

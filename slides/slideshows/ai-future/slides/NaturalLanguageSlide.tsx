@@ -31,7 +31,7 @@ export default function NaturalLanguageSlide() {
 
                 <div>
                   <div className="bg-pe-dark text-white px-6 py-4 rounded-t-lg">
-                    <h4 className="text-2xl font-bold">Flexible visualizations</h4>
+                    <h4 className="text-2xl font-bold">Flexible visualisations</h4>
                   </div>
                   <div className="bg-pe-dark/10 px-6 py-6 rounded-b-lg">
                     <p className="text-xl text-gray-700">

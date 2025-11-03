@@ -29,7 +29,7 @@ export default function DynamicsSlide() {
 
           <div className="flex items-start gap-4 text-2xl">
             <span className="flex-shrink-0" style={{ lineHeight: '1.5' }}>•</span>
-            <p style={{ lineHeight: '1.5' }}>Follows <strong>Office for Budget Responsibility elasticity framework</strong> with adjustable parameters for users to customize behavioural assumptions</p>
+            <p style={{ lineHeight: '1.5' }}>Follows <strong>Office for Budget Responsibility elasticity framework</strong> with adjustable parameters for users to customise behavioural assumptions</p>
           </div>
         </div>
       </div>

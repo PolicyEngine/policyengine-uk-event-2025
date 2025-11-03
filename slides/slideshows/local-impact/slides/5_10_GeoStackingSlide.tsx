@@ -60,7 +60,7 @@ export default function GeoStackingSlide() {
             </div>
           </div>
 
-          {/* Matrix sparsity visualization */}
+          {/* Matrix sparsity visualisation */}
           <div className="bg-gray-50 rounded-lg p-8">
             <h2 className="text-3xl font-semibold text-pe-dark mb-6 text-left">
               Sparse matrix structure

@@ -80,7 +80,7 @@ export default function OptimizationSlide() {
               <h3 className="text-2xl font-bold text-pe-dark mb-4 text-left">
                 Sparse w
               </h3>
-              <div className="text-sm text-gray-600 mb-3 text-left italic">Engineered via L0 regularization</div>
+              <div className="text-sm text-gray-600 mb-3 text-left italic">Engineered via L0 regularisation</div>
               <div className="bg-gray-100 rounded p-4 mb-4">
                 <div className="font-mono text-lg space-y-1">
                   <div className="flex items-center">
@@ -140,12 +140,12 @@ export default function OptimizationSlide() {
               <div className="bg-white border-2 border-pe-teal rounded-lg p-5">
                 <div className="text-pe-teal text-3xl font-bold mb-3 text-center">3</div>
                 <div className="text-xl font-bold mb-2 text-center text-pe-dark">True L0</div>
-                <div className="text-lg text-gray-700 text-center">L0 regularization with selective L2 shrinkage</div>
+                <div className="text-lg text-gray-700 text-center">L0 regularisation with selective L2 shrinkage</div>
               </div>
             </div>
             <div className="mt-5 pt-4 border-t-2 border-gray-300">
               <p className="text-lg text-gray-700 text-left">
-                <span className="font-bold">Method:</span> Stochastic gates for L0 regularization (Louizos et al. 2017)
+                <span className="font-bold">Method:</span> Stochastic gates for L0 regularisation (Louizos et al. 2017)
               </p>
             </div>
           </div>
