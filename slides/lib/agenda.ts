@@ -23,6 +23,6 @@ export const agenda: AgendaItem[] = [
   { time: '3:00 PM - 3:20 PM', title: 'VAT analysis with synthetic firm microdata', speakerIds: ['vahid-ahmadi'], slideshowId: 'vat-analysis', type: 'talk', hasQA: true },
   { time: '3:20 PM - 3:40 PM', title: 'PolicyEngine US: Tools for deconstructing complex policies', speakerIds: ['david-trimmer', 'daphne-hansell'], slideshowId: 'policyengine-us', type: 'talk', hasQA: true },
   { time: '3:40 PM - 4:25 PM', title: 'Panel discussion: The future of evidence-based policymaking', speakerIds: ['max-ghenis', 'arun-advani', 'anvar-sarygulov'], slideshowId: 'panel-future', type: 'panel' },
-  { time: '4:25 PM - 5:00 PM', title: 'Looking ahead: AI-powered policy analysis', speakerIds: ['max-ghenis', 'nikhil-woodruff', 'vahid-ahmadi'], slideshowId: 'ai-future', type: 'talk', hasQA: true },
+  { time: '4:25 PM - 5:00 PM', title: 'Looking ahead: AI-powered policy analysis', speakerIds: ['max-ghenis', 'nikhil-woodruff'], slideshowId: 'ai-future', type: 'talk', hasQA: true },
   { time: '5:00 PM - 6:00 PM', title: 'Reception and networking', slideshowId: 'reception', type: 'networking' },
 ];
