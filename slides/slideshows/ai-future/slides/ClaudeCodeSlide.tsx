@@ -45,10 +45,6 @@ export default function ClaudeCodeSlide() {
                 </p>
               </div>
             </div>
-
-            <div className="text-center text-xl font-medium text-gray-700 mt-8">
-              Live demo coming up...
-            </div>
           </div>
         </SlideContent>
       </div>
