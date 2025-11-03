@@ -7,7 +7,7 @@ import LocalAreaModelingSlide from './slides/LocalAreaModelingSlide';
 import SyntheticPanelSlide from './slides/SyntheticPanelSlide';
 import NaturalLanguageSlide from './slides/NaturalLanguageSlide';
 import ClosingReflectionSlide from './slides/ClosingReflectionSlide';
-import QASlide from './slides/QASlide';
+import QASlide from '@/components/QASlide';
 import EndSlide from './slides/EndSlide';
 
 export const aiFutureConfig: SlideshowConfig = {
