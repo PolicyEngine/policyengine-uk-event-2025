@@ -37,8 +37,10 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
 
   // Add section title as first slide if not already present
   const firstSlide = slides[0];
-  const isFirstSlideAutoSection = firstSlide === AutoSectionTitle || firstSlide?.name === 'AutoSectionTitle';
-  if (!isFirstSlideAutoSection) {
+  const isFirstSlideSection = firstSlide === AutoSectionTitle ||
+                               firstSlide?.toString().includes('SectionTitle') ||
+                               firstSlide?.displayName === 'SectionTitle';
+  if (!isFirstSlideSection) {
     slides.unshift(AutoSectionTitle);
   }
 
