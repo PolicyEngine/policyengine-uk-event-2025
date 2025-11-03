@@ -2,7 +2,7 @@ import { getAllSlideshowMetadata, getSlideshowById } from '@/lib/slideshows';
 import { agenda } from '@/lib/agenda';
 import SlideshowViewer from '@/components/SlideshowViewer';
 import AutoSectionTitle from '@/components/AutoSectionTitle';
-import QASlide from '@/components/QASlide';
+import AutoClosingSlide from '@/components/AutoClosingSlide';
 import { redirect } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -32,7 +32,7 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
     redirect('/');
   }
 
-  // Automatically inject section title at beginning and QA slide before end if needed
+  // Automatically inject section title at beginning and closing slide at end
   const slides = [...slideshow.slides];
 
   // Add section title as first slide if not already present (skip for breaks/networking)
@@ -45,10 +45,15 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
     slides.unshift(AutoSectionTitle);
   }
 
-  // Add QA slide before end slide if hasQA is true
-  if (agendaItem?.hasQA) {
-    // Insert QA slide before the last slide (which should be EndSlide)
-    slides.splice(slides.length - 1, 0, QASlide);
+  // Replace last slide with AutoClosingSlide (shows "Questions?" or "Thank you" based on hasQA)
+  const lastSlide = slides[slides.length - 1];
+  const isLastSlideEnd = lastSlide?.toString().includes('EndSlide') ||
+                         lastSlide?.toString().includes('ClosingSlide') ||
+                         lastSlide?.displayName === 'EndSlide';
+  if (isLastSlideEnd) {
+    slides[slides.length - 1] = AutoClosingSlide;
+  } else {
+    slides.push(AutoClosingSlide);
   }
 
   // Normal slideshow render
