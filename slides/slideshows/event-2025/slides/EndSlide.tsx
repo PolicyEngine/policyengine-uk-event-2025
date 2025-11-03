@@ -11,7 +11,7 @@ export default function EndSlide() {
         </SlideTitle>
 
         <div className="text-2xl text-white space-y-6 text-left">
-          <p className="text-3xl font-medium">Questions?</p>
+          
           <p className="opacity-90">hello@policyengine.org</p>
         </div>
       </div>
