@@ -6,18 +6,8 @@ import CountdownTimer from '@/components/CountdownTimer';
 
 export default function TeaSlide() {
   return (
-    <Slide className="!bg-transparent gradient-bg" showFooter={false}>
-      <div className="flex flex-col justify-between h-full py-24">
-        <div className="flex justify-center">
-          <Image
-            src={assetPath("/logos/white.svg")}
-            alt="PolicyEngine"
-            width={400}
-            height={120}
-            priority
-          />
-        </div>
-
+    <Slide className="!bg-transparent gradient-bg" showFooter={true}>
+      <div className="flex flex-col justify-center items-center h-full gap-16">
         <div className="flex flex-col items-center gap-6">
           <p className="text-3xl text-white/80">Programming resumes in</p>
           <CountdownTimer targetTime="14:20" eventDate="2025-11-03" />
