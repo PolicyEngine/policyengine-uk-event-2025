@@ -27,7 +27,12 @@ a {
   }
 
   .gradient-footer {
-    background: transparent;
+    background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
+  }
+
+  /* Override footer gradient when parent has gradient-bg */
+  .gradient-bg .gradient-footer {
+    background: transparent !important;
   }
 }
 
