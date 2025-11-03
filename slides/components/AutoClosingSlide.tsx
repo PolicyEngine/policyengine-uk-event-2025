@@ -17,7 +17,7 @@ export default function AutoClosingSlide() {
   const title = agendaItem?.hasQA ? 'Questions?' : 'Thank you';
 
   return (
-    <Slide isEnd showFooter={false}>
+    <Slide className="!bg-transparent gradient-bg" showFooter={true}>
       <div className="flex flex-col items-center justify-center h-full">
         <h1 className="text-7xl font-bold text-white">{title}</h1>
       </div>
