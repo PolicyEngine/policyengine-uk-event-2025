@@ -23,7 +23,7 @@ const SPELLING_RULES = [
   { american: /\bvisualiz/gi, british: 'visualis', exceptions: [] },
   { american: /\bcustomiz/gi, british: 'customis', exceptions: [] },
   { american: /\brigor\b/gi, british: 'rigour', exceptions: [] },
-  { american: /\bcenter/gi, british: 'centre', exceptions: ['text-align: center', 'justify-content: center', 'Center for', 'Niskanen Center'] },
+  { american: /\bcenter/gi, british: 'centre', exceptions: ['text-align: center', 'justify-content: center', 'Center for', 'Niskanen Center', 'UBI Center'] },
   { american: /\banalyz/gi, british: 'analys', exceptions: [] },
   { american: /\bfavor/gi, british: 'favour', exceptions: [] },
   { american: /\bcolor/gi, british: 'colour', exceptions: ['color code', 'color:', '#color'] },
