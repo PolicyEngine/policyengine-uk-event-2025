@@ -12,6 +12,7 @@ import { lunchConfig } from '@/slideshows/lunch/config';
 import { teaConfig } from '@/slideshows/tea/config';
 import { carbonDividendConfig } from '@/slideshows/carbon-dividend/config';
 import { localImpactConfig } from '@/slideshows/local-impact/config';
+import { aiFutureConfig } from '@/slideshows/ai-future/config';
 import { receptionConfig } from '@/slideshows/reception/config';
 
 // Register all slideshows here
@@ -29,6 +30,7 @@ export const slideshows: SlideshowConfig[] = [
   teaConfig,
   carbonDividendConfig,
   localImpactConfig,
+  aiFutureConfig,
   receptionConfig,
 ];
 

@@ -10,7 +10,7 @@ export default function FirmDistributionSlide() {
       <div className="w-full">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Firm turnover distribution (ONS and HMRC)
+            ONS and HMRC provide firms by coarse turnover band
           </h1>
         </SlideHeader>
 
@@ -19,8 +19,8 @@ export default function FirmDistributionSlide() {
             <Image
               src={assetPath("/Screenshot 2025-11-01 at 17.43.00.png")}
               alt="Figure 1: Distribution of UK firms by turnover band, 2024 (ONS)"
-              width={500}
-              height={380}
+              width={600}
+              height={450}
               className="h-auto"
             />
           </div>
@@ -28,8 +28,8 @@ export default function FirmDistributionSlide() {
             <Image
               src={assetPath("/Screenshot 2025-11-01 at 17.43.11.png")}
               alt="Figure 2: Distribution of VAT-registered firms by turnover band, 2024-25 (HMRC)"
-              width={500}
-              height={380}
+              width={600}
+              height={450}
               className="h-auto"
             />
           </div>

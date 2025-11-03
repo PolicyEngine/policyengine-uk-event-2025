@@ -18,13 +18,13 @@ export default function OBBBAIntro() {
               <div>
                 <h3 className="text-3xl font-bold text-pe-teal mb-6">Tax changes</h3>
                 <ul className="list-disc list-inside space-y-3 text-xl text-gray-700">
-                  <li>Extends TCJA provisions</li>
+                  <li>Extends 2017 tax cuts</li>
                   <li>Increases standard deduction</li>
-                  <li>Raises the CTC</li>
+                  <li>Raises the Child Tax Credit</li>
                   <li>Expands child and dependent care credit</li>
                   <li>Exempts tip and overtime income</li>
                   <li>Introduces senior deduction</li>
-                  <li>Reforms SALT cap</li>
+                  <li>Reforms state and local tax deduction cap</li>
                   <li>Modifies alternative minimum tax</li>
                   <li>Changes itemized deductions</li>
                   <li>Downstream state tax impacts</li>
@@ -34,13 +34,9 @@ export default function OBBBAIntro() {
               <div>
                 <h3 className="text-3xl font-bold text-pe-teal mb-6">Benefit changes</h3>
                 <ul className="list-disc list-inside space-y-3 text-xl text-gray-700">
-                  <li>Adds work requirements for SNAP</li>
-                  <li>Adds work requirements for Medicaid</li>
-                  <li>Restricts immigrant eligibility for CTC</li>
-                  <li>Restricts immigrant eligibility for SNAP</li>
-                  <li>Restricts immigrant eligibility for Medicaid</li>
-                  <li>Restricts immigrant eligibility for ACA subsidies</li>
-                  <li>Increases EITC audits</li>
+                  <li>Adds work requirements for food stamps and Medicaid</li>
+                  <li>Restricts immigrant eligibility for Child Tax Credit, food stamps, Medicaid, and Affordable Care Act subsidies</li>
+                  <li>Increases Earned Income Tax Credit audits</li>
                 </ul>
               </div>
             </div>

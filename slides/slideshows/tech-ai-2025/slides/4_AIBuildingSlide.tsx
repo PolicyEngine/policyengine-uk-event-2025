@@ -11,28 +11,25 @@ export default function AIBuildingSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Building internally</SlideTitle>
+          <SlideTitle>LLM coding agents accelerate development</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">
-          <SlideSubtitle>
-            LLM coding agents help us model the household sector
-          </SlideSubtitle>
 
           <BulletList
             size="lg"
             items={[
               {
                 text: 'Encoding tax-benefit reforms',
-                subtext: 'Going from a policy description to Python implementation',
+                subtext: 'From policy description to Python implementation',
               },
               {
                 text: 'Custom data imputation',
-                subtext: 'Imputing data from new surveys (LFS, EHS) at a faster pace. Lots of time is spent reading codebooks!',
+                subtext: 'Imputing data from new surveys (LFS, EHS). AI reads codebooks!',
               },
               {
-                text: 'Pulling out the outputs',
-                subtext: 'Scripts to transform household-level results into the metrics people actually care about',
+                text: 'Analysis scripts',
+                subtext: 'Transform household-level results into policy metrics',
               },
             ]}
           />

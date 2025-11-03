@@ -9,7 +9,7 @@ export default function ConstituencyMapSlide() {
     <Slide>
       <div className="max-w-full">
         <SlideHeader>
-          <SlideTitle>Interactive constituency impacts</SlideTitle>
+          <SlideTitle>We map impacts to every constituency</SlideTitle>
         </SlideHeader>
 
         <div className="mt-8">

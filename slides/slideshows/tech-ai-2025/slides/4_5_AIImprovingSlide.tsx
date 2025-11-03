@@ -6,29 +6,26 @@ import SlideContent from '@/components/SlideContent';
 import SlideSubtitle from '@/components/SlideSubtitle';
 import BulletList from '@/components/BulletList';
 
-export default function ReweightingSlide() {
+export default function AIImprovingSlide() {
   return (
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>We reweight to match administrative data</SlideTitle>
+          <SlideTitle>Machine learning enhances data quality</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">
-          <SlideSubtitle>
-            Calibrating to administrative statistics improves model accuracy
-          </SlideSubtitle>
 
           <BulletList
             size="lg"
             items={[
               {
-                text: 'Survey data needs adjustment',
-                subtext: 'Raw survey weights don\'t perfectly match known population statistics',
+                text: 'Quantile random forests (QRF)',
+                subtext: 'Impute missing variables in survey microdata',
               },
               {
-                text: 'Reweighting calibrates to administrative data',
-                subtext: 'Adjusting household weights to match official statistics from HMRC, DWP, and ONS',
+                text: 'Gradient descent optimisation',
+                subtext: 'Calibrate survey weights to population targets',
               },
             ]}
           />

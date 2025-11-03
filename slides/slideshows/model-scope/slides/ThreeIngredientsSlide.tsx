@@ -8,7 +8,7 @@ export default function ThreeIngredientsSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Three ingredients of a tax-benefit model</SlideTitle>
+          <SlideTitle>We combine three ingredients</SlideTitle>
         </SlideHeader>
 
         <div className="flex justify-center items-center gap-12 mt-20">

@@ -142,7 +142,7 @@ export default function HealthInsurancePathways() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>US health insurance coverage (2023)</SlideTitle>
+          <SlideTitle>Americans have diverse health insurance coverage</SlideTitle>
         </SlideHeader>
 
         <div className="mt-12 flex flex-col items-center">

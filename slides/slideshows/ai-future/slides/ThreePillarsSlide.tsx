@@ -4,18 +4,14 @@ import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
 import BulletList from '@/components/BulletList';
-import SlideSubtitle from '@/components/SlideSubtitle';
 
-export default function AIUsesSlide() {
+export default function ThreePillarsSlide() {
   return (
     <Slide>
-      <div>
+      <div className="">
         <SlideHeader>
-          <SlideTitle>AI at PolicyEngine: three uses</SlideTitle>
+          <SlideTitle>Our AI roadmap: three pillars</SlideTitle>
         </SlideHeader>
-        <SlideSubtitle>
-          We use AI in three main ways:
-        </SlideSubtitle>
 
         <SlideContent size="lg">
           <BulletList
@@ -23,15 +19,15 @@ export default function AIUsesSlide() {
             items={[
               {
                 text: 'Building our software',
-                subtext: 'LLM coding agents for faster policy modelling and data work',
+                subtext: 'Claude Code plugin and automated rules-as-code',
               },
               {
                 text: 'Improving our models',
-                subtext: 'Machine learning for calibration and imputation',
+                subtext: 'Local area modeling and synthetic panel data',
               },
               {
                 text: 'Augmenting our software',
-                subtext: 'Natural language interfaces and AI-powered explanations',
+                subtext: 'Natural language interfaces in app v2',
               },
             ]}
           />

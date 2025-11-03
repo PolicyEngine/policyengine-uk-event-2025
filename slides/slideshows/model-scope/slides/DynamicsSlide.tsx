@@ -8,7 +8,7 @@ export default function DynamicsSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Dynamics</SlideTitle>
+          <SlideTitle>We model behavioural responses to policy changes</SlideTitle>
         </SlideHeader>
 
         <div className="space-y-10 text-left px-12 py-6">

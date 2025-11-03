@@ -11,7 +11,7 @@ export default function CalibrationSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>What we calibrate to</SlideTitle>
+          <SlideTitle>We calibrate to administrative targets</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">

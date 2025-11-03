@@ -10,7 +10,7 @@ export default function LocalAreaImportanceSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Why local area impacts matter</SlideTitle>
+          <SlideTitle>Local impacts inform constituency policy</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">

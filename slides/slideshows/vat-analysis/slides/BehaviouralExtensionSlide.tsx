@@ -8,7 +8,7 @@ export default function BehaviouralExtensionSlide() {
       <div className="">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Behavioural extension and elasticity
+            By applying uncertainty and economic theory
           </h1>
         </SlideHeader>
 

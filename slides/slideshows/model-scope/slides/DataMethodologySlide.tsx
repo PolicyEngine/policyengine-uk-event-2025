@@ -131,7 +131,7 @@ graph TD
       <Slide>
         <div className="w-full h-full flex flex-col">
           <SlideHeader>
-            <SlideTitle>PolicyEngine UK Data Methodology</SlideTitle>
+            <SlideTitle>We build our dataset from six UK surveys</SlideTitle>
           </SlideHeader>
 
           <div className="flex-1 flex items-center justify-center" style={{ background: 'linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%)' }}>

@@ -11,7 +11,7 @@ export default function ApproachSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Flexible approach</SlideTitle>
+          <SlideTitle>We apply this to any geographic level</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">

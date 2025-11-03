@@ -4,7 +4,8 @@ import AgendaSlide from './slides/1_AgendaSlide';
 import ContextSlide from './slides/2_ContextSlide';
 import AIUsesSlide from './slides/3_AIUsesSlide';
 import AIBuildingSlide from './slides/4_AIBuildingSlide';
-import AIInterfaceSlide from './slides/5_AIInterfaceSlide';
+import AIImprovingSlide from './slides/4_5_AIImprovingSlide';
+import AIAugmentingSlide from './slides/5_AIInterfaceSlide';
 import TwoChildLimitSlide from './slides/5_5_TwoChildLimitSlide';
 import EndSlide from './slides/6_EndSlide';
 
@@ -20,7 +21,8 @@ export const techAI2025Config: SlideshowConfig = {
     ContextSlide,
     AIUsesSlide,
     AIBuildingSlide,
-    AIInterfaceSlide,
+    AIImprovingSlide,
+    AIAugmentingSlide,
     TwoChildLimitSlide,
     EndSlide,
   ],

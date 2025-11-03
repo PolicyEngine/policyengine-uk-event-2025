@@ -11,7 +11,7 @@ export default function StaticSimulationSlide() {
       <div className="w-full h-full flex flex-col">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Static simulation dashboard
+            Our dashboard calculates static revenue changes
           </h1>
         </SlideHeader>
 

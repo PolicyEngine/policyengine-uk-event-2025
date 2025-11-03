@@ -8,7 +8,7 @@ export default function DynamicModellingSlide() {
       <div className="">
         <SlideHeader>
           <h1 className="text-5xl font-bold text-pe-teal pb-5 border-b-4 border-pe-teal text-left">
-            Firm VAT dynamic modelling
+            Next step: Modelling firm VAT dynamics
           </h1>
         </SlideHeader>
 
