@@ -26,7 +26,7 @@ export default function AIAugmentingSlide() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-pe-teal mb-2">AI-powered analysis</h3>
+                <h3 className="text-2xl font-bold text-pe-teal mb-2">AI-powered explanations (March 2024)</h3>
                 <p className="text-lg text-gray-700">
                   GPT-4 translates complex calculations into plain English
                 </p>
@@ -46,7 +46,7 @@ export default function AIAugmentingSlide() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-pe-teal mb-2">Conversational interface</h3>
+                <h3 className="text-2xl font-bold text-pe-teal mb-2">Conversational interface (October 2024)</h3>
                 <p className="text-lg text-gray-700">
                   Natural language queries about household impacts
                 </p>
