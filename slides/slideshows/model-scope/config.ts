@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import SectionTitle from '@/components/AutoSectionTitle';
 import ThreeIngredientsSlide from './slides/ThreeIngredientsSlide';
 import DataMethodologySlide from './slides/DataMethodologySlide';
 import FlowchartSlide from './slides/FlowchartSlide';
@@ -15,7 +14,6 @@ export const modelScopeConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    SectionTitle,
     ThreeIngredientsSlide,
     GoogleSlidesEmbed,
     PoliciesScopeSlide,
