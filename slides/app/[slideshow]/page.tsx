@@ -35,12 +35,13 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
   // Automatically inject section title at beginning and QA slide before end if needed
   const slides = [...slideshow.slides];
 
-  // Add section title as first slide if not already present
+  // Add section title as first slide if not already present (skip for breaks/networking)
+  const isBreakOrNetworking = agendaItem?.type === 'break' || agendaItem?.type === 'networking';
   const firstSlide = slides[0];
   const isFirstSlideSection = firstSlide === AutoSectionTitle ||
                                firstSlide?.toString().includes('SectionTitle') ||
                                firstSlide?.displayName === 'SectionTitle';
-  if (!isFirstSlideSection) {
+  if (!isFirstSlideSection && !isBreakOrNetworking) {
     slides.unshift(AutoSectionTitle);
   }
 

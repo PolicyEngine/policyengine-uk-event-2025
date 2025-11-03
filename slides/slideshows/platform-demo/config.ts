@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import SectionTitle from './slides/SectionTitle';
 import EndSlide from './slides/EndSlide';
 
 export const platformDemoConfig: SlideshowConfig = {
@@ -9,7 +8,7 @@ export const platformDemoConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    SectionTitle,
+    
     EndSlide,
   ],
 };

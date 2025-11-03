@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import SectionTitle from './slides/SectionTitle';
 import Beginnings from './slides/Beginnings';
 import FirstReport from './slides/FirstReport';
 import UBICenterLaunch from './slides/UBICenterLaunch';
@@ -17,7 +16,7 @@ export const welcomeVisionConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    SectionTitle,
+    
     Beginnings,
     FirstReport,
     UBICenterLaunch,

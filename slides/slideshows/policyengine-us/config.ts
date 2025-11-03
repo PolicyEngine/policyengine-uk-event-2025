@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import SectionTitle from './slides/SectionTitle';
 import OBBBAIntro from './slides/OBBBAIntro';
 import OBBBADashboard from './slides/OBBBADashboard';
 import HealthInsurancePathways from './slides/HealthInsurancePathways';
@@ -14,7 +13,7 @@ export const policyengineUSConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    SectionTitle,
+    
     OBBBAIntro,
     OBBBADashboard,
     HealthInsurancePathways,
