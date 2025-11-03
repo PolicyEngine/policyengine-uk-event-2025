@@ -10,7 +10,7 @@ export const speakersById: Record<string, Speaker> = {
   'max-ghenis': {
     id: 'max-ghenis',
     name: 'Max Ghenis',
-    title: 'Founder & CEO',
+    title: 'Co-founder & CEO',
     organisation: 'PolicyEngine',
     headshotUrl: '/headshots/max-ghenis.jpg'
   },
@@ -112,7 +112,7 @@ export const speakers: Record<string, Speaker> = {
   maxGhenis: {
     id: 'max-ghenis',
     name: 'Max Ghenis',
-    title: 'Founder & CEO',
+    title: 'Co-founder & CEO',
     organisation: 'PolicyEngine',
     headshotUrl: '/headshots/max-ghenis.jpg' // Update with actual image
   },

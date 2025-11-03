@@ -8,7 +8,7 @@ export default function TwoChildLimitSlide() {
     <Slide>
       <div className="h-full flex flex-col">
         <SlideHeader>
-          <SlideTitle>Two-child limit comparison</SlideTitle>
+          <SlideTitle>Enables rapid policy-specific tooling</SlideTitle>
         </SlideHeader>
 
         <div className="flex-1 w-full">

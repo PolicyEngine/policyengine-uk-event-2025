@@ -11,11 +11,8 @@ export default function AIUsesSlide() {
     <Slide>
       <div>
         <SlideHeader>
-          <SlideTitle>AI at PolicyEngine: three uses</SlideTitle>
+          <SlideTitle>We use AI in three ways</SlideTitle>
         </SlideHeader>
-        <SlideSubtitle>
-          We use AI in three main ways:
-        </SlideSubtitle>
 
         <SlideContent size="lg">
           <BulletList

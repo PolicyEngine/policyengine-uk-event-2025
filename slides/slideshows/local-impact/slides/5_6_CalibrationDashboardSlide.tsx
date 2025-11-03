@@ -22,7 +22,7 @@ export default function CalibrationDashboardSlide() {
     <Slide>
       <div className="max-w-full h-full flex flex-col">
         <SlideHeader>
-          <SlideTitle>Calibration performance dashboard</SlideTitle>
+          <SlideTitle>Dashboard measures calibration performance</SlideTitle>
         </SlideHeader>
 
         <div className="flex-1 mt-8" onClick={(e) => e.stopPropagation()}>

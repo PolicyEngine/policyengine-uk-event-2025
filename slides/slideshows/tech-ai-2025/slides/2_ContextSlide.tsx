@@ -10,7 +10,7 @@ export default function ContextSlide() {
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Technology at PolicyEngine</SlideTitle>
+          <SlideTitle>PolicyEngine is a technology company</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="lg">

@@ -15,10 +15,6 @@ export default function ApproachSlide() {
         </SlideHeader>
 
         <SlideContent size="lg">
-          <SlideSubtitle>
-            This approach applies to any geographic area
-          </SlideSubtitle>
-
           <BulletList
             size="lg"
             items={[
