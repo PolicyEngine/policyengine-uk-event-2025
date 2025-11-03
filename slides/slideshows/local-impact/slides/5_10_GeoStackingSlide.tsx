@@ -16,133 +16,182 @@ export default function GeoStackingSlide() {
           One household, multiple geographies, optimised weights
         </p>
 
-        <SlideContent columns={2}>
-          <div>
+        <SlideContent size="md">
+          {/* Visual representation of household distribution */}
+          <div className="bg-gray-50 rounded-lg p-8 mb-8">
             <h2 className="text-3xl font-semibold text-pe-dark mb-6 text-left">
-              The approach
+              Universal donor households
             </h2>
+            <div className="flex flex-col items-center">
+              {/* Central household */}
+              <div className="bg-pe-teal text-white rounded-lg px-6 py-4 font-semibold text-2xl mb-6">
+                Household #1595
+              </div>
 
-            {/* Visual representation of household distribution */}
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <div className="flex flex-col items-center">
-                {/* Central household */}
-                <div className="bg-pe-teal text-white rounded-lg px-4 py-3 font-semibold mb-4">
-                  Household #1595
+              {/* Arrows to states */}
+              <div className="flex justify-center w-full mt-6 space-x-8">
+                <div className="flex-1 max-w-xs text-center">
+                  <div className="text-pe-teal text-5xl mb-3">↙</div>
+                  <div className="bg-white rounded-lg p-5 shadow-md">
+                    <div className="font-semibold text-pe-dark text-2xl">Hawaii</div>
+                    <div className="text-4xl font-bold text-pe-teal my-2">32.57</div>
+                    <div className="text-lg text-gray-600">weight</div>
+                  </div>
                 </div>
 
-                {/* Arrows to states */}
-                <div className="flex justify-between w-full mt-4 space-x-4">
-                  <div className="flex-1 text-center">
-                    <div className="text-pe-teal text-3xl mb-2">↙</div>
-                    <div className="bg-white rounded p-3 shadow-sm">
-                      <div className="font-semibold text-pe-dark">Hawaii</div>
-                      <div className="text-2xl font-bold text-pe-teal">32.57</div>
-                      <div className="text-sm text-gray-600">weight</div>
-                    </div>
+                <div className="flex-1 max-w-xs text-center">
+                  <div className="text-pe-teal text-5xl mb-3">↓</div>
+                  <div className="bg-white rounded-lg p-5 shadow-md">
+                    <div className="font-semibold text-pe-dark text-2xl">California</div>
+                    <div className="text-4xl font-bold text-pe-teal my-2">6.42</div>
+                    <div className="text-lg text-gray-600">weight</div>
                   </div>
+                </div>
 
-                  <div className="flex-1 text-center">
-                    <div className="text-pe-teal text-3xl mb-2">↓</div>
-                    <div className="bg-white rounded p-3 shadow-sm">
-                      <div className="font-semibold text-pe-dark">California</div>
-                      <div className="text-2xl font-bold text-pe-teal">6.42</div>
-                      <div className="text-sm text-gray-600">weight</div>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 text-center">
-                    <div className="text-pe-teal text-3xl mb-2">↘</div>
-                    <div className="bg-white rounded p-3 shadow-sm">
-                      <div className="font-semibold text-pe-dark">S. Dakota</div>
-                      <div className="text-2xl font-bold text-pe-teal">0.79</div>
-                      <div className="text-sm text-gray-600">weight</div>
-                    </div>
+                <div className="flex-1 max-w-xs text-center">
+                  <div className="text-pe-teal text-5xl mb-3">↘</div>
+                  <div className="bg-white rounded-lg p-5 shadow-md">
+                    <div className="font-semibold text-pe-dark text-2xl">S. Dakota</div>
+                    <div className="text-4xl font-bold text-pe-teal my-2">0.79</div>
+                    <div className="text-lg text-gray-600">weight</div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Matrix sparsity visualization */}
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="text-xl font-semibold text-pe-dark mb-3 text-left">
-                Sparse matrix structure
-              </h3>
-              <div className="grid grid-cols-6 gap-1 text-xs">
-                {/* Header row */}
-                <div className="col-span-1"></div>
-                <div className="text-center font-semibold">H1_CA</div>
-                <div className="text-center font-semibold">H2_CA</div>
-                <div className="text-center font-semibold">H1_TX</div>
-                <div className="text-center font-semibold">H2_TX</div>
-                <div className="text-center font-semibold">...</div>
-
-                {/* National targets */}
-                <div className="font-semibold text-right pr-2">National</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-
-                {/* CA targets */}
-                <div className="font-semibold text-right pr-2">CA age</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-
-                {/* TX targets */}
-                <div className="font-semibold text-right pr-2">TX age</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-pe-teal text-white text-center rounded">✓</div>
-                <div className="bg-gray-200 text-center rounded">-</div>
-              </div>
-              <p className="text-sm text-gray-600 mt-3 text-left">
-                99% sparsity: only relevant households contribute to each target
-              </p>
             </div>
           </div>
 
-          <div>
+          {/* Matrix sparsity visualization */}
+          <div className="bg-gray-50 rounded-lg p-8">
             <h2 className="text-3xl font-semibold text-pe-dark mb-6 text-left">
-              Key achievements
+              Sparse matrix structure
             </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr>
+                    <th className="text-left pr-4"></th>
+                    <th className="text-center font-semibold px-3 text-lg">H1_CA</th>
+                    <th className="text-center font-semibold px-3 text-lg">H2_CA</th>
+                    <th className="text-center font-semibold px-3 text-lg">H3_CA</th>
+                    <th className="text-center font-semibold px-3 text-lg">H1_TX</th>
+                    <th className="text-center font-semibold px-3 text-lg">H2_TX</th>
+                    <th className="text-center font-semibold px-3 text-lg">H3_TX</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-            {/* Statistics boxes */}
-            <div className="space-y-4">
-              <div className="bg-pe-teal bg-opacity-10 rounded-lg p-5">
-                <div className="text-4xl font-bold text-pe-teal mb-2">99%</div>
-                <div className="text-xl text-pe-dark font-semibold">Memory reduction</div>
-                <div className="text-lg text-gray-600">23 GB → 166 MB for 51 states</div>
-              </div>
+                  {/* National employment */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">national_employment</td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                  </tr>
 
-              <div className="bg-pe-teal bg-opacity-10 rounded-lg p-5">
-                <div className="text-4xl font-bold text-pe-teal mb-2">64,522</div>
-                <div className="text-xl text-pe-dark font-semibold">Universal donor households</div>
-                <div className="text-lg text-gray-600">Representing 167,089 geographic pairs</div>
-              </div>
+                  {/* National tax revenue */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">national_tax_revenue</td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                  </tr>
 
-              <div className="bg-pe-teal bg-opacity-10 rounded-lg p-5">
-                <div className="text-4xl font-bold text-pe-teal mb-2">2.59</div>
-                <div className="text-xl text-pe-dark font-semibold">Average states per household</div>
-                <div className="text-lg text-gray-600">One household active in up to 50 states</div>
-              </div>
+                  {/* CA age 0-5 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">CA_age_0_5</td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                  </tr>
+
+                  {/* CA age 5-10 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">CA_age_5_10</td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                  </tr>
+
+                  {/* CA age 10-15 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">CA_age_10_15</td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                  </tr>
+
+                  {/* TX age 0-5 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">TX_age_0_5</td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                  </tr>
+
+                  {/* TX age 5-10 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">TX_age_5_10</td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                  </tr>
+
+                  {/* TX age 10-15 */}
+                  <tr>
+                    <td className="font-semibold text-right pr-4 py-1 text-base">TX_age_10_15</td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-gray-300 text-gray-600 text-center rounded py-2 font-bold">0</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                    <td className="px-2 py-1"><div className="bg-pe-teal text-white text-center rounded py-2 font-bold">X</div></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            {/* Benefits list */}
-            <div className="mt-6">
-              <h3 className="text-2xl font-semibold text-pe-dark mb-4 text-left">
-                Benefits
-              </h3>
-              <ul className="list-disc list-inside space-y-3 text-xl text-left">
-                <li>Full household diversity in every geography</li>
-                <li>Consistent microsimulation across areas</li>
-                <li>Hierarchical targets: national → state → district</li>
-                <li>Scalable to 436 congressional districts</li>
-              </ul>
+            <div className="grid grid-cols-2 gap-8 mt-6">
+              <div className="space-y-3 text-xl text-left">
+                <div className="flex items-start">
+                  <span className="text-pe-teal font-bold text-2xl mr-4">•</span>
+                  <span><strong>X</strong> = household contributes to target</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-pe-teal font-bold text-2xl mr-4">•</span>
+                  <span><strong>0</strong> = household doesn't contribute</span>
+                </div>
+              </div>
+              <div className="space-y-3 text-xl text-left">
+                <div className="flex items-start">
+                  <span className="text-pe-teal font-bold text-2xl mr-4">•</span>
+                  <span>99% sparsity (23 GB → 166 MB)</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-pe-teal font-bold text-2xl mr-4">•</span>
+                  <span>Scales to 436 congressional districts</span>
+                </div>
+              </div>
             </div>
           </div>
         </SlideContent>
