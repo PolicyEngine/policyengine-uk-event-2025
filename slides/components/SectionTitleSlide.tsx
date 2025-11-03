@@ -36,22 +36,12 @@ export default function SectionTitleSlide({
     const speaker = getSpeakerById(speakerId);
     if (speaker) {
       return (
-        <Slide className="!bg-transparent gradient-bg" showFooter={false}>
+        <Slide className="!bg-transparent gradient-bg" showFooter={true}>
           <div className="max-w-7xl">
-            {/* Custom header with white logo */}
-            <div className="flex items-start justify-between gap-8 mb-10">
-              <div className="flex-1">
-                <SlideTitle className="text-white border-white">{slideTitle}</SlideTitle>
-              </div>
-              <div className="flex-shrink-0 pt-2">
-                <Image
-                  src={assetPath("/logos/profile_white.svg")}
-                  alt="PolicyEngine"
-                  width={60}
-                  height={60}
-                  className="opacity-90"
-                />
-              </div>
+            {/* Header */}
+            <div className="mb-10">
+              <SlideTitle className="text-white">{slideTitle}</SlideTitle>
+              <div className="w-full h-1 bg-white mt-5"></div>
             </div>
 
             <div className="mt-16 flex items-center justify-between gap-12">
@@ -82,7 +72,7 @@ export default function SectionTitleSlide({
     const isThreeOrMore = speakers.length >= 3;
 
     return (
-      <Slide className="!bg-transparent gradient-bg" showFooter={false}>
+      <Slide className="!bg-transparent gradient-bg" showFooter={true}>
         <div className="w-full h-full flex flex-col items-center justify-center -mt-12">
           {/* Centered title at top */}
           <div className="text-center mb-20">
@@ -111,17 +101,6 @@ export default function SectionTitleSlide({
               ))}
             </div>
           </div>
-
-          {/* Logo at bottom center */}
-          <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
-            <Image
-              src={assetPath("/logos/profile_white.svg")}
-              alt="PolicyEngine"
-              width={80}
-              height={80}
-              className="opacity-70"
-            />
-          </div>
         </div>
       </Slide>
     );
@@ -129,22 +108,12 @@ export default function SectionTitleSlide({
 
   // Legacy backwards compatibility - direct props
   return (
-    <Slide className="!bg-transparent gradient-bg" showFooter={false}>
+    <Slide className="!bg-transparent gradient-bg" showFooter={true}>
       <div className="max-w-7xl">
-        {/* Custom header with white logo */}
-        <div className="flex items-start justify-between gap-8 mb-10">
-          <div className="flex-1">
-            <SlideTitle className="text-white border-white">{slideTitle}</SlideTitle>
-          </div>
-          <div className="flex-shrink-0 pt-2">
-            <Image
-              src={assetPath("/logos/profile_white.svg")}
-              alt="PolicyEngine"
-              width={60}
-              height={60}
-              className="opacity-90"
-            />
-          </div>
+        {/* Header */}
+        <div className="mb-10">
+          <SlideTitle className="text-white">{slideTitle}</SlideTitle>
+          <div className="w-full h-1 bg-white mt-5"></div>
         </div>
 
         <div className="mt-16 flex items-center justify-between gap-12">
