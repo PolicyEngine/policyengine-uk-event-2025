@@ -687,6 +687,25 @@ function generateTwoSectionPage(item1, item2, speakers, pageNumber) {
     ? `${title1Comment} / ${title2Comment}`
     : title1Comment;
 
+  // Add images if specified
+  let image1Html = '';
+  if (item1.reportImageUrl) {
+    image1Html = `
+            <div style="margin-top: 20px; text-align: center;">
+                <img src="../slides/public${item1.reportImageUrl}" alt="${item1.title}" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            </div>
+`;
+  }
+
+  let image2Html = '';
+  if (item2?.reportImageUrl) {
+    image2Html = `
+            <div style="margin-top: 20px; text-align: center;">
+                <img src="../slides/public${item2.reportImageUrl}" alt="${item2.title}" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            </div>
+`;
+  }
+
   let html = `
 <!-- PAGE ${pageNumber}: ${pageComment} -->
 <div class="page">
@@ -696,6 +715,7 @@ function generateTwoSectionPage(item1, item2, speakers, pageNumber) {
 ${section1.speakerHtml}
 
 ${section1.content}
+${image1Html}
         </div>
 `;
 
@@ -706,6 +726,7 @@ ${section1.content}
 ${section2.speakerHtml}
 
 ${section2.content}
+${image2Html}
         </div>
 `;
   }
