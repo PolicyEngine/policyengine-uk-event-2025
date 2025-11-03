@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { assetPath } from '@/lib/assetPath';
 
 export default function GrowingAdoption() {
-  const organizations = [
+  const organisations = [
     { name: 'Green Party', logo: '/logos/organizations/gpew.png' },
     { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png' },
     { name: 'NIESR', logo: '/logos/organizations/niesr.jpeg' },
@@ -27,7 +27,7 @@ export default function GrowingAdoption() {
 
         <div className="mt-4">
           <div className="grid grid-cols-3 gap-2">
-            {organizations.map((org, idx) => (
+            {organisations.map((org, idx) => (
               <div
                 key={idx}
                 className={`
