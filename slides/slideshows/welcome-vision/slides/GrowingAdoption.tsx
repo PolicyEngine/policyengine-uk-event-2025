@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
@@ -9,48 +7,47 @@ import { assetPath } from '@/lib/assetPath';
 
 export default function GrowingAdoption() {
   const organizations = [
-    { name: 'Green Party', logo: '/logos/organizations/gpew.png', height: 60 },
-    { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png', height: 50 },
-    { name: 'NIESR', logo: '/logos/organizations/niesr.jpeg', height: 50 },
-    { name: 'Institute of Economic Affairs', logo: '/logos/organizations/iea.svg', height: 50 },
-    { name: 'Social Market Foundation', logo: '/logos/organizations/smf.png', height: 50 },
-    { name: 'Liberal Democrats', logo: '/logos/organizations/liberal-party.jpeg', height: 60 },
-    { name: 'UBI Lab Network', logo: '/logos/organizations/ubilabs.png', height: 50 },
-    { name: 'UK in a Changing Europe', logo: '/logos/organizations/ukeu.svg', height: 50 },
-    { name: 'UN Digital Public Good', logo: '/logos/organizations/dpga.png', height: 80, isUN: true },
+    { name: 'Green Party', logo: '/logos/organizations/gpew.png' },
+    { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png' },
+    { name: 'NIESR', logo: '/logos/organizations/niesr.jpeg' },
+    { name: 'Institute of Economic Affairs', logo: '/logos/organizations/iea.svg' },
+    { name: 'Social Market Foundation', logo: '/logos/organizations/smf.png' },
+    { name: 'Liberal Democrats', logo: '/logos/organizations/liberal-party.jpeg' },
+    { name: 'UBI Lab Network', logo: '/logos/organizations/ubilabs.png' },
+    { name: 'UK in a Changing Europe', logo: '/logos/organizations/ukeu.svg' },
+    { name: 'UN Digital Public Good', logo: '/logos/organizations/dpga.png', isUN: true },
   ];
 
   return (
     <Slide>
-      <div className="">
+      <div className="max-w-7xl">
         <SlideHeader>
           <SlideTitle>2023-2024: Growing adoption</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-8">
-          <div className="grid grid-cols-4 gap-6">
+        <div className="mt-6">
+          <div className="grid grid-cols-4 gap-4">
             {organizations.map((org, idx) => (
               <div
                 key={idx}
                 className={`
-                  rounded-xl p-6 border-2 flex items-center justify-center border-pe-teal bg-white shadow-lg
+                  rounded-lg p-4 border-2 flex items-center justify-center border-pe-teal bg-white shadow-md
                   ${org.isUN ? 'col-span-4 bg-gradient-to-r from-blue-50 to-purple-50' : ''}
                 `}
                 style={{
-                  minHeight: org.isUN ? '100px' : '100px'
+                  height: org.isUN ? '80px' : '70px'
                 }}
               >
                 <Image
                   src={assetPath(org.logo)}
                   alt={org.name}
-                  width={org.isUN ? 300 : 200}
-                  height={org.height}
-                  className="object-contain"
+                  width={org.isUN ? 250 : 150}
+                  height={org.isUN ? 60 : 40}
+                  className="object-contain max-w-full max-h-full"
                 />
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </Slide>
