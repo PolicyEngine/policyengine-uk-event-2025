@@ -45,15 +45,18 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
     slides.unshift(AutoSectionTitle);
   }
 
-  // Replace last slide with AutoClosingSlide (shows "Questions?" or "Thank you" based on hasQA)
-  const lastSlide = slides[slides.length - 1];
-  const isLastSlideEnd = lastSlide?.toString().includes('EndSlide') ||
-                         lastSlide?.toString().includes('ClosingSlide') ||
-                         lastSlide?.displayName === 'EndSlide';
-  if (isLastSlideEnd) {
-    slides[slides.length - 1] = AutoClosingSlide;
-  } else {
-    slides.push(AutoClosingSlide);
+  // Add AutoClosingSlide at end (skip for panels and breaks/networking)
+  const isPanel = agendaItem?.type === 'panel';
+  if (!isBreakOrNetworking && !isPanel) {
+    const lastSlide = slides[slides.length - 1];
+    const isLastSlideEnd = lastSlide?.toString().includes('EndSlide') ||
+                           lastSlide?.toString().includes('ClosingSlide') ||
+                           lastSlide?.displayName === 'EndSlide';
+    if (isLastSlideEnd) {
+      slides[slides.length - 1] = AutoClosingSlide;
+    } else {
+      slides.push(AutoClosingSlide);
+    }
   }
 
   // Normal slideshow render
