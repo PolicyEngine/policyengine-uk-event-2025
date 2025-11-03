@@ -1,5 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
-import CoverSlide from './slides/CoverSlide';
+import SectionTitle from '@/components/AutoSectionTitle';
 import ThreePillarsSlide from './slides/ThreePillarsSlide';
 import ClaudeCodeSlide from './slides/ClaudeCodeSlide';
 import ScientificDevelopmentSlide from './slides/ScientificDevelopmentSlide';
@@ -17,7 +17,7 @@ export const aiFutureConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    CoverSlide,
+    SectionTitle,
     ThreePillarsSlide,
     ClaudeCodeSlide,
     ScientificDevelopmentSlide,
