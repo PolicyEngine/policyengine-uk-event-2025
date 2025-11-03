@@ -440,6 +440,12 @@ function generateHtmlHeader() {
         }
 
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
             body {
                 background: white;
             }
@@ -447,6 +453,9 @@ function generateHtmlHeader() {
                 margin: 0;
                 box-shadow: none;
                 page-break-after: always;
+            }
+            .cover-page {
+                background: linear-gradient(135deg, #319795 0%, #1D4044 100%) !important;
             }
         }
     </style>
