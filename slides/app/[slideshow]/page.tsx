@@ -2,6 +2,7 @@ import { getAllSlideshowMetadata, getSlideshowById } from '@/lib/slideshows';
 import { agenda } from '@/lib/agenda';
 import SlideshowViewer from '@/components/SlideshowViewer';
 import AutoSectionTitle from '@/components/AutoSectionTitle';
+import QASlide from '@/components/QASlide';
 import { redirect } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -31,10 +32,26 @@ export default function SlideshowPage({ params }: { params: { slideshow: string 
     redirect('/');
   }
 
+  // Automatically inject section title at beginning and QA slide before end if needed
+  const slides = [...slideshow.slides];
+
+  // Add section title as first slide if not already present
+  const firstSlide = slides[0];
+  const isFirstSlideAutoSection = firstSlide === AutoSectionTitle || firstSlide?.name === 'AutoSectionTitle';
+  if (!isFirstSlideAutoSection) {
+    slides.unshift(AutoSectionTitle);
+  }
+
+  // Add QA slide before end slide if hasQA is true
+  if (agendaItem?.hasQA) {
+    // Insert QA slide before the last slide (which should be EndSlide)
+    slides.splice(slides.length - 1, 0, QASlide);
+  }
+
   // Normal slideshow render
   return (
-    <SlideshowViewer slideCount={slideshow.slides.length} slideshowId={params.slideshow}>
-      {slideshow.slides.map((SlideComponent, index) => (
+    <SlideshowViewer slideCount={slides.length} slideshowId={params.slideshow}>
+      {slides.map((SlideComponent, index) => (
         <SlideComponent key={index} />
       ))}
     </SlideshowViewer>

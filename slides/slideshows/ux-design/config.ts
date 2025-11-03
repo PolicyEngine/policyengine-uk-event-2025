@@ -1,7 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
-import QASlide from '@/components/QASlide';
 import EndSlide from './slides/EndSlide';
 
 export const uxDesignConfig: SlideshowConfig = {
@@ -13,7 +12,6 @@ export const uxDesignConfig: SlideshowConfig = {
   slides: [
     SectionTitle,
     GoogleSlidesEmbed,
-    QASlide,
     EndSlide,
   ],
 };

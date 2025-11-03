@@ -1,6 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
 import SectionTitle from './slides/SectionTitle';
-import QASlide from '@/components/QASlide';
 import EndSlide from './slides/EndSlide';
 
 export const platformDemoConfig: SlideshowConfig = {
@@ -11,7 +10,6 @@ export const platformDemoConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     SectionTitle,
-    QASlide,
     EndSlide,
   ],
 };
