@@ -5,7 +5,6 @@ import FlowchartSlide from './slides/FlowchartSlide';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
 import PoliciesScopeSlide from './slides/PoliciesScopeSlide';
 import DynamicsSlide from './slides/DynamicsSlide';
-import EndSlide from './slides/EndSlide';
 
 export const modelScopeConfig: SlideshowConfig = {
   id: 'model-scope',
@@ -20,6 +19,6 @@ export const modelScopeConfig: SlideshowConfig = {
     FlowchartSlide,
     DynamicsSlide,
     DataMethodologySlide,
-    EndSlide,
+    
   ],
 };

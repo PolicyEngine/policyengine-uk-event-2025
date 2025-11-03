@@ -4,7 +4,6 @@ import OBBBADashboard from './slides/OBBBADashboard';
 import HealthInsurancePathways from './slides/HealthInsurancePathways';
 import ACAShutdown from './slides/ACAShutdown';
 import EnhancedSubsidies from './slides/EnhancedSubsidies';
-import EndSlide from './slides/EndSlide';
 
 export const policyengineUSConfig: SlideshowConfig = {
   id: 'policyengine-us',
@@ -19,6 +18,6 @@ export const policyengineUSConfig: SlideshowConfig = {
     HealthInsurancePathways,
     ACAShutdown,
     EnhancedSubsidies,
-    EndSlide,
+    
   ],
 };

@@ -1,6 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
-import EndSlide from './slides/EndSlide';
 
 export const uxDesignConfig: SlideshowConfig = {
   id: 'ux-design',
@@ -11,6 +10,6 @@ export const uxDesignConfig: SlideshowConfig = {
   slides: [
     
     GoogleSlidesEmbed,
-    EndSlide,
+    
   ],
 };

@@ -10,7 +10,6 @@ import USImprovementsSlide from './slides/5_8_USImprovementsSlide';
 import USFoodStampMapSlide from './slides/5_9_USFoodStampMapSlide';
 import GeoStackingSlide from './slides/5_10_GeoStackingSlide';
 import OptimizationSlide from './slides/5_11_OptimizationSlide';
-import EndSlide from './slides/6_EndSlide';
 
 export const localImpactConfig: SlideshowConfig = {
   id: 'local-impact',
@@ -30,6 +29,6 @@ export const localImpactConfig: SlideshowConfig = {
     USFoodStampMapSlide,
     GeoStackingSlide,
     OptimizationSlide,
-    EndSlide,
+    
   ],
 };

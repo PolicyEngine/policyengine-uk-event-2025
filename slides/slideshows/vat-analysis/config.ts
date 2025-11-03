@@ -8,7 +8,6 @@ import StaticSimulationSlide from './slides/StaticSimulationSlide';
 import DynamicModellingSlide from './slides/DynamicModellingSlide';
 import BehaviouralExtensionSlide from './slides/BehaviouralExtensionSlide';
 import TurnoverDistributionsSlide from './slides/TurnoverDistributionsSlide';
-import EndSlide from './slides/EndSlide';
 
 export const vatAnalysisConfig: SlideshowConfig = {
   id: 'vat-analysis',
@@ -26,6 +25,6 @@ export const vatAnalysisConfig: SlideshowConfig = {
     DynamicModellingSlide,
     BehaviouralExtensionSlide,
     TurnoverDistributionsSlide,
-    EndSlide,
+    
   ],
 };

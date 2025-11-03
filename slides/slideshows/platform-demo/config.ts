@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import EndSlide from './slides/EndSlide';
 
 export const platformDemoConfig: SlideshowConfig = {
   id: 'platform-demo',
@@ -9,6 +8,6 @@ export const platformDemoConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     
-    EndSlide,
+    
   ],
 };

@@ -1,6 +1,5 @@
 import { SlideshowConfig } from '@/lib/types';
 import GoogleSlidesEmbed from './slides/GoogleSlidesEmbed';
-import EndSlide from './slides/EndSlide';
 
 export const carbonDividendConfig: SlideshowConfig = {
   id: 'carbon-dividend',
@@ -10,6 +9,6 @@ export const carbonDividendConfig: SlideshowConfig = {
   location: 'Central Hall Westminster, London',
   slides: [
     GoogleSlidesEmbed,
-    EndSlide,
+    
   ],
 };

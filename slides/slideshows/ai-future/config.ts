@@ -6,7 +6,6 @@ import LocalAreaModelingSlide from './slides/LocalAreaModelingSlide';
 import SyntheticPanelSlide from './slides/SyntheticPanelSlide';
 import NaturalLanguageSlide from './slides/NaturalLanguageSlide';
 import ClosingReflectionSlide from './slides/ClosingReflectionSlide';
-import EndSlide from './slides/EndSlide';
 
 export const aiFutureConfig: SlideshowConfig = {
   id: 'ai-future',
@@ -22,6 +21,6 @@ export const aiFutureConfig: SlideshowConfig = {
     SyntheticPanelSlide,
     NaturalLanguageSlide,
     ClosingReflectionSlide,
-    EndSlide,
+    
   ],
 };

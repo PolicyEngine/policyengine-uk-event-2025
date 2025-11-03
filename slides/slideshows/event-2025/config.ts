@@ -1,7 +1,6 @@
 import { SlideshowConfig } from '@/lib/types';
 import CoverSlide from './slides/CoverSlide';
 import WelcomeSlide from './slides/WelcomeSlide';
-import EndSlide from './slides/EndSlide';
 
 export const event2025Config: SlideshowConfig = {
   id: 'event-2025',
@@ -12,6 +11,6 @@ export const event2025Config: SlideshowConfig = {
   slides: [
     CoverSlide,
     WelcomeSlide,
-    EndSlide,
+    
   ],
 };

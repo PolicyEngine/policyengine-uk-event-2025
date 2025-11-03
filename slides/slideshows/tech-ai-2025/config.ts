@@ -6,7 +6,6 @@ import AIBuildingSlide from './slides/4_AIBuildingSlide';
 import AIImprovingSlide from './slides/4_5_AIImprovingSlide';
 import AIAugmentingSlide from './slides/5_AIInterfaceSlide';
 import TwoChildLimitSlide from './slides/5_5_TwoChildLimitSlide';
-import EndSlide from './slides/6_EndSlide';
 
 export const techAI2025Config: SlideshowConfig = {
   id: 'tech-ai-2025',
@@ -22,6 +21,6 @@ export const techAI2025Config: SlideshowConfig = {
     AIAugmentingSlide,
     AIImprovingSlide,
     TwoChildLimitSlide,
-    EndSlide,
+    
   ],
 };
