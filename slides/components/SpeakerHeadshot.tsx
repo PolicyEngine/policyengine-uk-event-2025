@@ -35,11 +35,12 @@ export default function SpeakerHeadshot({
 
   // Create initials fallback if no image
   const initials = name
-    .split(' ')
-    .map(part => part[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 2);
+    ? name.split(' ')
+        .map(part => part[0])
+        .join('')
+        .toUpperCase()
+        .slice(0, 2)
+    : '??';
 
   // Apply assetPath to the image URL for GitHub Pages compatibility
   const fullImageUrl = imageUrl ? assetPath(imageUrl) : undefined;

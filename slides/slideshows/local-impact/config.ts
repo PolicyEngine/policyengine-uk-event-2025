@@ -1,5 +1,4 @@
 import { SlideshowConfig } from '@/lib/types';
-import CoverSlide from './slides/1_CoverSlide';
 import LocalAreaImportanceSlide from './slides/2_LocalAreaImportanceSlide';
 import ReweightingSlide from './slides/3_ReweightingSlide';
 import ApproachSlide from './slides/4_ApproachSlide';
@@ -20,7 +19,6 @@ export const localImpactConfig: SlideshowConfig = {
   date: '3 November 2025',
   location: 'Central Hall Westminster, London',
   slides: [
-    CoverSlide,
     LocalAreaImportanceSlide,
     ReweightingSlide,
     ApproachSlide,
