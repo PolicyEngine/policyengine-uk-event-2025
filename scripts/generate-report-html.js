@@ -790,7 +790,6 @@ function generateReport() {
   let html = generateHtmlHeader();
   html += generateFrontCover();
   html += generateAgendaPage(agendaItems, speakers);
-  html += generateSpeakersPage(speakers, agendaItems);
 
   // Generate content pages for items with slideshowId (2 sections per page)
   const contentItems = agendaItems.filter(
