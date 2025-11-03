@@ -40,7 +40,7 @@ export default function ElectionCalculatorDemo() {
                 <ul className="list-disc list-inside space-y-2">
                   <li>Instant household-specific estimates</li>
                   <li>Side-by-side policy comparison</li>
-                  <li>Comprehensive tax and benefit modeling</li>
+                  <li>Comprehensive tax and benefit modelling</li>
                   <li>50-state coverage</li>
                 </ul>
               </div>

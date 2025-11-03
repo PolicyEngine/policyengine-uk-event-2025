@@ -6,6 +6,7 @@ export interface AgendaItem {
   slideshowId?: string; // Link to slideshow if exists
   type: 'talk' | 'demo' | 'panel' | 'break' | 'networking';
   hasQA?: boolean; // Whether to include Q&A slide at end
+  reportImageUrl?: string; // Optional image to include at bottom of report section
 }
 
 export const agenda: AgendaItem[] = [
@@ -16,12 +17,12 @@ export const agenda: AgendaItem[] = [
   { time: '12:50 PM - 1:05 PM', title: 'Scope of the model: Policies, households, and dynamics', speakerIds: ['vahid-ahmadi'], slideshowId: 'model-scope', type: 'talk' },
   { time: '1:05 PM - 1:25 PM', title: 'Localising policy impact: Parliamentary constituencies and local authorities', speakerIds: ['nikhil-woodruff', 'ben-ogorek'], slideshowId: 'local-impact', type: 'talk', hasQA: true },
   { time: '1:25 PM - 1:40 PM', title: 'UX research and design of PolicyEngine v2 platform', speakerIds: ['biniam-gebre', 'masara-myers'], slideshowId: 'ux-design', type: 'talk', hasQA: true },
-  { time: '1:40 PM - 2:00 PM', title: 'Live demo: PolicyEngine v2 platform', speakerIds: ['anthony-volk'], slideshowId: 'platform-demo', type: 'demo', hasQA: true },
+  { time: '1:40 PM - 2:00 PM', title: 'Live demo: PolicyEngine v2 platform', speakerIds: ['anthony-volk'], slideshowId: 'platform-demo', type: 'demo', hasQA: true, reportImageUrl: '/images/app-v2-demo.png' },
   { time: '2:00 PM - 2:20 PM', title: 'Tea break and networking', slideshowId: 'tea', type: 'break' },
   { time: '2:20 PM - 2:40 PM', title: "NIESR's use of PolicyEngine in its living standards review", speakerIds: ['max-mosley'], slideshowId: 'niesr-review', type: 'talk', hasQA: true },
   { time: '2:40 PM - 3:00 PM', title: 'Microsimulation of a carbon dividend', speakerIds: ['malcolm-torry'], slideshowId: 'carbon-dividend', type: 'talk', hasQA: true },
-  { time: '3:00 PM - 3:20 PM', title: 'VAT analysis with synthetic firm microdata', speakerIds: ['vahid-ahmadi'], slideshowId: 'vat-analysis', type: 'talk', hasQA: true },
-  { time: '3:20 PM - 3:40 PM', title: 'PolicyEngine US: Tools for deconstructing complex policies', speakerIds: ['david-trimmer', 'daphne-hansell'], slideshowId: 'policyengine-us', type: 'talk', hasQA: true },
+  { time: '3:00 PM - 3:20 PM', title: 'VAT analysis with synthetic firm microdata', speakerIds: ['vahid-ahmadi'], slideshowId: 'vat-analysis', type: 'talk', hasQA: true, reportImageUrl: '/Screenshot 2025-11-01 at 17.47.25.png' },
+  { time: '3:20 PM - 3:40 PM', title: 'PolicyEngine US: Tools for deconstructing complex policies', speakerIds: ['david-trimmer', 'daphne-hansell'], slideshowId: 'policyengine-us', type: 'talk', hasQA: true, reportImageUrl: '/images/posts/obbba-household-by-household.png' },
   { time: '3:40 PM - 4:25 PM', title: 'Panel discussion: The future of evidence-based policymaking', speakerIds: ['max-ghenis', 'arun-advani', 'anvar-sarygulov'], slideshowId: 'panel-future', type: 'panel' },
   { time: '4:25 PM - 5:00 PM', title: 'Looking ahead: AI-powered policy analysis', speakerIds: ['max-ghenis', 'nikhil-woodruff'], slideshowId: 'ai-future', type: 'talk', hasQA: true },
   { time: '5:00 PM - 6:00 PM', title: 'Reception and networking', slideshowId: 'reception', type: 'networking' },

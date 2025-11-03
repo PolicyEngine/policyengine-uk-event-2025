@@ -7,15 +7,15 @@ import { assetPath } from '@/lib/assetPath';
 
 export default function GrowingAdoption() {
   const organisations = [
-    { name: 'Green Party', logo: '/logos/organizations/gpew.png' },
-    { name: 'Centre for Policy Studies', logo: '/logos/organizations/cps.png' },
-    { name: 'NIESR', logo: '/logos/organizations/niesr.jpeg' },
-    { name: 'Institute of Economic Affairs', logo: '/logos/organizations/iea.svg' },
-    { name: 'Social Market Foundation', logo: '/logos/organizations/smf.png' },
-    { name: 'Liberal Democrats', logo: '/logos/organizations/liberal-party.jpeg' },
-    { name: 'UBI Lab Network', logo: '/logos/organizations/ubilabs.png' },
-    { name: 'UK in a Changing Europe', logo: '/logos/organizations/ukeu.svg' },
-    { name: 'UN Digital Public Good', logo: '/logos/organizations/dpga.png', isUN: true },
+    { name: 'Green Party', logo: '/logos/organisations/gpew.png' },
+    { name: 'Centre for Policy Studies', logo: '/logos/organisations/cps.png' },
+    { name: 'NIESR', logo: '/logos/organisations/niesr.jpeg' },
+    { name: 'Institute of Economic Affairs', logo: '/logos/organisations/iea.svg' },
+    { name: 'Social Market Foundation', logo: '/logos/organisations/smf.png' },
+    { name: 'Liberal Democrats', logo: '/logos/organisations/liberal-party.jpeg' },
+    { name: 'UBI Lab Network', logo: '/logos/organisations/ubilabs.png' },
+    { name: 'UK in a Changing Europe', logo: '/logos/organisations/ukeu.svg' },
+    { name: 'UN Digital Public Good', logo: '/logos/organisations/dpga.png', isUN: true },
   ];
 
   return (

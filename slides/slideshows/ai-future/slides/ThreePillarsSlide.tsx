@@ -23,7 +23,7 @@ export default function ThreePillarsSlide() {
               },
               {
                 text: 'Improving our models',
-                subtext: 'Local area modeling and synthetic panel data',
+                subtext: 'Local area modelling and synthetic panel data',
               },
               {
                 text: 'Augmenting our software',

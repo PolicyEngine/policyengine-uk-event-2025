@@ -624,10 +624,19 @@ function generateSectionContent(agendaItem, speakers) {
   let content = '';
   if (fs.existsSync(reportMdPath)) {
     content = fs.readFileSync(reportMdPath, 'utf8');
-    // Convert basic markdown to HTML (simple conversion for now)
+    // Convert basic markdown to HTML
     content = content
+      // Convert markdown images: ![alt](path) -> <img>
+      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">')
+      // Split into paragraphs
       .split('\n\n')
-      .map(para => `            <p>${para.trim()}</p>`)
+      .map(para => {
+        // Skip if already an HTML tag
+        if (para.trim().startsWith('<')) {
+          return para.trim();
+        }
+        return `            <p>${para.trim()}</p>`;
+      })
       .join('\n\n');
   } else {
     content = `            <p><em>Content for this section will be added from slideshows/${slideshowId}/report.md</em></p>`;

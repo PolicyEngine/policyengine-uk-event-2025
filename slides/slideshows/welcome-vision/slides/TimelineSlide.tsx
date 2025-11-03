@@ -10,7 +10,7 @@ export default function TimelineSlide() {
     { year: '2021', month: 'Oct', event: 'Create independent nonprofit for open-source microsimulation' },
     { year: '2021-22', event: 'Score UK policies: demonstrate utility and contribute to evidence base' },
     { year: '2022', month: 'Mar', event: 'Expand to US' },
-    { year: '2022-23', event: 'Build world-class economic simulation: rigorous rule encoding + representative datasets' },
+    { year: '2022-23', event: 'Build world-class economic simulation: rigourous rule encoding + representative datasets' },
     { year: '2023', month: 'Jan', event: 'Open surfaces: Python package, web app, AI summarisation' },
     { year: '2023', event: 'UN recognises PolicyEngine as digital public good' },
     { year: '2024', event: 'Growing adoption: Green Party, CPS, NIESR, IEA, SMF, Lib Dems, UBI Lab Network, UK in a Changing Europe' },

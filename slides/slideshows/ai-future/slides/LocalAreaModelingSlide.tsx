@@ -4,12 +4,12 @@ import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
 
-export default function LocalAreaModelingSlide() {
+export default function LocalAreaModellingSlide() {
   return (
     <Slide>
       <div className="">
         <SlideHeader>
-          <SlideTitle>Improving models: local area modeling</SlideTitle>
+          <SlideTitle>Improving models: local area modelling</SlideTitle>
         </SlideHeader>
 
         <SlideContent size="md">

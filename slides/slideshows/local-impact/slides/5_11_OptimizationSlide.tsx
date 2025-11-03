@@ -4,7 +4,7 @@ import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
 import SlideContent from '@/components/SlideContent';
 
-export default function OptimizationSlide() {
+export default function OptimisationSlide() {
   return (
     <Slide>
       <div className="max-w-7xl">
