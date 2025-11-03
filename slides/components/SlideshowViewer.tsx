@@ -17,6 +17,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
   const childArray = Children.toArray(children);
   const router = useRouter();
 
@@ -57,6 +58,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
 
   useEffect(() => {
     setMounted(true);
+    setIsNavigating(false); // Reset navigation flag on mount
 
     // Initialize slide from URL parameter (client-side only)
     const initialSlide = parseInt(searchParams.get('slide') || '0', 10);
@@ -83,9 +85,16 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore keyboard events during navigation
+      if (isNavigating) {
+        e.preventDefault();
+        return;
+      }
+
       if (e.key === 'ArrowRight' || e.key === ' ') {
         e.preventDefault();
         if (currentSlide === slideCount - 1 && nextPresentation) {
+          setIsNavigating(true);
           router.push(`/${nextPresentation}`);
         } else {
           setCurrentSlide((prev) => Math.min(prev + 1, slideCount - 1));
@@ -93,6 +102,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         if (currentSlide === 0 && previousPresentation) {
+          setIsNavigating(true);
           // Go to last slide of previous presentation
           router.push(`/${previousPresentation}?slide=999`); // Will clamp to last slide
         } else {
@@ -116,7 +126,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [slideCount, currentSlide, nextPresentation, previousPresentation, router]);
+  }, [slideCount, currentSlide, nextPresentation, previousPresentation, router, isNavigating]);
 
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === slideCount - 1;
@@ -130,6 +140,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
 
     // If on last slide and there's a next presentation, go to it
     if (isLastSlide && nextPresentation) {
+      setIsNavigating(true);
       router.push(`/${nextPresentation}`);
     } else {
       setCurrentSlide((prev) => Math.min(prev + 1, slideCount - 1));
@@ -138,6 +149,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
 
   const handleNext = () => {
     if (isLastSlide && nextPresentation) {
+      setIsNavigating(true);
       router.push(`/${nextPresentation}`);
     } else {
       setCurrentSlide((prev) => Math.min(prev + 1, slideCount - 1));
@@ -178,6 +190,7 @@ function SlideshowViewerClient({ slideCount, children, slideshowId }: SlideshowV
           <button
             onClick={() => {
               if (isFirstSlide && previousPresentation) {
+                setIsNavigating(true);
                 router.push(`/${previousPresentation}?slide=999`);
               } else {
                 setCurrentSlide((prev) => Math.max(prev - 1, 0));
