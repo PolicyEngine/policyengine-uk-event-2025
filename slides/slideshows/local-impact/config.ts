@@ -9,6 +9,7 @@ import CalibrationDashboardSlide from './slides/5_6_CalibrationDashboardSlide';
 import ConstituencyMapSlide from './slides/5_7_ConstituencyMapSlide';
 import USImprovementsSlide from './slides/5_8_USImprovementsSlide';
 import USFoodStampMapSlide from './slides/5_9_USFoodStampMapSlide';
+import GeoStackingSlide from './slides/5_10_GeoStackingSlide';
 import EndSlide from './slides/6_EndSlide';
 
 export const localImpactConfig: SlideshowConfig = {
@@ -28,6 +29,7 @@ export const localImpactConfig: SlideshowConfig = {
     ConstituencyMapSlide,
     USImprovementsSlide,
     USFoodStampMapSlide,
+    GeoStackingSlide,
     EndSlide,
   ],
 };
