@@ -27,7 +27,7 @@ a {
   }
 
   .gradient-footer {
-    background: linear-gradient(135deg, #319795 0%, #1D4044 100%);
+    background: transparent;
   }
 }
 
