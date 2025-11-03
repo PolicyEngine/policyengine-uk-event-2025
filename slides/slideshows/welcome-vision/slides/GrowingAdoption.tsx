@@ -26,23 +26,23 @@ export default function GrowingAdoption() {
         </SlideHeader>
 
         <div className="mt-4">
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             {organizations.map((org, idx) => (
               <div
                 key={idx}
                 className={`
                   rounded-lg p-3 border flex items-center justify-center border-pe-teal/30 bg-white
-                  ${org.isUN ? 'col-span-4 bg-blue-50' : ''}
+                  ${org.isUN ? 'col-span-3 bg-blue-50' : ''}
                 `}
                 style={{
-                  height: org.isUN ? '60px' : '55px'
+                  height: '65px'
                 }}
               >
                 <Image
                   src={assetPath(org.logo)}
                   alt={org.name}
-                  width={org.isUN ? 200 : 120}
-                  height={org.isUN ? 45 : 35}
+                  width={org.isUN ? 250 : 140}
+                  height={org.isUN ? 50 : 40}
                   className="object-contain max-w-full max-h-full"
                 />
               </div>
