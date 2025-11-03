@@ -167,11 +167,9 @@ Ghenis highlights PolicyEngine's growing impact: formal recognition from HM Trea
 
 ## Technology and AI for UK Policymaking: The PolicyEngine Approach
 
-**Speaker: Nikhil Woodruff**
+**Speakers: Max Ghenis & Nikhil Woodruff**
 
-Nikhil Woodruff explores how PolicyEngine leverages artificial intelligence and modern software architecture for UK policy analysis. Building on the OpenFisca-Core framework, PolicyEngine has developed a technical stack that processes policy simulations in real-time, enabling users to receive instant feedback on reform proposals. Woodruff demonstrates the platform's AI-powered explanation system, launched in 2024, which translates tax and benefit calculations into clear, understandable language—making professional-grade analysis accessible regardless of technical background.
-
-The session addresses the unique challenges of modelling the UK's tax and benefit system, with its complex interactions between means-tested benefits, tax credits, and universal programs. Woodruff explains how PolicyEngine employs machine learning for data enhancement, including addressing the Family Resources Survey's known undersampling of high-income households. He showcases how the platform's Python-based architecture maintains computational efficiency while supporting millions of possible policy configurations, and discusses the technical decisions that enable PolicyEngine to serve both individual users seeking personal calculations and researchers conducting population-wide microsimulation analysis.
+Max Ghenis and Nikhil Woodruff present how PolicyEngine leverages artificial intelligence and modern software architecture for UK policy analysis. The presentation covers PolicyEngine's AI product launches in 2024: AI-powered explanations (March 2024) using GPT-4 to translate tax calculations into plain English, and the conversational policy interface (October 2024) enabling natural language queries about household impacts. The speakers demonstrate how LLM coding agents accelerate development of tax-benefit reforms and data work, and how machine learning techniques—quantile random forests for imputation and gradient descent for calibration—enhance data quality.
 
 ---
 
@@ -193,9 +191,7 @@ The session explores PolicyEngine's data enhancement capabilities. Ahmadi detail
 
 **Speaker: Anthony Volk**
 
-Anthony Volk showcases PolicyEngine 2.0 through an interactive demonstration of the comprehensively redesigned platform. Based on extensive user research conducted by partner organisation Citizen Codex, the new design addresses user feedback requesting a more standard, accessible interface with lower experience and domain knowledge thresholds. Volk walks through the reimagined user journey from designing a policy reform to interpreting its economic and distributional impacts, demonstrating how the new interface reduces the time and understanding needed for users to successfully run their first microsimulation.
-
-The demo highlights improvements to the platform's design and functionality, including enhanced visualisation tools, more intuitive navigation reflecting modern web standards, and new features designed to lower barriers for first-time users. Volk demonstrates capabilities such as customising household circumstances to understand policy impacts on specific family types, comparing multiple policy scenarios side-by-side with improved clarity, and using the enhanced API to integrate PolicyEngine analysis into external research workflows. He showcases new features including sign-in functionality for saving and sharing policy scenarios, mobile optimisation for analysis on any device, and increased opportunities for AI integration into the user workflow—demonstrating PolicyEngine's commitment to democratising access to policy analysis tools while maintaining the technical rigour that professional researchers require.
+Anthony Volk demonstrates the redesigned PolicyEngine 2.0 platform.
 
 ---
 
@@ -205,9 +201,7 @@ The demo highlights improvements to the platform's design and functionality, inc
 
 **Speakers: Biniam Gebre & MaSara Myers**
 
-Biniam Gebre and MaSara Myers present the user experience research that informed the design of PolicyEngine 2.0. This presentation reveals insights from interviews with policymakers, researchers, journalists, and citizens to understand their needs, pain points, and mental models when engaging with policy analysis tools. The speakers explain how these insights shaped design decisions, from information architecture to visual design, ensuring that complex microsimulation results are presented in ways that are both accurate and comprehensible.
-
-The session explores the balance between simplicity and depth in policy analysis interfaces, demonstrating how PolicyEngine 2.0 serves both casual users seeking quick policy insights and expert researchers requiring detailed technical outputs. Gebre and Myers showcase specific design patterns developed to make distributional analysis, budget impacts, and household-level effects more intuitive, and discuss ongoing efforts to continuously improve the platform based on user feedback.
+Biniam Gebre and MaSara Myers from Citizen Codex present their user experience research and design work for PolicyEngine 2.0.
 
 ---
 
@@ -261,15 +255,13 @@ The presentation showcases validation results showing PolicyEngine's estimates d
 
 <div style="page-break-after: always;"></div>
 
-## PolicyEngine US: Modelling Federal, State, and Local Policies
+## PolicyEngine US: Tools for Deconstructing Complex Policies
 
-**Speaker: Max Ghenis**
+**Speakers: Daphne Hansell & David Trimmer**
 
-Max Ghenis presents PolicyEngine's US operations, which expanded rapidly in 2024 to achieve comprehensive coverage of American tax and benefit policy. A flagship achievement was the launch of the household-by-household interactive for the One Big Beautiful Bill Act (OBBBA), which allowed users to explore the legislation's effects on over 40,000 representative households using PolicyEngine's Enhanced Current Population Survey data. Ghenis demonstrates the interactive's "Get Random Household" function, which reveals how the same policy affects different families across America's diverse population, with each household weighted by population representation to ensure realistic coverage. This capability showcases PolicyEngine's ability to deliver real-time, detailed analysis of complex legislation in ways that make policy impacts tangible and accessible.
+Daphne Hansell and David Trimmer demonstrate PolicyEngine US's household-level analysis tools through two recent applications. They present the household-by-household interactive for the One Big Beautiful Bill Act (OBBBA), which allows users to explore the legislation's effects on over 40,000 representative households using PolicyEngine's Enhanced Current Population Survey data. The interactive's "Get Random Household" function reveals how the same policy affects different families across America's diverse population, with each household weighted by population representation.
 
-The presentation highlights PolicyEngine US's comprehensive scope, achieved in 2024: federal tax and benefit programs including SNAP, TANF, childcare subsidies, and housing assistance; complete income tax models for all 50 states and DC; and specialized tools like the SALT-AMT calculator and GiveCalc for charitable giving analysis. Ghenis showcases the Enhanced Current Population Survey, which integrates IRS data and Congressional Budget Office forecasts using machine learning to enable accurate tax-benefit microsimulation. He discusses PolicyEngine's analysis of numerous Congressional proposals including the American Family Act and Tax Relief for Workers Act, partnerships with organisations like the Niskanen Center for Child Tax Credit research, and state-level work in Montana, Utah, New York, and Louisiana. The presentation demonstrates how PolicyEngine US handles the complexity of multi-jurisdictional American fiscal policy—from federal-state interactions to local tax variations—establishing the platform as a leading resource for evidence-based policy analysis across all levels of government. Ghenis notes recognition from the academic community, including presentations at the National Tax Association, APPAM, and universities including UC Berkeley and Northwestern.
-
-This expansion has been supported by major grants from leading foundations and agencies. The National Science Foundation awarded PolicyEngine $300,000 through its Pathways to Enable Open-Source Ecosystems (POSE) program to strengthen organisational infrastructure and community engagement around economic policy analysis tools. Arnold Ventures has provided multiple awards supporting state and congressional district policy breakdowns, specialized calculators for SALT and AMT policies, and labour supply response modelling. MyFriendBen contracted PolicyEngine to power its benefit eligibility screener with comprehensive API support, while NEO Philanthropy provided general operating support through its Economic Mobility & Opportunity Fund. These partnerships demonstrate growing recognition of PolicyEngine's role in democratising sophisticated policy analysis across the United States.
+The speakers also showcase PolicyEngine's household view of enhanced ACA subsidies, demonstrating how the platform enables users to understand health insurance subsidy impacts at the individual household level. These tools make policy impacts tangible by showing real effects on specific family types rather than aggregate statistics alone.
 
 ---
 
@@ -279,9 +271,7 @@ This expansion has been supported by major grants from leading foundations and a
 
 **Panelists: Max Ghenis, Arun Advani, Anvar Sarygulov**
 
-This panel discussion brings together leading voices in policy research and computational analysis to explore the evolving landscape of evidence-based policymaking. The panelists discuss how technological advances—including artificial intelligence, improved data infrastructure, and open-source collaboration—are changing the speed, scope, and accessibility of policy analysis. They examine PolicyEngine's roadmap for advancing capabilities: incorporating macroeconomic impacts, enhancing behavioural modelling beyond labour supply to capture saving, education, and family structure decisions, and expanding international reach with PolicyEngine-Canada and partnerships with think tanks and academic institutions worldwide.
-
-The conversation explores questions about democratising policy analysis while maintaining analytical rigour. Panelists debate the implications of user experience improvements—sign-in functionality, mobile optimisation, and social collaboration features—for broadening who can engage with policy tools. They discuss how AI integration, including GPT-4-powered explanations and planned API access, makes complex tax and benefit calculations understandable for non-experts while preserving technical precision for professional researchers. The panel addresses the changing relationship between academic research, government analysis, and public engagement, considering both the opportunities for more informed public discourse and the challenges of managing uncertainty and maintaining trust in computational models. Panelists reflect on the skills and institutional changes needed to realize the potential of open-source, accessible policy modelling in improving societal outcomes and strengthening democratic decision-making.
+Max Ghenis moderates a panel discussion with Arun Advani and Anvar Sarygulov exploring the evolving landscape of evidence-based policymaking.
 
 ---
 
@@ -289,11 +279,11 @@ The conversation explores questions about democratising policy analysis while ma
 
 ## Looking Ahead: AI-Powered Policy Analysis
 
-**Speakers: Max Ghenis, Nikhil Woodruff, Vahid Ahmadi**
+**Speakers: Max Ghenis, Nikhil Woodruff**
 
-The PolicyEngine team concludes the event with a live demonstration of their multi-agent AI research workflow, recently tested on policy analysis tasks similar to their UK carbon dividend study. Using Claude Code's multi-agent system, PolicyEngine has configured specialized agents that automate different parts of the policy analysis pipeline: a data fetching agent that accesses PolicyEngine microsimulation data from GitHub repositories and documentation, a script writer that generates Python code using the policyengine-uk package, and a report generator that produces formatted research output with Plotly visualisations. The speakers demonstrate how Claude Code automatically routes tasks to appropriate agents based on natural language requests, showing real-time policy analysis without manual coordination between components.
+The PolicyEngine team demonstrates their multi-agent AI research workflow using Claude Code. PolicyEngine has configured specialized agents for data fetching, Python script writing, and report generation with Plotly visualisations. The demo shows real-time policy analysis through natural language requests.
 
-The presentation candidly addresses both successes and limitations discovered during testing. The team found that multi-agent workflows excel at standard distributional analyses—calculating poverty rates, Gini coefficients, and decile-level impacts—saving significant time on repetitive tasks while maintaining PolicyEngine's house style. However, they reveal challenges with complex benefit program interactions, the need for precise prompting rather than generic instructions, and the importance of specialized reviewer agents for meaningful code critique. The speakers announce the forthcoming policyengine-claude plugin, which packages these insights for other researchers using Claude Code with PolicyEngine, incorporating Anthropic's Skills ecosystem for common policy analyses and direct database access through the Model Context Protocol. They emphasize the right division of labour: AI handles routine policy updates with constant analysis structures, while human researchers focus on questions requiring genuine policy expertise, complex methodological choices, and political context—ensuring that advancing AI serves to augment rather than replace expert judgment in evidence-based policymaking.
+The team discusses successes and limitations: multi-agent workflows excel at standard distributional analyses while facing challenges with complex benefit interactions. They announce the forthcoming policyengine-claude plugin, incorporating Anthropic's Skills ecosystem and Model Context Protocol. The team emphasizes AI handling routine analyses while human researchers focus on policy expertise and methodological choices.
 
 ---
 
