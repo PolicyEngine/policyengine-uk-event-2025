@@ -14,13 +14,13 @@ export default function ACAShutdown() {
           <SlideTitle>Shutdown centers on premium tax credits</SlideTitle>
         </SlideHeader>
 
-        <div className="mt-12 flex justify-center">
-          <div className="relative w-full max-w-5xl h-[500px] rounded-lg overflow-hidden shadow-xl border-2 border-gray-300">
+        <div className="mt-12 flex justify-center items-center">
+          <div className="relative w-full h-[600px]">
             <Image
               src={assetPath("/images/posts/aca-shutdown-news.png")}
               alt="PBS News article on health care subsidies shutdown fight"
               fill
-              className="object-cover object-top"
+              className="object-contain"
             />
           </div>
         </div>
