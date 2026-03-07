@@ -2,6 +2,8 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideTitle from '@/components/SlideTitle';
 import SlideHeader from '@/components/SlideHeader';
+import { colors } from '@policyengine/design-system/tokens';
+import { chartColors } from '@policyengine/design-system/charts';
 
 export default function HealthInsurancePathways() {
   // 2023 MECE enrollment data from KFF - mutually exclusive categories
@@ -10,49 +12,49 @@ export default function HealthInsurancePathways() {
       name: 'Employer-Sponsored Insurance (ESI)',
       fullName: 'Employer-Sponsored Insurance',
       enrollment: 158.4, // million - employer only
-      color: '#2C5F8D',
+      color: colors.blue[800],
       description: 'Employer coverage only'
     },
     {
       name: 'Medicaid/CHIP',
       fullName: 'Medicaid/CHIP',
       enrollment: 49.7, // million - Medicaid only (includes CHIP)
-      color: '#319795',
+      color: colors.primary[500],
       description: 'Low-income coverage only'
     },
     {
       name: 'Dual Coverage',
       fullName: 'Dual Coverage',
       enrollment: 44.5, // million - calculated to reach 326.1M total
-      color: '#68B0AB',
+      color: colors.primary[400],
       description: 'Multiple coverage types'
     },
     {
       name: 'Uninsured',
       fullName: 'Uninsured',
       enrollment: 25.8, // million
-      color: '#D1D5DB',
+      color: colors.gray[300],
       description: 'No health coverage'
     },
     {
       name: 'Medicare',
       fullName: 'Medicare',
       enrollment: 23.0, // million - Medicare only
-      color: '#1D4044',
+      color: colors.primary[900],
       description: 'Age 65+ or disability only'
     },
     {
       name: 'Marketplace',
       fullName: 'Non-Group/Marketplace',
       enrollment: 20.4, // million - non-group only
-      color: '#4A8B94',
+      color: colors.primary[600],
       description: 'Individual market only'
     },
     {
       name: 'Military/VA',
       fullName: 'Military/VA',
       enrollment: 4.3, // million
-      color: '#2C6975',
+      color: colors.primary[700],
       description: 'Military & veterans coverage'
     }
   ].sort((a, b) => b.enrollment - a.enrollment); // Sort by size
@@ -232,7 +234,7 @@ export default function HealthInsurancePathways() {
                         y1={rect.y + rect.height / 2}
                         x2={rect.x + rect.width}
                         y2={rect.y + rect.height / 2}
-                        stroke="#666"
+                        stroke={colors.gray[500]}
                         strokeWidth="2"
                         markerEnd="url(#arrowhead)"
                       />
@@ -241,7 +243,7 @@ export default function HealthInsurancePathways() {
                         x={width + 30}
                         y={rect.y + rect.height / 2 - 10}
                         textAnchor="start"
-                        fill="#333"
+                        fill={colors.gray[800]}
                         fontSize="18"
                         fontWeight="700"
                       >
@@ -251,7 +253,7 @@ export default function HealthInsurancePathways() {
                         x={width + 30}
                         y={rect.y + rect.height / 2 + 12}
                         textAnchor="start"
-                        fill="#666"
+                        fill={colors.gray[500]}
                         fontSize="16"
                         fontWeight="600"
                       >
@@ -273,7 +275,7 @@ export default function HealthInsurancePathways() {
                 refY="3"
                 orient="auto"
               >
-                <polygon points="0 0, 10 3, 0 6" fill="#666" />
+                <polygon points="0 0, 10 3, 0 6" fill={colors.gray[500]} />
               </marker>
             </defs>
           </svg>

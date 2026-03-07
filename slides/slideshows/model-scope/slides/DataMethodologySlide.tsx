@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import SlideTitle from '@/components/SlideTitle';
+import { colors } from '@policyengine/design-system/tokens';
 
 export default function DataMethodologySlide() {
   const mermaidRef = useRef<HTMLDivElement>(null);
@@ -134,7 +135,7 @@ graph TD
             <SlideTitle>We build our dataset from six UK surveys</SlideTitle>
           </SlideHeader>
 
-          <div className="flex-1 flex items-center justify-center" style={{ background: 'linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%)' }}>
+          <div className="flex-1 flex items-center justify-center" style={{ background: `linear-gradient(to bottom, ${colors.gray[50]} 0%, ${colors.background.tertiary} 100%)` }}>
             <div
               ref={mermaidRef}
               className="mermaid"
@@ -145,7 +146,7 @@ graph TD
             />
           </div>
 
-          <div className="w-full flex justify-center pb-4" style={{ background: 'linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%)' }}>
+          <div className="w-full flex justify-center pb-4" style={{ background: `linear-gradient(to bottom, ${colors.gray[50]} 0%, ${colors.background.tertiary} 100%)` }}>
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -187,7 +188,7 @@ graph TD
               cursor: 'pointer'
             }}
           >
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="3" strokeLinecap="round">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke={colors.black} strokeWidth="3" strokeLinecap="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
