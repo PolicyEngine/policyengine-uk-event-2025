@@ -2,6 +2,7 @@ import React from 'react';
 import Slide from '@/components/Slide';
 import SlideHeader from '@/components/SlideHeader';
 import SlideTitle from '@/components/SlideTitle';
+import { colors } from '@policyengine/design-system/tokens';
 
 export default function FlowchartSlide() {
   return (
@@ -15,7 +16,7 @@ export default function FlowchartSlide() {
           <iframe
             src="https://policyengine.github.io/flowchart/?variable=universal_childcare_entitlement&country=UK"
             className="w-full h-full rounded-lg shadow-lg"
-            style={{ border: '1px solid #ccc' }}
+            style={{ border: `1px solid ${colors.border.medium}` }}
             title="Universal Childcare Entitlement Flowchart"
           />
         </div>
