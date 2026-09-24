@@ -1,5 +1,6 @@
 import React from 'react';
 import Slide from '@/components/Slide';
+import { colors } from '@policyengine/design-system/tokens';
 
 export default function UKBenefitsIframe() {
   return (
@@ -8,7 +9,7 @@ export default function UKBenefitsIframe() {
         <iframe
           src="https://policyengine.org/uk/research/uk-benefits-post"
           className="w-full flex-1 rounded-lg shadow-2xl"
-          style={{ border: '2px solid #ccc' }}
+          style={{ border: `2px solid ${colors.border.medium}` }}
         />
       </div>
     </Slide>
