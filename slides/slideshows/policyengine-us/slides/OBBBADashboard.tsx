@@ -23,12 +23,12 @@ export default function OBBBADashboard() {
             />
           </div>
           <a
-            href="https://policyengine.org/us/obbba-household-by-household"
+            href="https://www.policyengine.org/us/obbba-households"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 text-2xl text-pe-teal hover:text-pe-dark transition-colors"
           >
-            policyengine.org/us/obbba-household-by-household
+            policyengine.org/us/obbba-households
           </a>
         </div>
       </div>
